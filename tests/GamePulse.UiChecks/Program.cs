@@ -375,7 +375,7 @@ internal static class Program
         Save(dialogFrame, Path.Combine(destination, "achievements-detail-dialog-test-fixtures.png"));
         var dialogScroll = dialog.GetVisualDescendants().OfType<ScrollViewer>().Single(control => control.Name == "AchievementDetailScroll");
         Check(dialogScroll.Extent.Height > dialogScroll.Viewport.Height && dialogScroll.Viewport.Height > 100,
-            "A long description and all fields must be readable in the compact detail dialog.");
+            $"A long description and all fields must be readable in the compact detail dialog: extent={dialogScroll.Extent.Height}, viewport={dialogScroll.Viewport.Height}.");
         dialogScroll.Offset = new Vector(0, dialogScroll.Extent.Height);
         await SettleAsync(dialog);
         Check(dialogScroll.Offset.Y > 0, "The final detail fields must be reachable by scrolling.");
@@ -756,7 +756,8 @@ internal static class Program
         public int AchievementRequests { get; private set; }
         public GameAchievements LargeAchievements { get; } = new(100001, "Test game 00001",
             Enumerable.Range(1, 12_000).Select(i => new AchievementDetail($"TEST_{i:D5}", $"Test achievement {i:D5}",
-                i == 2 ? string.Join(" ", Enumerable.Repeat("Synthetic detail description for testing readable wrapping and scrolling.", 12)) : $"Complete test objective {i} (synthetic fixture).",
+                // Leave enough overflow margin for platform fallback fonts while retaining a single-line list preview.
+                i == 2 ? string.Join(" ", Enumerable.Repeat("Synthetic detail description for testing readable wrapping and scrolling.", 120)) : $"Complete test objective {i} (synthetic fixture).",
                 i % 7 == 0, i % 2 == 0, i % 2 == 0 ? DateTimeOffset.FromUnixTimeSeconds(1_780_000_000 + i * 100) : null)).ToArray(), true);
         public Task<Outcome<GameAchievements>> GetAchievementsAsync(string id, uint app, bool force, CancellationToken token)
         {
