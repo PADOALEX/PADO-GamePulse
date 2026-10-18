@@ -29,4 +29,9 @@ jobs:
           powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Test-ReleaseSupport.ps1 -TestDirectory artifacts/release-support-windows-powershell
           if ($LASTEXITCODE -ne 0) { throw 'Windows PowerShell release helper checks failed.' }
           ./scripts/Test-InstallerRetirement.ps1 -TestDirectory artifacts/retirement-generator
-          ./scripts/Test-SourceArchive.ps1 -TestDirectory artifacts/source-archive-safety
+          $archiveChecks = ./scripts/Test-SourceArchive.ps1 -TestDirectory artifacts/source-archive-safety
+          if ($archiveChecks.Passed -ne $true) { throw 'Source archive safety checks failed.' }
+          $archiveChecks
+          # Negative Git-ignore fixtures deliberately return native exit code 1.
+          # All assertions above succeeded; do not propagate that expected fixture exit.
+          exit 0

@@ -53,7 +53,14 @@ Raw evidence: [tests](performance/release-100-test-results.json),
 [PowerShell 7](performance/release-100-support-pwsh-results.json),
 [Windows PowerShell](performance/release-100-support-windows-powershell-results.json),
 [source-export safety](performance/release-100-source-archive-safety-results.json),
+[Windows PowerShell source export](performance/release-100-source-archive-safety-windows-powershell-results.json),
 [retirement safety](performance/release-100-retirement-generator-results.json).
+
+The standalone default-source export command also passed under Windows PowerShell 5.1 and
+PowerShell 7, from an unrelated working directory using only an isolated synthetic project.
+Cross-platform UI checks use a deliberately oversized description to verify actual scrolling
+without depending on one system font's word widths. Expected negative Git-ignore fixture codes
+are checked explicitly and do not masquerade as a failed CI job after successful assertions.
 
 The large-list figures are labeled synthetic local observations, not Steam latency, native FPS,
 historical activity or real users. No universal speed multiplier is claimed.

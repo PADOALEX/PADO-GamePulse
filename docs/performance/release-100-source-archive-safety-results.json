@@ -9,5 +9,7 @@
   "ReparseRootsRejected": true,
   "NoOverwrite": true,
   "OutputOutsideSource": true,
-  "GitIgnoreChecked": true
+  "GitIgnoreChecked": true,
+  "WindowsPowerShellStandaloneDefault": true,
+  "PowerShell7StandaloneDefault": true
 }

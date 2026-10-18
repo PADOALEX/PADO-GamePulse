@@ -1,0 +1,15 @@
+﻿{
+    "Passed":  true,
+    "ExclusionFixtures":  25,
+    "SafeEntryPaths":  true,
+    "CredentialBytesAbsent":  true,
+    "Sha256Verified":  true,
+    "UnsafeExampleRejected":  true,
+    "ReparseEntriesExcluded":  true,
+    "ReparseRootsRejected":  true,
+    "NoOverwrite":  true,
+    "OutputOutsideSource":  true,
+    "GitIgnoreChecked":  true,
+    "WindowsPowerShellStandaloneDefault":  true,
+    "PowerShell7StandaloneDefault":  true
+}

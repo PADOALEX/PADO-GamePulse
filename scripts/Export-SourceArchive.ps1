@@ -1,10 +1,15 @@
 [CmdletBinding()]
 param(
-    [string]$SourceDirectory = (Join-Path $PSScriptRoot '..'),
+    [string]$SourceDirectory,
     [Parameter(Mandatory=$true)][string]$OutputDirectory
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version 2.0
+# Windows PowerShell 5.1 can bind -File parameter defaults before $PSScriptRoot is
+# initialized. Resolve the optional source only after entering the script body.
+if (-not $PSBoundParameters.ContainsKey('SourceDirectory')) {
+    $SourceDirectory = Join-Path $PSScriptRoot '..'
+}
 Add-Type -AssemblyName System.IO.Compression
 
 function Assert-OrdinaryAncestors([string]$Path) {

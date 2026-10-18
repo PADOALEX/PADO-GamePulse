@@ -86,7 +86,60 @@ if (Get-Command git -ErrorAction SilentlyContinue) {
     Require ($LASTEXITCODE -eq 1) 'The safe environment example must remain eligible for Git.'
     $gitChecked = $true
 }
-$result = [ordered]@{ Passed=$true; ExclusionFixtures=25; SafeEntryPaths=$true; CredentialBytesAbsent=$true; Sha256Verified=$true; UnsafeExampleRejected=$true; ReparseEntriesExcluded=$true; ReparseRootsRejected=$true; NoOverwrite=$true; OutputOutsideSource=$true; GitIgnoreChecked=$gitChecked }
+# Exercise the documented standalone command without -SourceDirectory. Calling
+# the exporter with & and an explicit fixture path does not reproduce PS 5.1's
+# early -File parameter binding, so use child hosts and an unrelated working dir.
+$standaloneSource = Join-Path $testRoot 'standalone-source'
+$standaloneScripts = Join-Path $standaloneSource 'scripts'
+$standaloneWorkingDirectory = Join-Path $testRoot 'standalone-working-directory'
+New-Item -ItemType Directory -Path $standaloneScripts,$standaloneWorkingDirectory | Out-Null
+foreach ($relative in @('Directory.Build.props','.env.example','src/Example.cs')) {
+    $target = Join-Path $standaloneSource $relative
+    New-Item -ItemType Directory -Force -Path ([IO.Path]::GetDirectoryName($target)) | Out-Null
+    Copy-Item -LiteralPath (Join-Path $source $relative) -Destination $target
+}
+[IO.File]::WriteAllText((Join-Path $standaloneSource '.env'),$sentinel,$utf8)
+$standaloneExporter = Join-Path $standaloneScripts 'Export-SourceArchive.ps1'
+Copy-Item -LiteralPath $exporter -Destination $standaloneExporter
+$standaloneHosts = [ordered]@{ WindowsPowerShell='powershell.exe'; PowerShell7='pwsh.exe' }
+$standaloneResults = @{}
+foreach ($hostName in $standaloneHosts.Keys) {
+    $hostCommand = Get-Command $standaloneHosts[$hostName] -CommandType Application -ErrorAction SilentlyContinue
+    if ($null -eq $hostCommand) {
+        if ($hostName -eq 'WindowsPowerShell') { throw 'Windows PowerShell is required for the standalone source archive regression.' }
+        $standaloneResults[$hostName] = $false
+        continue
+    }
+    $standaloneOutput = Join-Path $testRoot ('standalone-output-' + $hostName)
+    # Invoke the native host directly, as documented. PowerShell adjusts Windows
+    # PowerShell's module path when called from PS 7; Start-Process bypasses that
+    # compatibility handling and can prevent built-in cmdlets from autoloading.
+    Push-Location -LiteralPath $standaloneWorkingDirectory
+    try {
+        & $hostCommand.Source -NoProfile -ExecutionPolicy Bypass -File $standaloneExporter -OutputDirectory $standaloneOutput `
+            1> (Join-Path $testRoot ($hostName + '-standalone.stdout.txt')) `
+            2> (Join-Path $testRoot ($hostName + '-standalone.stderr.txt'))
+        $standaloneExitCode = $LASTEXITCODE
+    } finally { Pop-Location }
+    Require ($standaloneExitCode -eq 0) ($hostName + ' standalone -File default-source export failed; inspect its isolated stderr log.')
+    $standaloneReportPath = Join-Path $standaloneOutput 'source-archive-0.9.0.json'
+    Require (Test-Path -LiteralPath $standaloneReportPath -PathType Leaf) ($hostName + ' did not resolve the source beside the copied exporter.')
+    $standaloneReport = [IO.File]::ReadAllText($standaloneReportPath) | ConvertFrom-Json
+    Require ($standaloneReport.ActualEnvironmentFilesRead -eq $false) ($hostName + ' must exclude local environment files before opening content.')
+    $standaloneArchivePath = Join-Path $standaloneOutput 'PADO.GamePulse-0.9.0-source.zip'
+    Require ($standaloneReport.Archive -eq $standaloneArchivePath) ($hostName + ' reported an unexpected archive path.')
+    $standaloneRead = [IO.File]::OpenRead($standaloneArchivePath)
+    try {
+        $standaloneArchive = New-Object IO.Compression.ZipArchive($standaloneRead,[IO.Compression.ZipArchiveMode]::Read,$true)
+        try {
+            Require ($null -ne $standaloneArchive.GetEntry('PADO.GamePulse/src/Example.cs')) ($hostName + ' did not archive the isolated source fixture.')
+            Require ($null -eq $standaloneArchive.GetEntry('PADO.GamePulse/.env')) ($hostName + ' included a private environment file.')
+            Require ($standaloneArchive.Entries.Count -eq 4) ($hostName + ' archived unexpected files outside the isolated source fixture.')
+        } finally { $standaloneArchive.Dispose() }
+    } finally { $standaloneRead.Dispose() }
+    $standaloneResults[$hostName] = $true
+}
+$result = [ordered]@{ Passed=$true; ExclusionFixtures=25; SafeEntryPaths=$true; CredentialBytesAbsent=$true; Sha256Verified=$true; UnsafeExampleRejected=$true; ReparseEntriesExcluded=$true; ReparseRootsRejected=$true; NoOverwrite=$true; OutputOutsideSource=$true; GitIgnoreChecked=$gitChecked; WindowsPowerShellStandaloneDefault=$standaloneResults.WindowsPowerShell; PowerShell7StandaloneDefault=$standaloneResults.PowerShell7 }
 $result | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $testRoot 'source-archive-test-results.json') -Encoding UTF8
 Write-Host 'Source archive safety checks passed; only isolated dummy credentials were used.'
 [pscustomobject]$result
