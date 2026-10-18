@@ -1,0 +1,135 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:services="using:GamePulse.Desktop.Services"
+             x:Class="GamePulse.Desktop.App"
+             RequestedThemeVariant="Dark">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Dark">
+          <SolidColorBrush x:Key="PageBrush" Color="#101721" />
+          <SolidColorBrush x:Key="SidebarBrush" Color="#141E2B" />
+          <SolidColorBrush x:Key="CardBrush" Color="#192432" />
+          <SolidColorBrush x:Key="InputBrush" Color="#0B121B" />
+          <!-- Fluent's focused template uses these brushes instead of TextBox.Background. -->
+          <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#0B121B" />
+          <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#0B121B" />
+          <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#E9F0F7" />
+          <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="#E9F0F7" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#2B3B4D" />
+          <SolidColorBrush x:Key="TextBrush" Color="#E9F0F7" />
+          <SolidColorBrush x:Key="MutedTextBrush" Color="#B1BFCE" />
+          <SolidColorBrush x:Key="LabelBrush" Color="#91A3B7" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#91E9D0" />
+          <SolidColorBrush x:Key="SelectionBrush" Color="#24483F" />
+          <SolidColorBrush x:Key="AccentSurfaceBrush" Color="#213E39" />
+          <SolidColorBrush x:Key="AccentTextBrush" Color="#91E9D0" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+          <SolidColorBrush x:Key="PageBrush" Color="#F0F4F8" />
+          <SolidColorBrush x:Key="SidebarBrush" Color="#E7EDF4" />
+          <SolidColorBrush x:Key="CardBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="InputBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#162638" />
+          <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="#162638" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#CCD7E3" />
+          <SolidColorBrush x:Key="TextBrush" Color="#162638" />
+          <SolidColorBrush x:Key="MutedTextBrush" Color="#475E75" />
+          <SolidColorBrush x:Key="LabelBrush" Color="#526B84" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#005A4A" />
+          <SolidColorBrush x:Key="SelectionBrush" Color="#D3EDE3" />
+          <SolidColorBrush x:Key="AccentSurfaceBrush" Color="#D3EDE3" />
+          <SolidColorBrush x:Key="AccentTextBrush" Color="#075A48" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="{x:Static services:ThemeManager.HighContrast}">
+          <SolidColorBrush x:Key="PageBrush" Color="#000000" />
+          <SolidColorBrush x:Key="SidebarBrush" Color="#000000" />
+          <SolidColorBrush x:Key="CardBrush" Color="#000000" />
+          <SolidColorBrush x:Key="InputBrush" Color="#000000" />
+          <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#000000" />
+          <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#000000" />
+          <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="MutedTextBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="LabelBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#FFFF00" />
+          <SolidColorBrush x:Key="SelectionBrush" Color="#242424" />
+          <SolidColorBrush x:Key="AccentSurfaceBrush" Color="#000000" />
+          <SolidColorBrush x:Key="AccentTextBrush" Color="#FFFF00" />
+        </ResourceDictionary>
+      </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+  <Application.Styles>
+    <FluentTheme>
+      <FluentTheme.Palettes>
+        <ColorPaletteResources x:Key="Dark" Accent="#21AA8B" />
+        <ColorPaletteResources x:Key="Light" Accent="#147D66" />
+      </FluentTheme.Palettes>
+    </FluentTheme>
+    <Style Selector="Window">
+      <Setter Property="FontFamily" Value="Segoe UI, Inter, sans-serif" />
+      <Setter Property="FontSize" Value="14" />
+      <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+    </Style>
+    <Style Selector="Button">
+      <Setter Property="MinHeight" Value="38" />
+      <Setter Property="CornerRadius" Value="7" />
+    </Style>
+    <Style Selector="Button.primary">
+      <Setter Property="Background" Value="#69E8C7" />
+      <Setter Property="Foreground" Value="#102A28" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style Selector="Button.quiet">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="HorizontalContentAlignment" Value="Left" />
+    </Style>
+    <Style Selector="Button.nav">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="Foreground" Value="{DynamicResource MutedTextBrush}" />
+      <Setter Property="HorizontalAlignment" Value="Stretch" />
+      <Setter Property="HorizontalContentAlignment" Value="Left" />
+      <Setter Property="Padding" Value="12,9" />
+    </Style>
+    <Style Selector="Button.nav.active">
+      <Setter Property="Background" Value="{DynamicResource AccentSurfaceBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource AccentTextBrush}" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource SelectionBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+    </Style>
+    <Style Selector="Window.compact Button.nav">
+      <Setter Property="Padding" Value="8,5" />
+      <Setter Property="MinHeight" Value="32" />
+    </Style>
+    <Style Selector="Button:focus-visible, TextBox:focus-visible, ComboBox:focus-visible, ListBoxItem:focus-visible, CheckBox:focus-visible, TabItem:focus-visible">
+      <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+      <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style Selector="Button.nav.active:focus-visible">
+      <Setter Property="BorderBrush" Value="#FFFFFF" />
+    </Style>
+    <Style Selector="TextBlock.muted">
+      <Setter Property="Foreground" Value="{DynamicResource MutedTextBrush}" />
+      <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style Selector="TextBlock.label">
+      <Setter Property="FontSize" Value="12" />
+      <Setter Property="Foreground" Value="{DynamicResource LabelBrush}" />
+    </Style>
+    <Style Selector="Border.card">
+      <Setter Property="Background" Value="{DynamicResource CardBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="12" />
+      <Setter Property="Padding" Value="22" />
+    </Style>
+  </Application.Styles>
+</Application>

@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>Інвентар</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Досліджуйте доступні предмети, їхню кількість і властивості.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>SteamID {0}  ·  AppID {1}  ·  Контекст {2}</value>
+  </data>
+  <data name="AppLabel" xml:space="preserve">
+    <value>ІНВЕНТАР</value>
+  </data>
+  <data name="ContextLabel" xml:space="preserve">
+    <value>ID КОНТЕКСТУ</value>
+  </data>
+  <data name="ContextHelp" xml:space="preserve">
+    <value>Використовуйте публічний контекст інвентарю, який надає гра.</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Завантажити інвентар</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук за назвою, типом, AssetID або ClassID</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Сортувати предмети</value>
+  </data>
+  <data name="SortName" xml:space="preserve">
+    <value>За назвою</value>
+  </data>
+  <data name="SortType" xml:space="preserve">
+    <value>За типом</value>
+  </data>
+  <data name="SortAmount" xml:space="preserve">
+    <value>Спочатку більша кількість</value>
+  </data>
+  <data name="SortAssetId" xml:space="preserve">
+    <value>За AssetID</value>
+  </data>
+  <data name="MarketableOnly" xml:space="preserve">
+    <value>Лише для продажу</value>
+  </data>
+  <data name="TradableOnly" xml:space="preserve">
+    <value>Лише для обміну</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Скинути фільтри</value>
+  </data>
+  <data name="LoadedLabel" xml:space="preserve">
+    <value>ЗАВАНТАЖЕНІ ОБ’ЄКТИ</value>
+  </data>
+  <data name="QuantityLabel" xml:space="preserve">
+    <value>ЗАВАНТАЖЕНА КІЛЬКІСТЬ</value>
+  </data>
+  <data name="TotalLabel" xml:space="preserve">
+    <value>ПОВНИЙ ПІДСУМОК</value>
+  </data>
+  <data name="CoverageLabel" xml:space="preserve">
+    <value>ВІДОМОСТІ ПРО ПРЕДМЕТИ</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>ПРЕДМЕТ</value>
+  </data>
+  <data name="QuantityColumn" xml:space="preserve">
+    <value>КІЛЬК.</value>
+  </data>
+  <data name="DetailTitle" xml:space="preserve">
+    <value>Відомості про предмет</value>
+  </data>
+  <data name="SelectHint" xml:space="preserve">
+    <value>Виберіть предмет, щоб переглянути доступні відомості про нього.</value>
+  </data>
+  <data name="AssetIdLabel" xml:space="preserve">
+    <value>ASSET ID</value>
+  </data>
+  <data name="ClassIdLabel" xml:space="preserve">
+    <value>CLASS ID</value>
+  </data>
+  <data name="InstanceIdLabel" xml:space="preserve">
+    <value>INSTANCE ID</value>
+  </data>
+  <data name="TypeLabel" xml:space="preserve">
+    <value>ТИП</value>
+  </data>
+  <data name="AmountLabel" xml:space="preserve">
+    <value>КІЛЬКІСТЬ</value>
+  </data>
+  <data name="MarketableLabel" xml:space="preserve">
+    <value>МОЖНА ПРОДАТИ</value>
+  </data>
+  <data name="TradableLabel" xml:space="preserve">
+    <value>МОЖНА ОБМІНЯТИ</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копіювати AssetID</value>
+  </data>
+  <data name="OpenSteam" xml:space="preserve">
+    <value>Відкрити інвентар</value>
+  </data>
+  <data name="AssetFallback" xml:space="preserve">
+    <value>Об’єкт {0}</value>
+  </data>
+  <data name="UnknownType" xml:space="preserve">
+    <value>Невідомий тип</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ні</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Невідомо</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="MetadataAvailable" xml:space="preserve">
+    <value>Відомості про предмет доступні</value>
+  </data>
+  <data name="MetadataMissing" xml:space="preserve">
+    <value>Steam не повернув відповідного опису предмета. Назва, тип і можливість обміну чи продажу невідомі.</value>
+  </data>
+  <data name="Coverage" xml:space="preserve">
+    <value>{0:N0} / {1:N0}</value>
+  </data>
+  <data name="Shown" xml:space="preserve">
+    <value>Показано {0:N0} / {1:N0}</value>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>Неповний інвентар: {0} Завантажені предмети залишаються доступними. Загальні підсумки позначено N/A.</value>
+  </data>
+  <data name="InterruptedRateLimited" xml:space="preserve">
+    <value>Steam обмежив подальші запити.</value>
+  </data>
+  <data name="InterruptedPrivate" xml:space="preserve">
+    <value>Steam повідомив, що подальші сторінки приватні.</value>
+  </data>
+  <data name="InterruptedUnavailable" xml:space="preserve">
+    <value>Подальші сторінки недоступні.</value>
+  </data>
+  <data name="InterruptedFailed" xml:space="preserve">
+    <value>Не вдалося завантажити подальші сторінки.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Сторінок: {0:N0} · отримано об’єктів: {1:N0}</value>
+  </data>
+  <data name="ProgressReported" xml:space="preserve">
+    <value>Сторінок: {0:N0} · отримано об’єктів: {1:N0} · за даними Steam: {2:N0}</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Оновлено {0}</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>З кешу · оновлено {0}</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>Відкрийте профіль, а потім виберіть інвентар для завантаження.</value>
+  </data>
+  <data name="NotLoaded" xml:space="preserve">
+    <value>Виберіть інвентар і натисніть «Завантажити інвентар».</value>
+  </data>
+  <data name="InvalidContext" xml:space="preserve">
+    <value>Введіть додатний числовий ID контексту без пробілів і початкових нулів.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Завантаження інвентарю скасовано. Натисніть «Завантажити інвентар», щоб спробувати ще раз.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Завантаження доступних сторінок інвентарю…</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Steam повернув порожній інвентар.</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Steam явно повідомив, що цей інвентар приватний.</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Steam обмежує запити інвентарю. Спробуйте пізніше.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Не вдалося завантажити інвентар. Спробуйте ще раз.</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>Потрібен ключ Steam API. Вкажіть GAMEPULSE_STEAM_API_KEY у локальному .env або змінній середовища й перезапустіть програму.</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Цей інвентар недоступний. Steam може обмежувати доступ, або вибраний контекст може бути недоступним.</value>
+  </data>
+  <data name="Filtering" xml:space="preserve">
+    <value>Фільтрування доступних предметів…</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>Немає предметів, що відповідають цим фільтрам.</value>
+  </data>
+  <data name="PartialReady" xml:space="preserve">
+    <value>Деякі сторінки інвентарю доступні. Перегляньте примітку про повноту нижче.</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Доступний інвентар завантажено.</value>
+  </data>
+  <data name="FilterFailed" xml:space="preserve">
+    <value>Не вдалося застосувати фільтр предметів. Скиньте фільтри.</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>AssetID скопійовано.</value>
+  </data>
+  <data name="ClipboardFailed" xml:space="preserve">
+    <value>Не вдалося скопіювати AssetID.</value>
+  </data>
+  <data name="ExternalFailed" xml:space="preserve">
+    <value>Не вдалося відкрити інвентар Steam.</value>
+  </data>
+  <data name="CompleteNote" xml:space="preserve">
+    <value>Кількість враховує поле amount кожного об’єкта. Можливість обміну й продажу показано лише тоді, коли ці дані надає Steam.</value>
+  </data>
+  <data name="NoPreview" xml:space="preserve">
+    <value>Зображення недоступне</value>
+  </data>
+  <data name="StopPageLimit" xml:space="preserve">
+    <value>Досягнуто налаштованого локального обмеження кількості сторінок.</value>
+  </data>
+  <data name="StopSizeLimit" xml:space="preserve">
+    <value>Досягнуто налаштованого локального обмеження розміру даних.</value>
+  </data>
+  <data name="StopSourceChanged" xml:space="preserve">
+    <value>Під час завантаження Steam повернув неузгоджену кількість предметів; оновіть дані, щоб перевірити поточний інвентар.</value>
+  </data>
+  <data name="StopInvalidPagination" xml:space="preserve">
+    <value>Steam повернув неузгоджену пагінацію або повторні предмети; оновіть дані, перш ніж оцінювати підсумки.</value>
+  </data>
+  <data name="StopMissingTotal" xml:space="preserve">
+    <value>Steam не надав загальної кількості об’єктів інвентарю, тому його повноту неможливо підтвердити.</value>
+  </data>
+  <data name="AccessibleAsset" xml:space="preserve">
+    <value>{0}. Кількість: {1}. {2}. Можна продати: {3}. Можна обміняти: {4}. Asset ID {5}.</value>
+  </data>
+</root>

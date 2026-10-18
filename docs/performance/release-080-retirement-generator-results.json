@@ -1,0 +1,9 @@
+﻿{
+    "Passed":  true,
+    "Cases":  16,
+    "KnownRetirement":  true,
+    "CurrentPathWins":  true,
+    "MalformedAndTraversingPathsRejected":  true,
+    "InvalidHashAndDuplicateRejected":  true,
+    "NativeDeletionTested":  false
+}

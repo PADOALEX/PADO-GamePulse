@@ -1,0 +1,7 @@
+{
+  "CheckedUtcDate": "2026-10-17",
+  "Command": "dotnet list PADO.GamePulse.sln package --vulnerable --include-transitive --format json --output-version 1",
+  "Projects": 7,
+  "VulnerablePackagesReported": 0,
+  "Scope": "Configured NuGet advisory feed at check time; not a guarantee against undisclosed or future vulnerabilities."
+}

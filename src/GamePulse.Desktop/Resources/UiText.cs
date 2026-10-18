@@ -1,0 +1,71 @@
+using System.Resources;
+
+namespace GamePulse.Desktop.Resources;
+
+/// <summary>Shared UI text with English and Ukrainian resources.</summary>
+public static class UiText
+{
+    private static readonly ResourceManager Manager = new("GamePulse.Desktop.Resources.Strings", typeof(UiText).Assembly);
+    public static string Get(string key) => Manager.GetString(key, GamePulse.Desktop.Services.UiLanguage.Culture) ?? key;
+    public static string ProductName => Get(nameof(ProductName));
+    public static string Subtitle => Get(nameof(Subtitle));
+    public static string Explorer => Get(nameof(Explorer));
+    public static string Games => Get(nameof(Games));
+    public static string Friends => Get(nameof(Friends));
+    public static string Achievements => Get(nameof(Achievements));
+    public static string Inventory => Get(nameof(Inventory));
+    public static string Compare => Get(nameof(Compare));
+    public static string OverviewTab => Get(nameof(OverviewTab));
+    public static string PhaseLabel => Get(nameof(PhaseLabel));
+    public static string Recent => Get(nameof(Recent));
+    public static string SessionOnly => Get(nameof(SessionOnly));
+    public static string Settings => Get(nameof(Settings));
+    public static string Theme => Get(nameof(Theme));
+    public static string SearchLabel => Get(nameof(SearchLabel));
+    public static string SearchPlaceholder => Get(nameof(SearchPlaceholder));
+    public static string Search => Get(nameof(Search));
+    public static string Refresh => Get(nameof(Refresh));
+    public static string Cancel => Get(nameof(Cancel));
+    public static string SearchHint => Get(nameof(SearchHint));
+    public static string Overview => Get(nameof(Overview));
+    public static string AvailableData => Get(nameof(AvailableData));
+    public static string StartTitle => Get(nameof(StartTitle));
+    public static string StartMessage => Get(nameof(StartMessage));
+    public static string SetupTitle => Get(nameof(SetupTitle));
+    public static string SetupMessage => Get(nameof(SetupMessage));
+    public static string KeyName => Get(nameof(KeyName));
+    public static string PrivacyNote => Get(nameof(PrivacyNote));
+    public static string Identity => Get(nameof(Identity));
+    public static string SteamId => Get(nameof(SteamId));
+    public static string CopyId => Get(nameof(CopyId));
+    public static string OpenSteam => Get(nameof(OpenSteam));
+    public static string Visibility => Get(nameof(Visibility));
+    public static string Created => Get(nameof(Created));
+    public static string LastOnline => Get(nameof(LastOnline));
+    public static string CurrentGame => Get(nameof(CurrentGame));
+    public static string Level => Get(nameof(Level));
+    public static string LevelNote => Get(nameof(LevelNote));
+    public static string Bans => Get(nameof(Bans));
+    public static string Vac => Get(nameof(Vac));
+    public static string VacStatus => Get(nameof(VacStatus));
+    public static string GameBans => Get(nameof(GameBans));
+    public static string CommunityBan => Get(nameof(CommunityBan));
+    public static string Economy => Get(nameof(Economy));
+    public static string DaysSinceBan => Get(nameof(DaysSinceBan));
+    public static string BanNote => Get(nameof(BanNote));
+    public static string Updated => Get(nameof(Updated));
+    public static string ScopeTitle => Get(nameof(ScopeTitle));
+    public static string ScopeMessage => Get(nameof(ScopeMessage));
+    public static string GamesRoadmap => Get(nameof(GamesRoadmap));
+    public static string AchievementsRoadmap => Get(nameof(AchievementsRoadmap));
+    public static string FriendsRoadmap => Get(nameof(FriendsRoadmap));
+    public static string CompareRoadmap => Get(nameof(CompareRoadmap));
+    public static string InventoryRoadmap => Get(nameof(InventoryRoadmap));
+    public static string About => Get(nameof(About));
+    public static string AboutMessage => Get(nameof(AboutMessage));
+    public static string ShortcutHint => Get(nameof(ShortcutHint));
+    public static string ThemeHint => Get(nameof(ThemeHint));
+    public static string PageControls => Get(nameof(PageControls));
+    public static string Navigation => Get(nameof(Navigation));
+    public static string AvatarAlt => Get(nameof(AvatarAlt));
+}

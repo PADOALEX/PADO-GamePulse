@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+             xmlns:text="using:GamePulse.Desktop.Resources"
+             x:Class="GamePulse.Desktop.Views.AchievementDetailsView">
+  <StackPanel Spacing="9" Margin="0,4,10,4">
+    <TextBlock Text="{loc:Translate Module=Achievements, Key=SelectDetail}" Classes="muted" FontSize="11" IsVisible="{Binding !HasAchievementSelection}" />
+    <StackPanel Spacing="12" IsVisible="{Binding HasAchievementSelection}">
+      <TextBlock Text="{Binding SelectedAchievement.Name}" AutomationProperties.HeadingLevel="2" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" />
+      <TextBlock Text="{Binding SelectedAchievement.Description}" FontSize="12" TextWrapping="Wrap" />
+      <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+        <StackPanel Spacing="4"><TextBlock Text="{loc:Translate Module=Achievements, Key=StatusLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedAchievement.Status}" FontSize="12" /></StackPanel>
+        <StackPanel Grid.Column="1" Spacing="4"><TextBlock Text="{loc:Translate Module=Achievements, Key=HiddenLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedAchievement.Hidden}" FontSize="12" /></StackPanel>
+      </Grid>
+      <StackPanel Spacing="4"><TextBlock Text="{loc:Translate Module=Achievements, Key=UnlockedAtLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedAchievement.UnlockedAt}" FontSize="12" TextWrapping="Wrap" /></StackPanel>
+      <StackPanel Spacing="4"><TextBlock Text="{loc:Translate Module=Achievements, Key=ApiNameLabel}" Classes="label" FontSize="9" /><SelectableTextBlock Text="{Binding SelectedAchievement.ApiName}" FontSize="11" TextWrapping="Wrap" /></StackPanel>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

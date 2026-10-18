@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="Title" xml:space="preserve"><value>Friends</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Explore this profile’s available connections. Select a friend for details or compare any two profiles.</value></data>
+  <data name="Search" xml:space="preserve"><value>Search name or SteamID…</value></data>
+  <data name="Sort" xml:space="preserve"><value>Sort friends</value></data>
+  <data name="OnlineOnly" xml:space="preserve"><value>Online only</value></data>
+  <data name="Reset" xml:space="preserve"><value>Reset filters</value></data>
+  <data name="TotalLabel" xml:space="preserve"><value>AVAILABLE FRIENDS</value></data>
+  <data name="LoadedLabel" xml:space="preserve"><value>PROFILE SUMMARIES</value></data>
+  <data name="MissingLabel" xml:space="preserve"><value>SUMMARIES UNAVAILABLE</value></data>
+  <data name="PersonLabel" xml:space="preserve"><value>PLAYER / STEAMID</value></data>
+  <data name="PresenceLabel" xml:space="preserve"><value>STATUS</value></data>
+  <data name="DetailTitle" xml:space="preserve"><value>Mini-profile</value></data>
+  <data name="SelectHint" xml:space="preserve"><value>Select a friend to inspect their available profile and open it in Explorer or Compare.</value></data>
+  <data name="SelectedNote" xml:space="preserve"><value>Only information shared by Steam is shown. Unavailable fields remain unknown.</value></data>
+  <data name="NameLabel" xml:space="preserve"><value>DISPLAY NAME</value></data>
+  <data name="IdLabel" xml:space="preserve"><value>STEAMID64</value></data>
+  <data name="VisibilityLabel" xml:space="preserve"><value>PROFILE VISIBILITY</value></data>
+  <data name="CreatedLabel" xml:space="preserve"><value>ACCOUNT CREATED</value></data>
+  <data name="SinceLabel" xml:space="preserve"><value>FRIENDS SINCE</value></data>
+  <data name="LogoffLabel" xml:space="preserve"><value>LAST LOGOFF</value></data>
+  <data name="GameLabel" xml:space="preserve"><value>CURRENT GAME</value></data>
+  <data name="OpenExplorer" xml:space="preserve"><value>Open in Explorer</value></data>
+  <data name="CompareA" xml:space="preserve"><value>Compare as A</value></data>
+  <data name="CompareB" xml:space="preserve"><value>Compare as B</value></data>
+  <data name="Copy" xml:space="preserve"><value>Copy SteamID</value></data>
+  <data name="Steam" xml:space="preserve"><value>Steam profile ↗</value></data>
+  <data name="SortStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="SortName" xml:space="preserve"><value>Name A–Z</value></data>
+  <data name="SortNewest" xml:space="preserve"><value>Newest friendship</value></data>
+  <data name="SortOldest" xml:space="preserve"><value>Oldest friendship</value></data>
+  <data name="NA" xml:space="preserve"><value>N/A</value></data>
+  <data name="Offline" xml:space="preserve"><value>Offline</value></data>
+  <data name="Online" xml:space="preserve"><value>Online</value></data>
+  <data name="Busy" xml:space="preserve"><value>Busy</value></data>
+  <data name="Away" xml:space="preserve"><value>Away</value></data>
+  <data name="Snooze" xml:space="preserve"><value>Snooze</value></data>
+  <data name="LookingToTrade" xml:space="preserve"><value>Looking to trade</value></data>
+  <data name="LookingToPlay" xml:space="preserve"><value>Looking to play</value></data>
+  <data name="UnknownPresence" xml:space="preserve"><value>Status unavailable</value></data>
+  <data name="SummaryAvailable" xml:space="preserve"><value>Profile summary available</value></data>
+  <data name="SummaryMissing" xml:space="preserve"><value>Profile summary unavailable</value></data>
+  <data name="SummaryRateLimited" xml:space="preserve"><value>Steam temporarily limited this profile summary. Refresh the profile later.</value></data>
+  <data name="SummaryMissingKey" xml:space="preserve"><value>A configured Steam Web API key is needed to load this profile summary.</value></data>
+  <data name="SummaryFailed" xml:space="preserve"><value>This profile summary could not be loaded. Refresh the profile to try again.</value></data>
+  <data name="Playing" xml:space="preserve"><value>Playing {0}</value></data>
+  <data name="PublicVisibility" xml:space="preserve"><value>Public</value></data>
+  <data name="PrivateVisibility" xml:space="preserve"><value>Private</value></data>
+  <data name="FriendsVisibility" xml:space="preserve"><value>Friends only</value></data>
+  <data name="Idle" xml:space="preserve"><value>Open a Steam profile to explore its available friends.</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading the friend directory and batched profile summaries…</value></data>
+  <data name="Cancelled" xml:space="preserve"><value>Loading cancelled. Retry the profile to load this directory.</value></data>
+  <data name="Private" xml:space="preserve"><value>Steam denied access to this friend list. It may be private; no friend count can be inferred.</value></data>
+  <data name="Empty" xml:space="preserve"><value>Steam returned an accessible, empty friend list.</value></data>
+  <data name="MissingKey" xml:space="preserve"><value>A Steam API key is required. Configure GAMEPULSE_STEAM_API_KEY in your local .env or environment, then restart the app.</value></data>
+  <data name="RateLimited" xml:space="preserve"><value>Steam temporarily limited these requests. Wait and refresh the profile.</value></data>
+  <data name="Failed" xml:space="preserve"><value>The friend directory could not be loaded. Refresh the profile to try again.</value></data>
+  <data name="Unavailable" xml:space="preserve"><value>Steam did not return an accessible friend list. Privacy or API-key/access restrictions may apply; no friend count can be inferred.</value></data>
+  <data name="Ready" xml:space="preserve"><value>Available friend directory</value></data>
+  <data name="Filtering" xml:space="preserve"><value>Filtering friends…</value></data>
+  <data name="NoMatches" xml:space="preserve"><value>No friends match these filters.</value></data>
+  <data name="Shown" xml:space="preserve"><value>{0:N0} / {1:N0} shown</value></data>
+  <data name="Partial" xml:space="preserve"><value>Some summaries are unavailable. Every returned friend ID remains in the list; unavailable status is not offline.</value></data>
+  <data name="Updated" xml:space="preserve"><value>Updated {0}</value></data>
+  <data name="Cached" xml:space="preserve"><value>Cached · updated {0}</value></data>
+  <data name="FilterFailed" xml:space="preserve"><value>The friend filters could not be applied. Try resetting them.</value></data>
+  <data name="Copied" xml:space="preserve"><value>SteamID copied.</value></data>
+  <data name="ClipboardFailed" xml:space="preserve"><value>The clipboard is unavailable.</value></data>
+  <data name="ExternalFailed" xml:space="preserve"><value>Could not open the Steam profile in your browser.</value></data>
+  <data name="ContextOpen" xml:space="preserve"><value>Open profile</value></data>
+  <data name="ContextA" xml:space="preserve"><value>Use as Profile A</value></data>
+  <data name="ContextB" xml:space="preserve"><value>Use as Profile B</value></data>
+  <data name="AccessibleFriend" xml:space="preserve"><value>{0}. SteamID {1}. {2}. {3}.</value></data>
+</root>

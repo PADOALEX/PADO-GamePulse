@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="Title" xml:space="preserve"><value>Library explorer</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Explore available games, playtime and activity for this Steam profile.</value></data>
+  <data name="Library" xml:space="preserve"><value>All available games</value></data>
+  <data name="Recent" xml:space="preserve"><value>Recent activity</value></data>
+  <data name="Search" xml:space="preserve"><value>Search game name or AppID…</value></data>
+  <data name="Minimum" xml:space="preserve"><value>Min hours</value></data>
+  <data name="Maximum" xml:space="preserve"><value>Max hours</value></data>
+  <data name="NeverPlayed" xml:space="preserve"><value>Never played</value></data>
+  <data name="Reset" xml:space="preserve"><value>Reset filters</value></data>
+  <data name="Game" xml:space="preserve"><value>GAME / APPID</value></data>
+  <data name="Lifetime" xml:space="preserve"><value>LIFETIME</value></data>
+  <data name="TwoWeeks" xml:space="preserve"><value>LAST 2 WEEKS</value></data>
+  <data name="LastPlayed" xml:space="preserve"><value>LAST PLAYED</value></data>
+  <data name="Store" xml:space="preserve"><value>Open Steam Store ↗</value></data>
+  <data name="Copy" xml:space="preserve"><value>Copy AppID</value></data>
+  <data name="SelectHint" xml:space="preserve"><value>Select a game to open its store page or copy its AppID.</value></data>
+  <data name="Returned" xml:space="preserve"><value>AVAILABLE / REPORTED</value></data>
+  <data name="TotalHours" xml:space="preserve"><value>TOTAL HOURS</value></data>
+  <data name="Unplayed" xml:space="preserve"><value>NEVER PLAYED</value></data>
+  <data name="OwnedStatusLabel" xml:space="preserve"><value>Library</value></data>
+  <data name="RecentStatusLabel" xml:space="preserve"><value>Recent activity</value></data>
+  <data name="RecentNote" xml:space="preserve"><value>Recent activity covers Steam's available two-week window. Lifetime filters use total playtime. Missing fields remain N/A.</value></data>
+  <data name="Sort" xml:space="preserve"><value>Sort games</value></data>
+  <data name="MostPlayed" xml:space="preserve"><value>Most played</value></data>
+  <data name="LeastPlayed" xml:space="preserve"><value>Least played</value></data>
+  <data name="Name" xml:space="preserve"><value>Name A–Z</value></data>
+  <data name="RecentlyPlayed" xml:space="preserve"><value>Last played</value></data>
+  <data name="Idle" xml:space="preserve"><value>Open a Steam profile to explore its library.</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading from Steam…</value></data>
+  <data name="Ready" xml:space="preserve"><value>Available</value></data>
+  <data name="OwnedEmpty" xml:space="preserve"><value>Steam returned an available, empty library.</value></data>
+  <data name="RecentEmpty" xml:space="preserve"><value>Steam returned no recent activity in the available window.</value></data>
+  <data name="Private" xml:space="preserve"><value>Access denied by Steam. This data may be private.</value></data>
+  <data name="Unavailable" xml:space="preserve"><value>Steam did not expose this data. Ownership and activity cannot be inferred.</value></data>
+  <data name="MissingKey" xml:space="preserve"><value>A Steam API key is required. Configure GAMEPULSE_STEAM_API_KEY in your local .env or environment, then restart the app.</value></data>
+  <data name="RateLimited" xml:space="preserve"><value>Steam rate limit reached. Wait and refresh the profile.</value></data>
+  <data name="Failed" xml:space="preserve"><value>The request failed. Refresh the profile to try again.</value></data>
+  <data name="Cancelled" xml:space="preserve"><value>Loading cancelled. Refresh the profile to try again.</value></data>
+  <data name="Partial" xml:space="preserve"><value>Partial library: {0} returned / {1} reported. Totals and never-played counts are unavailable.</value></data>
+  <data name="Coverage" xml:space="preserve"><value>Known lifetime playtime: {0} / {1} returned games.</value></data>
+  <data name="Updated" xml:space="preserve"><value>Updated {0}</value></data>
+  <data name="Cached" xml:space="preserve"><value>Updated {0} · cached</value></data>
+  <data name="NA" xml:space="preserve"><value>N/A</value></data>
+  <data name="Hours" xml:space="preserve"><value>{0:N1} h</value></data>
+  <data name="Unnamed" xml:space="preserve"><value>App {0}</value></data>
+  <data name="Shown" xml:space="preserve"><value>{0:N0} / {1:N0} games shown</value></data>
+  <data name="NoMatches" xml:space="preserve"><value>No games match these filters.</value></data>
+  <data name="InvalidHours" xml:space="preserve"><value>Enter valid, non-negative hours using your local decimal separator.</value></data>
+  <data name="InvalidRange" xml:space="preserve"><value>Minimum hours must not exceed maximum hours.</value></data>
+  <data name="UnplayedUnavailable" xml:space="preserve"><value>Never-played filtering requires a complete, available library.</value></data>
+  <data name="Filtering" xml:space="preserve"><value>Updating filters…</value></data>
+  <data name="FilterFailed" xml:space="preserve"><value>Unable to apply these filters. Reset filters to retry.</value></data>
+  <data name="Copied" xml:space="preserve"><value>AppID copied.</value></data>
+  <data name="ClipboardFailed" xml:space="preserve"><value>Clipboard is unavailable.</value></data>
+  <data name="ExternalFailed" xml:space="preserve"><value>The store page could not be opened.</value></data>
+  <data name="AccessibleGame" xml:space="preserve"><value>{0}. AppID {1}. Lifetime {2}. Last two weeks {3}.</value></data>
+</root>

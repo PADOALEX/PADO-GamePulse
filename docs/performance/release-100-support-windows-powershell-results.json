@@ -1,0 +1,13 @@
+﻿{
+    "Passed":  true,
+    "Cases":  30,
+    "PowerShellVersion":  "5.1.26100.9711",
+    "HostRuntimeVersion":  "4.0.30319.42000",
+    "AbsentEnvironmentRestored":  true,
+    "ExplicitEmptyEnvironmentSemantics":  true,
+    "UnsafePayloadRejected":  true,
+    "ReparseAncestorsRejected":  true,
+    "RealCredentialValuesRead":  false,
+    "NativeApplicationStarted":  false,
+    "GitBuildMetadataSupported":  true
+}

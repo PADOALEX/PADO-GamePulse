@@ -1,0 +1,163 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+             xmlns:text="using:GamePulse.Desktop.Resources"
+             xmlns:controls="using:GamePulse.Desktop.Controls"
+             x:Class="GamePulse.Desktop.Views.FriendsView">
+  <UserControl.Resources>
+    <ResourceDictionary><ResourceDictionary.ThemeDictionaries>
+      <ResourceDictionary x:Key="Dark"><SolidColorBrush x:Key="FriendOnlineBrush" Color="#69E8C7" /></ResourceDictionary>
+      <ResourceDictionary x:Key="Light"><SolidColorBrush x:Key="FriendOnlineBrush" Color="#126951" /></ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries></ResourceDictionary>
+  </UserControl.Resources>
+  <UserControl.Styles>
+    <Style Selector="TextBlock.online"><Setter Property="Foreground" Value="{DynamicResource FriendOnlineBrush}" /></Style>
+  </UserControl.Styles>
+  <controls:AdaptivePageGrid RowDefinitions="Auto,*,Auto" RowSpacing="8" Margin="0,4,0,0">
+    <ScrollViewer Classes="adaptiveHeader" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" AutomationProperties.Name="{loc:Translate Module=Strings, Key=PageControls}">
+      <Grid RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="8" Margin="0,0,10,0">
+    <StackPanel Spacing="4">
+      <TextBlock Text="{loc:Translate Module=Friends, Key=Title}" AutomationProperties.HeadingLevel="1" FontSize="25" FontWeight="SemiBold" />
+      <TextBlock Text="{loc:Translate Module=Friends, Key=Subtitle}" Classes="muted" FontSize="12" TextWrapping="Wrap" />
+    </StackPanel>
+
+    <Grid Grid.Row="1" ColumnDefinitions="*,*,*" ColumnSpacing="12">
+      <Border Classes="card" Padding="16,8"><StackPanel Spacing="5">
+        <TextBlock Text="{loc:Translate Module=Friends, Key=TotalLabel}" Classes="label" FontSize="10" />
+        <TextBlock Text="{Binding DirectoryCount}" FontSize="20" FontWeight="SemiBold" />
+      </StackPanel></Border>
+      <Border Grid.Column="1" Classes="card" Padding="16,8"><StackPanel Spacing="5">
+        <TextBlock Text="{loc:Translate Module=Friends, Key=LoadedLabel}" Classes="label" FontSize="10" />
+        <TextBlock Text="{Binding LoadedCount}" FontSize="20" FontWeight="SemiBold" />
+      </StackPanel></Border>
+      <Border Grid.Column="2" Classes="card" Padding="16,8"><StackPanel Spacing="5">
+        <TextBlock Text="{loc:Translate Module=Friends, Key=MissingLabel}" Classes="label" FontSize="10" />
+        <TextBlock Text="{Binding MissingCount}" FontSize="20" FontWeight="SemiBold" />
+      </StackPanel></Border>
+    </Grid>
+
+    <StackPanel Grid.Row="2" Spacing="8">
+      <Grid ColumnDefinitions="*,200" ColumnSpacing="10">
+        <TextBox x:Name="FriendsFilterInput" AutomationProperties.AutomationId="FriendsFilterInput" Text="{Binding Query, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Friends, Key=Search}"
+                 AutomationProperties.Name="{loc:Translate Module=Friends, Key=Search}" MinHeight="38"
+                 Background="{DynamicResource InputBrush}" Foreground="{DynamicResource TextBrush}"
+                 PlaceholderForeground="{DynamicResource MutedTextBrush}" />
+        <ComboBox Grid.Column="1" ItemsSource="{Binding SortOptions}" SelectedIndex="{Binding SelectedSortIndex, Mode=TwoWay}"
+                  HorizontalAlignment="Stretch" VerticalContentAlignment="Center"
+                  AutomationProperties.Name="{loc:Translate Module=Friends, Key=Sort}" >
+            <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Value}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+      </Grid>
+      <StackPanel Orientation="Horizontal" Spacing="18">
+        <CheckBox Content="{loc:Translate Module=Friends, Key=OnlineOnly}" IsChecked="{Binding OnlineOnly, Mode=TwoWay}" MinHeight="30" />
+        <Button Content="{loc:Translate Module=Friends, Key=Reset}" Command="{Binding ResetFiltersCommand}" Classes="quiet" FontSize="12" MinHeight="30" />
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel Grid.Row="3" Spacing="5">
+      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+        <controls:LiveStatusTextBlock x:Name="FriendsStatus" AutomationProperties.AutomationId="FriendsStatus" Text="{Binding StateMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="12" TextWrapping="Wrap" />
+        <TextBlock Grid.Column="1" Text="{Binding ShownCount}" Classes="label" FontSize="11" />
+      </Grid>
+      <TextBlock Text="{Binding Completeness}" IsVisible="{Binding HasCompleteness}" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+      <ProgressBar Height="2" IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
+    </StackPanel>
+
+      </Grid>
+    </ScrollViewer>
+    <!-- A finite star row and the ListBox's own scroll viewer keep the entire directory virtualized. -->
+    <Grid Grid.Row="1" ColumnDefinitions="*,260" ColumnSpacing="12">
+      <Border CornerRadius="9" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1"
+              Background="{DynamicResource CardBrush}" ClipToBounds="True">
+        <Grid RowDefinitions="30,*">
+          <Grid ColumnDefinitions="*,120" Margin="14,0,20,0" VerticalAlignment="Center">
+            <TextBlock Text="{loc:Translate Module=Friends, Key=PersonLabel}" Classes="label" FontSize="10" />
+            <TextBlock Grid.Column="1" Text="{loc:Translate Module=Friends, Key=PresenceLabel}" Classes="label" FontSize="10" HorizontalAlignment="Right" />
+          </Grid>
+          <ListBox x:Name="FriendsList" AutomationProperties.AutomationId="FriendsList" Grid.Row="1" ItemsSource="{Binding Rows}"
+                   SelectedItem="{Binding SelectedFriend, Mode=TwoWay}"
+                   DoubleTapped="FriendsList_OnDoubleTapped" KeyDown="FriendsList_OnKeyDown"
+                   Background="Transparent" BorderThickness="0" Padding="0"
+                   AutomationProperties.Name="{loc:Translate Module=Friends, Key=Title}"
+                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ContextMenu><ContextMenu>
+              <MenuItem Header="{loc:Translate Module=Friends, Key=ContextOpen}" Click="OpenExplorer_OnClick" />
+              <MenuItem Header="{loc:Translate Module=Friends, Key=ContextA}" Click="CompareA_OnClick" />
+              <MenuItem Header="{loc:Translate Module=Friends, Key=ContextB}" Click="CompareB_OnClick" />
+              <Separator />
+              <MenuItem Header="{loc:Translate Module=Friends, Key=Copy}" Click="CopyId_OnClick" />
+              <MenuItem Header="{loc:Translate Module=Friends, Key=Steam}" Click="OpenSteam_OnClick" />
+            </ContextMenu></ListBox.ContextMenu>
+            <ListBox.ItemsPanel><ItemsPanelTemplate><VirtualizingStackPanel /></ItemsPanelTemplate></ListBox.ItemsPanel>
+            <ListBox.Styles><Style Selector="ListBoxItem">
+              <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+              <Setter Property="AutomationProperties.Name" Value="{Binding AccessibleName}" />
+              <Setter Property="Padding" Value="12,7" /><Setter Property="MinHeight" Value="58" />
+            </Style></ListBox.Styles>
+            <ListBox.ItemTemplate><DataTemplate>
+              <Grid ColumnDefinitions="36,*,120" ColumnSpacing="10" Height="44" VerticalAlignment="Center">
+                <Border CornerRadius="9" Background="{DynamicResource InputBrush}" Height="36" Width="36" VerticalAlignment="Center" ClipToBounds="True">
+                  <controls:AsyncThumbnail Url="{Binding AvatarUrl}" FallbackText="{Binding Initial}"
+                      Loader="{Binding $parent[UserControl].DataContext.RowThumbnailLoader}" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="4">
+                  <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="13" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" />
+                  <TextBlock Text="{Binding Subtitle}" Classes="label" FontSize="10" TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+                <TextBlock Grid.Column="2" Text="{Binding Presence}" Classes="muted" Classes.online="{Binding IsOnline}"
+                           FontSize="11" HorizontalAlignment="Right" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+              </Grid>
+            </DataTemplate></ListBox.ItemTemplate>
+          </ListBox>
+        </Grid>
+      </Border>
+
+      <Border Grid.Column="1" Classes="card" Padding="16,14" ClipToBounds="True">
+        <Grid RowDefinitions="Auto,*" RowSpacing="12">
+          <TextBlock Text="{loc:Translate Module=Friends, Key=DetailTitle}" AutomationProperties.HeadingLevel="2" FontSize="15" FontWeight="SemiBold" />
+          <StackPanel Grid.Row="1" IsVisible="{Binding !HasSelection}" Spacing="12" Margin="0,14,0,0">
+            <TextBlock Text="{loc:Translate Module=Friends, Key=SelectHint}" Classes="muted" TextWrapping="Wrap" FontSize="12" />
+            <TextBlock Text="{loc:Translate Module=Friends, Key=SelectedNote}" Classes="label" TextWrapping="Wrap" FontSize="10" />
+          </StackPanel>
+          <ScrollViewer x:Name="MiniProfileScroll" AutomationProperties.AutomationId="MiniProfileScroll" Grid.Row="1" IsVisible="{Binding HasSelection}" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Spacing="12" Margin="0,0,8,0">
+              <Grid ColumnDefinitions="52,*" ColumnSpacing="10">
+                <Border CornerRadius="10" Background="{DynamicResource InputBrush}" Width="52" Height="52" ClipToBounds="True">
+                  <Grid>
+                    <TextBlock Text="{Binding SelectedFriend.Initial}" Classes="muted" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Image Source="{Binding SelectedAvatar}" Stretch="UniformToFill" />
+                  </Grid>
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="5">
+                  <TextBlock Text="{Binding SelectedFriend.Name}" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" />
+                  <TextBlock Text="{Binding SelectedFriend.Presence}" Classes="muted" Classes.online="{Binding SelectedFriend.IsOnline}" FontSize="11" TextWrapping="Wrap" />
+                </StackPanel>
+              </Grid>
+              <TextBlock Text="{Binding SelectedFriend.SummaryStatus}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Friends, Key=IdLabel}" Classes="label" FontSize="9" />
+                <SelectableTextBlock Text="{Binding SelectedFriend.SteamId}" FontSize="12" /></StackPanel>
+              <Button x:Name="OpenFriendButton" AutomationProperties.AutomationId="OpenFriendButton" Content="{loc:Translate Module=Friends, Key=OpenExplorer}" Click="OpenExplorer_OnClick" Classes="primary" HorizontalAlignment="Stretch" FontSize="12" />
+              <Grid ColumnDefinitions="*,*" ColumnSpacing="7">
+                <Button x:Name="CompareFriendAButton" AutomationProperties.AutomationId="CompareFriendAButton" Content="{loc:Translate Module=Friends, Key=CompareA}" Click="CompareA_OnClick" HorizontalAlignment="Stretch" FontSize="11" Padding="7,8" />
+                <Button x:Name="CompareFriendBButton" AutomationProperties.AutomationId="CompareFriendBButton" Grid.Column="1" Content="{loc:Translate Module=Friends, Key=CompareB}" Click="CompareB_OnClick" HorizontalAlignment="Stretch" FontSize="11" Padding="7,8" />
+              </Grid>
+              <Border Height="1" Background="{DynamicResource BorderBrush}" />
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Friends, Key=GameLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedFriend.CurrentGame}" FontSize="12" TextWrapping="Wrap" /></StackPanel>
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Friends, Key=VisibilityLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedFriend.Visibility}" FontSize="12" /></StackPanel>
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Friends, Key=SinceLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedFriend.FriendsSince}" FontSize="12" /></StackPanel>
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Friends, Key=CreatedLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedFriend.CreatedAt}" FontSize="12" /></StackPanel>
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Friends, Key=LogoffLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedFriend.LastLogoff}" FontSize="12" /></StackPanel>
+              <WrapPanel><Button Content="{loc:Translate Module=Friends, Key=Copy}" Click="CopyId_OnClick" Classes="quiet" FontSize="11" /><Button Content="{loc:Translate Module=Friends, Key=Steam}" Click="OpenSteam_OnClick" Classes="quiet" FontSize="11" /></WrapPanel>
+              <TextBlock Text="{loc:Translate Module=Friends, Key=SelectedNote}" Classes="label" TextWrapping="Wrap" FontSize="10" />
+            </StackPanel>
+          </ScrollViewer>
+        </Grid>
+      </Border>
+    </Grid>
+
+    <Grid Grid.Row="2" ColumnDefinitions="*,Auto" ColumnSpacing="12">
+      <controls:LiveStatusTextBlock x:Name="FriendsLocalMessage" AutomationProperties.AutomationId="FriendsLocalMessage" Text="{Binding LocalMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+      <TextBlock Grid.Column="1" Text="{Binding UpdatedAt}" Classes="label" FontSize="10" />
+    </Grid>
+  </controls:AdaptivePageGrid>
+</UserControl>

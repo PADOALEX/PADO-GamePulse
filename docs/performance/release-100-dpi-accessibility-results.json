@@ -1,0 +1,223 @@
+{
+  "Kind": "Synthetic real-view headless DPI changes, not a physical monitor or Narrator certification",
+  "Configurations": 24,
+  "PagesPerConfiguration": 7,
+  "Results": [
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1,
+      "Theme": "Dark",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1,
+      "Theme": "Light",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1.25,
+      "Theme": "Dark",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 812.8,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1.25,
+      "Theme": "Light",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 812.8,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1.25,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 812.8,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1.5,
+      "Theme": "Dark",
+      "LogicalWidth": 1248,
+      "LogicalHeight": 677.3333333333334,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1.5,
+      "Theme": "Light",
+      "LogicalWidth": 1248,
+      "LogicalHeight": 677.3333333333334,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 1.5,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1248,
+      "LogicalHeight": 677.3333333333334,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 2,
+      "Theme": "Dark",
+      "LogicalWidth": 936,
+      "LogicalHeight": 508,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 2,
+      "Theme": "Light",
+      "LogicalWidth": 936,
+      "LogicalHeight": 508,
+      "Passed": true
+    },
+    {
+      "Width": 1920,
+      "Height": 1080,
+      "Scale": 2,
+      "Theme": "HighContrast",
+      "LogicalWidth": 936,
+      "LogicalHeight": 508,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1,
+      "Theme": "Dark",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1,
+      "Theme": "Light",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1.25,
+      "Theme": "Dark",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1.25,
+      "Theme": "Light",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1.25,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1.5,
+      "Theme": "Dark",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1.5,
+      "Theme": "Light",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 1.5,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1260,
+      "LogicalHeight": 900,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 2,
+      "Theme": "Dark",
+      "LogicalWidth": 1256,
+      "LogicalHeight": 688,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 2,
+      "Theme": "Light",
+      "LogicalWidth": 1256,
+      "LogicalHeight": 688,
+      "Passed": true
+    },
+    {
+      "Width": 2560,
+      "Height": 1440,
+      "Scale": 2,
+      "Theme": "HighContrast",
+      "LogicalWidth": 1256,
+      "LogicalHeight": 688,
+      "Passed": true
+    }
+  ]
+}

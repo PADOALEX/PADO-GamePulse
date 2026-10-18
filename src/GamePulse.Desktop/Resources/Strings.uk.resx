@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="ProductName" xml:space="preserve">
+    <value>PADO GamePulse</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Огляд Steam-профілів та ігрова аналітика</value>
+  </data>
+  <data name="Explorer" xml:space="preserve">
+    <value>Огляд профілів</value>
+  </data>
+  <data name="PhaseLabel" xml:space="preserve">
+    <value>ДОСЛІДНИК ПРОФІЛІВ STEAM</value>
+  </data>
+  <data name="Recent" xml:space="preserve">
+    <value>НЕЩОДАВНІ ПРОФІЛІ</value>
+  </data>
+  <data name="SessionOnly" xml:space="preserve">
+    <value>Лише в цьому сеансі. Історія пошуку зберігається в пам’яті й очищується після закриття застосунку.</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Налаштування</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Змінити тему</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>ДОСЛІДІТЬ БУДЬ-ЯКИЙ STEAM-ПРОФІЛЬ</value>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>SteamID64, посилання steamcommunity.com або vanity-ідентифікатор</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Дослідити →</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="SearchHint" xml:space="preserve">
+    <value>Vanity-ідентифікатор — це частина адреси профілю. Імена користувачів неунікальні, тому глобальний пошук за ними недоступний.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Огляд профілю</value>
+  </data>
+  <data name="AvailableData" xml:space="preserve">
+    <value>Факти з даних, які надає Steam.</value>
+  </data>
+  <data name="StartTitle" xml:space="preserve">
+    <value>Почніть із профілю.</value>
+  </data>
+  <data name="StartMessage" xml:space="preserve">
+    <value>Введіть вище SteamID64, посилання на профіль або vanity-ідентифікатор. Ви можете досліджувати різні профілі без входу в Steam.</value>
+  </data>
+  <data name="SetupTitle" xml:space="preserve">
+    <value>Налаштуйте ключ Steam Web API</value>
+  </data>
+  <data name="SetupMessage" xml:space="preserve">
+    <value>Створіть локальний .env поруч із PADO.GamePulse.sln для запуску з коду або поруч із GamePulse.Desktop.exe для портативної чи встановленої програми. Вкажіть власний ключ у GAMEPULSE_STEAM_API_KEY і перезапустіть програму. Наявна змінна середовища має пріоритет. Не передавайте свій .env іншим.</value>
+  </data>
+  <data name="KeyName" xml:space="preserve">
+    <value>GAMEPULSE_STEAM_API_KEY</value>
+  </data>
+  <data name="PrivacyNote" xml:space="preserve">
+    <value>Без входу в Steam. Без бази даних. Приватні дані залишаються приватними.</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>ДАНІ ПРОФІЛЮ</value>
+  </data>
+  <data name="SteamId" xml:space="preserve">
+    <value>STEAMID64</value>
+  </data>
+  <data name="CopyId" xml:space="preserve">
+    <value>Копіювати ID</value>
+  </data>
+  <data name="OpenSteam" xml:space="preserve">
+    <value>Відкрити в Steam ↗</value>
+  </data>
+  <data name="Visibility" xml:space="preserve">
+    <value>Видимість</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Акаунт створено</value>
+  </data>
+  <data name="LastOnline" xml:space="preserve">
+    <value>Останній вихід із мережі</value>
+  </data>
+  <data name="CurrentGame" xml:space="preserve">
+    <value>Поточна гра</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>РІВЕНЬ STEAM</value>
+  </data>
+  <data name="LevelNote" xml:space="preserve">
+    <value>Завантажується окремо, якщо доступний.</value>
+  </data>
+  <data name="Bans" xml:space="preserve">
+    <value>ВІДОМОСТІ ПРО БЛОКУВАННЯ</value>
+  </data>
+  <data name="Vac" xml:space="preserve">
+    <value>Блокування VAC</value>
+  </data>
+  <data name="VacStatus" xml:space="preserve">
+    <value>Заблоковано VAC</value>
+  </data>
+  <data name="GameBans" xml:space="preserve">
+    <value>Ігрові блокування</value>
+  </data>
+  <data name="CommunityBan" xml:space="preserve">
+    <value>Блокування спільноти</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Статус обміну</value>
+  </data>
+  <data name="DaysSinceBan" xml:space="preserve">
+    <value>Днів від останнього блокування</value>
+  </data>
+  <data name="BanNote" xml:space="preserve">
+    <value>Це факти з джерела, а не оцінка довіри. N/A означає, що дані недоступні.</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Оновлено</value>
+  </data>
+  <data name="ScopeTitle" xml:space="preserve">
+    <value>Доступні інструменти</value>
+  </data>
+  <data name="ScopeMessage" xml:space="preserve">
+    <value>Досліджуйте профілі, бібліотеки, друзів, досягнення й публічні інвентарі. Порівнюйте будь-які два профілі, знаходьте спільні ігри, аналізуйте «Пульс бібліотеки» та експортуйте відфільтровані таблиці у CSV. Доступність джерела й приватність визначають, які факти надає Steam.</value>
+  </data>
+  <data name="GamesRoadmap" xml:space="preserve">
+    <value>Ігри · бібліотека, нещодавня активність, фільтри</value>
+  </data>
+  <data name="AchievementsRoadmap" xml:space="preserve">
+    <value>Досягнення · завантаження для вибраної гри</value>
+  </data>
+  <data name="FriendsRoadmap" xml:space="preserve">
+    <value>Друзі · пакетне завантаження публічних мініпрофілів</value>
+  </data>
+  <data name="CompareRoadmap" xml:space="preserve">
+    <value>Порівняння · будь-які два профілі та спільні ігри</value>
+  </data>
+  <data name="InventoryRoadmap" xml:space="preserve">
+    <value>Інвентар · пагінація та віртуалізований список</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>НАЛАШТУВАННЯ / ПРО ПРОГРАМУ</value>
+  </data>
+  <data name="AboutMessage" xml:space="preserve">
+    <value>Незалежний дослідник Steam-профілів. Вхід у Steam і база даних не потрібні. Необов’язковий .env — приватний локальний текстовий файл. Релізні пакети не містять API-ключа; архів коду містить порожній .env.example.</value>
+  </data>
+  <data name="ShortcutHint" xml:space="preserve">
+    <value>Ctrl+L Профіль · Ctrl+F Фільтр сторінки · Enter Дослідити · Esc Скасувати</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Завантаження…</value>
+  </data>
+  <data name="SearchingTitle" xml:space="preserve">
+    <value>Пошук профілю…</value>
+  </data>
+  <data name="SearchingMessage" xml:space="preserve">
+    <value>Основні дані з’являться першими. Додаткові відомості завантажуються окремо.</value>
+  </data>
+  <data name="ReadyTitle" xml:space="preserve">
+    <value>Основні дані профілю доступні</value>
+  </data>
+  <data name="ReadyMessage" xml:space="preserve">
+    <value>Відсутні значення позначено N/A. Оновлення завантажує дані без використання кешу.</value>
+  </data>
+  <data name="CancelledTitle" xml:space="preserve">
+    <value>Завантаження скасовано</value>
+  </data>
+  <data name="CancelledMessage" xml:space="preserve">
+    <value>Отримані дані залишаються видимими. Щоб продовжити, почніть новий пошук або оновіть профіль.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Скасовано</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Введіть коректний SteamID64, посилання на Steam-профіль або vanity-ідентифікатор. Імена користувачів неунікальні. Використайте ідентифікатор з адреси профілю.</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>Потрібен ключ Steam API. Додайте GAMEPULSE_STEAM_API_KEY у локальний .env або задайте змінну середовища й перезапустіть програму.</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Steam не дозволив доступ до цих відомостей.</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Відповідного профілю не знайдено. Перевірте SteamID64 або vanity-посилання.</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Steam обмежує частоту запитів. Спробуйте пізніше.</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Ці відомості недоступні в Steam.</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Steam не повернув даних для цього запиту.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Не вдалося завершити запит. Перевірте з’єднання та спробуйте ще раз.</value>
+  </data>
+  <data name="RequestFailedTitle" xml:space="preserve">
+    <value>Не вдалося відкрити профіль</value>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>Публічний</value>
+  </data>
+  <data name="LimitedVisibility" xml:space="preserve">
+    <value>Приватний / обмежений</value>
+  </data>
+  <data name="UnknownName" xml:space="preserve">
+    <value>Профіль без імені</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Не в мережі</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>У мережі</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Зайнятий</value>
+  </data>
+  <data name="Away" xml:space="preserve">
+    <value>Відійшов</value>
+  </data>
+  <data name="Snooze" xml:space="preserve">
+    <value>Неактивний</value>
+  </data>
+  <data name="LookingToTrade" xml:space="preserve">
+    <value>Хоче обмінятися</value>
+  </data>
+  <data name="LookingToPlay" xml:space="preserve">
+    <value>Хоче пограти</value>
+  </data>
+  <data name="UnknownPresence" xml:space="preserve">
+    <value>Невідомий статус</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ні</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>з кешу</value>
+  </data>
+  <data name="AvatarAlt" xml:space="preserve">
+    <value>Аватар Steam-профілю</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>SteamID скопійовано.</value>
+  </data>
+  <data name="ExternalFailed" xml:space="preserve">
+    <value>Не вдалося відкрити посилання. Натомість можна скопіювати SteamID.</value>
+  </data>
+  <data name="ClipboardFailed" xml:space="preserve">
+    <value>Не вдалося скопіювати SteamID до буфера обміну.</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Ігри та активність</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Порівняння профілів</value>
+  </data>
+  <data name="OverviewTab" xml:space="preserve">
+    <value>Огляд</value>
+  </data>
+  <data name="Friends" xml:space="preserve">
+    <value>Друзі</value>
+  </data>
+  <data name="Achievements" xml:space="preserve">
+    <value>Досягнення</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Інвентар</value>
+  </data>
+  <data name="PageControls" xml:space="preserve">
+    <value>Елементи керування сторінкою; прокрутіть, щоб побачити решту фільтрів</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Основна навігація та нещодавні профілі</value>
+  </data>
+  <data name="ThemeHint" xml:space="preserve">
+    <value>Перемикайте темну, світлу та контрастну теми. Системний режим високої контрастності визначається автоматично.</value>
+  </data>
+  <data name="CurrentPage" xml:space="preserve">
+    <value>Поточна сторінка</value>
+  </data>
+  <data name="LanguageButton" xml:space="preserve">
+    <value>Мова · Українська</value>
+  </data>
+  <data name="LanguageHint" xml:space="preserve">
+    <value>Змінити мову. Поточна мова: українська. Перемкнути на англійську.</value>
+  </data>
+  <data name="ExportCsv" xml:space="preserve">
+    <value>Експорт CSV</value>
+  </data>
+  <data name="ExportHint" xml:space="preserve">
+    <value>Експорт відфільтрованих ігор, спільних ігор або інвентарю у CSV. Ctrl+Shift+E.</value>
+  </data>
+  <data name="ExportDialogTitle" xml:space="preserve">
+    <value>Зберегти поточну відфільтровану таблицю</value>
+  </data>
+  <data name="ExportUnavailable" xml:space="preserve">
+    <value>Відкрийте завантажену таблицю ігор, спільних ігор або інвентарю з відповідними рядками. Дочекайтеся завершення завантаження та фільтрації.</value>
+  </data>
+  <data name="ExportWorking" xml:space="preserve">
+    <value>Підготовка поточної відфільтрованої таблиці до експорту…</value>
+  </data>
+  <data name="ExportSaved" xml:space="preserve">
+    <value>Збережено {0:N0} рядків у CSV. Файл містить ідентифікатори профілів; поширюйте його свідомо.</value>
+  </data>
+  <data name="ExportCancelled" xml:space="preserve">
+    <value>Експорт скасовано.</value>
+  </data>
+  <data name="ExportFailed" xml:space="preserve">
+    <value>Не вдалося завершити експорт. Перевірте вибране місце збереження та вільний простір.</value>
+  </data>
+</root>

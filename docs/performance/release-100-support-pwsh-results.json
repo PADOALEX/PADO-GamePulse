@@ -1,0 +1,13 @@
+{
+  "Passed": true,
+  "Cases": 30,
+  "PowerShellVersion": "7.6.5",
+  "HostRuntimeVersion": "10.0.11",
+  "AbsentEnvironmentRestored": true,
+  "ExplicitEmptyEnvironmentSemantics": true,
+  "UnsafePayloadRejected": true,
+  "ReparseAncestorsRejected": true,
+  "RealCredentialValuesRead": false,
+  "NativeApplicationStarted": false,
+  "GitBuildMetadataSupported": true
+}

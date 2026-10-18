@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>Огляд бібліотеки</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Переглядайте доступні ігри, ігровий час та активність цього Steam-профілю.</value>
+  </data>
+  <data name="Library" xml:space="preserve">
+    <value>Усі доступні ігри</value>
+  </data>
+  <data name="Recent" xml:space="preserve">
+    <value>Нещодавня активність</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук за назвою гри або AppID…</value>
+  </data>
+  <data name="Minimum" xml:space="preserve">
+    <value>Мін. годин</value>
+  </data>
+  <data name="Maximum" xml:space="preserve">
+    <value>Макс. годин</value>
+  </data>
+  <data name="NeverPlayed" xml:space="preserve">
+    <value>Не запускалися</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Скинути фільтри</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>ГРА / APPID</value>
+  </data>
+  <data name="Lifetime" xml:space="preserve">
+    <value>ЗА ВЕСЬ ЧАС</value>
+  </data>
+  <data name="TwoWeeks" xml:space="preserve">
+    <value>ОСТАННІ 2 ТИЖНІ</value>
+  </data>
+  <data name="LastPlayed" xml:space="preserve">
+    <value>ОСТАННІЙ ЗАПУСК</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Відкрити магазин Steam ↗</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копіювати AppID</value>
+  </data>
+  <data name="SelectHint" xml:space="preserve">
+    <value>Виберіть гру, щоб відкрити її сторінку в магазині або скопіювати AppID.</value>
+  </data>
+  <data name="Returned" xml:space="preserve">
+    <value>ДОСТУПНО / ЗА ДАНИМИ STEAM</value>
+  </data>
+  <data name="TotalHours" xml:space="preserve">
+    <value>УСЬОГО ГОДИН</value>
+  </data>
+  <data name="Unplayed" xml:space="preserve">
+    <value>НЕ ЗАПУСКАЛИСЯ</value>
+  </data>
+  <data name="OwnedStatusLabel" xml:space="preserve">
+    <value>Бібліотека</value>
+  </data>
+  <data name="RecentStatusLabel" xml:space="preserve">
+    <value>Нещодавня активність</value>
+  </data>
+  <data name="RecentNote" xml:space="preserve">
+    <value>Нещодавня активність охоплює доступний у Steam двотижневий період. Фільтри годин використовують загальний ігровий час. Відсутні значення позначено N/A.</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Сортувати ігри</value>
+  </data>
+  <data name="MostPlayed" xml:space="preserve">
+    <value>Найбільше годин</value>
+  </data>
+  <data name="LeastPlayed" xml:space="preserve">
+    <value>Найменше годин</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>За назвою А–Я</value>
+  </data>
+  <data name="RecentlyPlayed" xml:space="preserve">
+    <value>За останнім запуском</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>Відкрийте Steam-профіль, щоб дослідити його бібліотеку.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Завантаження зі Steam…</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Доступно</value>
+  </data>
+  <data name="OwnedEmpty" xml:space="preserve">
+    <value>Steam повернув доступну порожню бібліотеку.</value>
+  </data>
+  <data name="RecentEmpty" xml:space="preserve">
+    <value>Steam не повернув нещодавньої активності за доступний період.</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Steam відмовив у доступі. Ці дані можуть бути приватними.</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Steam не надав цих даних. Наявність ігор та активність невідомі.</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>Потрібен ключ Steam API. Вкажіть GAMEPULSE_STEAM_API_KEY у локальному .env або змінній середовища й перезапустіть програму.</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Досягнуто обмеження частоти запитів Steam. Зачекайте й оновіть профіль.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Запит завершився помилкою. Оновіть профіль, щоб спробувати ще раз.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Завантаження скасовано. Оновіть профіль, щоб спробувати ще раз.</value>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>Неповна бібліотека: отримано {0} / заявлено {1}. Загальні показники та кількість незапущених ігор недоступні.</value>
+  </data>
+  <data name="Coverage" xml:space="preserve">
+    <value>Відомий загальний ігровий час: {0} / {1} отриманих ігор.</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Оновлено {0}</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>Оновлено {0} · з кешу</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>{0:N1} год</value>
+  </data>
+  <data name="Unnamed" xml:space="preserve">
+    <value>Застосунок {0}</value>
+  </data>
+  <data name="Shown" xml:space="preserve">
+    <value>Показано {0:N0} / {1:N0} ігор</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>Немає ігор, що відповідають цим фільтрам.</value>
+  </data>
+  <data name="InvalidHours" xml:space="preserve">
+    <value>Введіть коректну невід’ємну кількість годин, використовуючи десятковий роздільник вашого регіону.</value>
+  </data>
+  <data name="InvalidRange" xml:space="preserve">
+    <value>Мінімальна кількість годин не може перевищувати максимальну.</value>
+  </data>
+  <data name="UnplayedUnavailable" xml:space="preserve">
+    <value>Для фільтра незапущених ігор потрібна повна доступна бібліотека.</value>
+  </data>
+  <data name="Filtering" xml:space="preserve">
+    <value>Застосування фільтрів…</value>
+  </data>
+  <data name="FilterFailed" xml:space="preserve">
+    <value>Не вдалося застосувати фільтри. Скиньте їх, щоб спробувати ще раз.</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>AppID скопійовано.</value>
+  </data>
+  <data name="ClipboardFailed" xml:space="preserve">
+    <value>Буфер обміну недоступний.</value>
+  </data>
+  <data name="ExternalFailed" xml:space="preserve">
+    <value>Не вдалося відкрити сторінку магазину.</value>
+  </data>
+  <data name="AccessibleGame" xml:space="preserve">
+    <value>{0}. AppID {1}. За весь час: {2}. За останні два тижні: {3}.</value>
+  </data>
+</root>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data xml:space="preserve" name="Title">
+    <value>Пульс бібліотеки</value>
+  </data>
+  <data xml:space="preserve" name="Subtitle">
+    <value>Досліджуйте ігрові звички профілю на основі доступного знімка даних Steam.</value>
+  </data>
+  <data xml:space="preserve" name="Available">
+    <value>ДОСТУПНО / ЗА STEAM</value>
+  </data>
+  <data xml:space="preserve" name="Total">
+    <value>ЗАГАЛЬНИЙ ЧАС</value>
+  </data>
+  <data xml:space="preserve" name="Unplayed">
+    <value>НЕ ЗАПУСКАЛИСЯ</value>
+  </data>
+  <data xml:space="preserve" name="Concentration">
+    <value>ТОП-3 · ЧАСТКА ЧАСУ</value>
+  </data>
+  <data xml:space="preserve" name="Distribution">
+    <value>Розподіл ігрового часу</value>
+  </data>
+  <data xml:space="preserve" name="DistributionNote">
+    <value>Кількість і смуги описують лише отримані ігри; невідомий час — в окремій групі.</value>
+  </data>
+  <data xml:space="preserve" name="TopTitle">
+    <value>Топ-10 за ігровим часом</value>
+  </data>
+  <data xml:space="preserve" name="TopNote">
+    <value>Лише відомий час. Повний доступний список — на сторінці ігор.</value>
+  </data>
+  <data xml:space="preserve" name="SnapshotNote">
+    <value>Обчислено локально з завантаженої бібліотеки. Без додаткових запитів Steam чи історичного відстеження.</value>
+  </data>
+  <data xml:space="preserve" name="KnownTotal">
+    <value>ЧАС В ОТРИМАНИХ ІГРАХ З ВІДОМИМИ ДАНИМИ</value>
+  </data>
+  <data xml:space="preserve" name="Store">
+    <value>Магазин Steam ↗</value>
+  </data>
+  <data xml:space="preserve" name="Copy">
+    <value>Копіювати AppID</value>
+  </data>
+  <data xml:space="preserve" name="SelectHint">
+    <value>Виберіть гру з топу, щоб відкрити магазин або скопіювати AppID.</value>
+  </data>
+  <data xml:space="preserve" name="CoverageHint">
+    <value>Відкрийте профіль, щоб дослідити пульс його бібліотеки.</value>
+  </data>
+  <data xml:space="preserve" name="Idle">
+    <value>Відкрийте будь-який Steam-профіль через пошук угорі.</value>
+  </data>
+  <data xml:space="preserve" name="Loading">
+    <value>Аналіз доступної бібліотеки…</value>
+  </data>
+  <data xml:space="preserve" name="Ready">
+    <value>Знімок бібліотеки готовий. Загальні показники вимагають повного охоплення даних.</value>
+  </data>
+  <data xml:space="preserve" name="Partial">
+    <value>Steam повернув частину бібліотеки. Розподіл описує лише отримані ігри.</value>
+  </data>
+  <data xml:space="preserve" name="Empty">
+    <value>Steam повернув повну порожню бібліотеку.</value>
+  </data>
+  <data xml:space="preserve" name="Private">
+    <value>Бібліотека приватна або доступ заборонено. Її вміст невідомий.</value>
+  </data>
+  <data xml:space="preserve" name="MissingKey">
+    <value>Налаштуйте GAMEPULSE_STEAM_API_KEY, щоб завантажити бібліотеку.</value>
+  </data>
+  <data xml:space="preserve" name="RateLimited">
+    <value>Steam обмежує запити. Спробуйте оновити пізніше.</value>
+  </data>
+  <data xml:space="preserve" name="Failed">
+    <value>Не вдалося проаналізувати бібліотеку. Оновіть профіль, щоб повторити.</value>
+  </data>
+  <data xml:space="preserve" name="Unavailable">
+    <value>Бібліотека недоступна. Загальні показники та припущення про володіння не відображаються.</value>
+  </data>
+  <data xml:space="preserve" name="NA">
+    <value>Н/Д</value>
+  </data>
+  <data xml:space="preserve" name="AvailableCount">
+    <value>{0:N0} / {1:N0}</value>
+  </data>
+  <data xml:space="preserve" name="Hours">
+    <value>{0:N1} год</value>
+  </data>
+  <data xml:space="preserve" name="Percent">
+    <value>{0:N1}%</value>
+  </data>
+  <data xml:space="preserve" name="Coverage">
+    <value>Охоплення ігрового часу: {0:N0} / {1:N0} отриманих ігор.</value>
+  </data>
+  <data xml:space="preserve" name="CompleteNote">
+    <value>Загальний час і незапущені ігри охоплюють повну отриману бібліотеку. Частки — Н/Д, якщо знаменник дорівнює нулю.</value>
+  </data>
+  <data xml:space="preserve" name="IncompleteNote">
+    <value>Загальний час, кількість незапущених ігор і частка топ-3 — Н/Д до повного охоплення бібліотеки та її ігрового часу.</value>
+  </data>
+  <data xml:space="preserve" name="TopCount">
+    <value>Показано {0:N0} із {1:N0} отриманих ігор із відомим часом.</value>
+  </data>
+  <data xml:space="preserve" name="UpdatedAt">
+    <value>Знімок Steam оновлено {0}</value>
+  </data>
+  <data xml:space="preserve" name="CachedAt">
+    <value>Знімок Steam із кешу за {0}</value>
+  </data>
+  <data xml:space="preserve" name="RangeUnplayed">
+    <value>Не запускалися · 0 год</value>
+  </data>
+  <data xml:space="preserve" name="RangeUnderOneHour">
+    <value>Розпочаті · понад 0, менш як 1 год</value>
+  </data>
+  <data xml:space="preserve" name="RangeOneToTenHours">
+    <value>Від 1 до менш як 10 год</value>
+  </data>
+  <data xml:space="preserve" name="RangeTenToFiftyHours">
+    <value>Від 10 до менш як 50 год</value>
+  </data>
+  <data xml:space="preserve" name="RangeFiftyToHundredHours">
+    <value>Від 50 до менш як 100 год</value>
+  </data>
+  <data xml:space="preserve" name="RangeHundredPlusHours">
+    <value>100 год і більше</value>
+  </data>
+  <data xml:space="preserve" name="RangeUnknown">
+    <value>Невідомий ігровий час</value>
+  </data>
+  <data xml:space="preserve" name="BucketAccessible">
+    <value>{0}: {1:N0} ігор; {2:N1}% отриманих ігор.</value>
+  </data>
+  <data xml:space="preserve" name="Unnamed">
+    <value>Застосунок {0}</value>
+  </data>
+  <data xml:space="preserve" name="TopGameAccessible">
+    <value>Місце {0}: {1}, {2}.</value>
+  </data>
+  <data xml:space="preserve" name="Copied">
+    <value>AppID скопійовано.</value>
+  </data>
+  <data xml:space="preserve" name="ClipboardFailed">
+    <value>Не вдалося скопіювати AppID.</value>
+  </data>
+  <data xml:space="preserve" name="ExternalFailed">
+    <value>Не вдалося відкрити сторінку магазину Steam.</value>
+  </data>
+</root>

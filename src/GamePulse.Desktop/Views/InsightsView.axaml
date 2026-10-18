@@ -1,0 +1,120 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+             xmlns:text="using:GamePulse.Desktop.Resources"
+             xmlns:controls="using:GamePulse.Desktop.Controls"
+             x:Class="GamePulse.Desktop.Views.InsightsView">
+  <controls:AdaptivePageGrid RowDefinitions="Auto,*,Auto" BodyReserve="180" RowSpacing="12" Margin="0,4,0,0">
+    <ScrollViewer Classes="adaptiveHeader" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                  AutomationProperties.Name="{loc:Translate Module=Strings, Key=PageControls}">
+      <StackPanel Spacing="11" Margin="0,0,10,0">
+        <StackPanel Spacing="4">
+          <TextBlock Text="{loc:Translate Module=Insights, Key=Title}" AutomationProperties.HeadingLevel="1" FontSize="25" FontWeight="SemiBold" />
+          <TextBlock Text="{loc:Translate Module=Insights, Key=Subtitle}" Classes="muted" FontSize="12" TextWrapping="Wrap" />
+        </StackPanel>
+        <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="9">
+          <Border Classes="card" Padding="13,11"><StackPanel Spacing="6">
+            <TextBlock Text="{loc:Translate Module=Insights, Key=Available}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding AvailableCount}" FontSize="22" FontWeight="SemiBold" />
+          </StackPanel></Border>
+          <Border Grid.Column="1" Classes="card" Padding="13,11"><StackPanel Spacing="6">
+            <TextBlock Text="{loc:Translate Module=Insights, Key=Total}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding TotalHours}" FontSize="22" FontWeight="SemiBold" />
+          </StackPanel></Border>
+          <Border Grid.Column="2" Classes="card" Padding="13,11"><StackPanel Spacing="6">
+            <TextBlock Text="{loc:Translate Module=Insights, Key=Unplayed}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+            <StackPanel Orientation="Horizontal" Spacing="7"><TextBlock Text="{Binding UnplayedCount}" FontSize="22" FontWeight="SemiBold" /><TextBlock Text="{Binding UnplayedShare}" Classes="muted" VerticalAlignment="Center" FontSize="11" /></StackPanel>
+          </StackPanel></Border>
+          <Border Grid.Column="3" Classes="card" Padding="13,11"><StackPanel Spacing="6">
+            <TextBlock Text="{loc:Translate Module=Insights, Key=Concentration}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding TopThreeShare}" FontSize="22" FontWeight="SemiBold" />
+          </StackPanel></Border>
+        </Grid>
+        <StackPanel Spacing="4">
+          <controls:LiveStatusTextBlock x:Name="InsightsStatus" AutomationProperties.AutomationId="InsightsStatus"
+                                      Text="{Binding StatusMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="12" TextWrapping="Wrap" />
+          <TextBlock Text="{Binding Coverage}" Classes="label" FontSize="11" />
+          <TextBlock Text="{Binding CoverageNote}" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+          <TextBlock Text="{loc:Translate Module=Insights, Key=SnapshotNote}" Classes="muted" FontSize="10" TextWrapping="Wrap" />
+          <TextBlock Text="{loc:Translate Module=Insights, Key=SelectHint}" Classes="muted" FontSize="10" IsVisible="{Binding !HasSelection}" TextWrapping="Wrap" />
+          <ProgressBar Height="2" IsIndeterminate="True" IsVisible="{Binding IsLoading}" />
+        </StackPanel>
+      </StackPanel>
+    </ScrollViewer>
+
+    <Grid Grid.Row="1" ColumnDefinitions="0.9*,1.1*" ColumnSpacing="12" IsVisible="{Binding HasData}">
+      <Border Classes="card" Padding="15,12">
+        <Grid RowDefinitions="Auto,*" RowSpacing="10">
+          <StackPanel Spacing="4">
+            <TextBlock Text="{loc:Translate Module=Insights, Key=Distribution}" FontWeight="SemiBold" FontSize="15" AutomationProperties.HeadingLevel="2" />
+            <TextBlock Text="{loc:Translate Module=Insights, Key=DistributionNote}" Classes="muted" FontSize="10" TextWrapping="Wrap" />
+          </StackPanel>
+          <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                        AutomationProperties.Name="{loc:Translate Module=Insights, Key=Distribution}">
+            <StackPanel Spacing="12" Margin="0,0,8,0">
+              <ItemsControl ItemsSource="{Binding Buckets}">
+                <ItemsControl.ItemTemplate><DataTemplate>
+                  <StackPanel Spacing="4" Margin="0,0,0,11">
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                      <TextBlock Text="{Binding Label}" FontSize="11" TextWrapping="Wrap" />
+                      <TextBlock Grid.Column="1" Text="{Binding Count}" FontSize="11" FontWeight="SemiBold" />
+                    </Grid>
+                    <ProgressBar Minimum="0" Maximum="100" Value="{Binding Share}" Height="5"
+                                 AutomationProperties.Name="{Binding AccessibleName}" />
+                  </StackPanel>
+                </DataTemplate></ItemsControl.ItemTemplate>
+              </ItemsControl>
+              <StackPanel Spacing="4">
+                <TextBlock Text="{loc:Translate Module=Insights, Key=KnownTotal}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding KnownHours}" FontSize="20" FontWeight="SemiBold" />
+              </StackPanel>
+            </StackPanel>
+          </ScrollViewer>
+        </Grid>
+      </Border>
+      <Border Grid.Column="1" Classes="card" Padding="0" ClipToBounds="True">
+        <Grid RowDefinitions="Auto,*">
+          <StackPanel Margin="15,12" Spacing="4">
+            <TextBlock Text="{loc:Translate Module=Insights, Key=TopTitle}" FontWeight="SemiBold" FontSize="15" AutomationProperties.HeadingLevel="2" />
+            <TextBlock Text="{Binding TopCount}" Classes="label" FontSize="10" />
+            <TextBlock Text="{loc:Translate Module=Insights, Key=TopNote}" Classes="muted" FontSize="10" TextWrapping="Wrap" />
+          </StackPanel>
+          <!-- This is explicitly a top 10, rather than a truncated library. The full library stays in Games. -->
+          <ListBox x:Name="InsightsTopGames" AutomationProperties.AutomationId="InsightsTopGames" Grid.Row="1"
+                   ItemsSource="{Binding TopGames}" SelectedItem="{Binding SelectedGame, Mode=TwoWay}"
+                   Background="Transparent" BorderThickness="0" Padding="0" KeyDown="TopGames_OnKeyDown"
+                   AutomationProperties.Name="{loc:Translate Module=Insights, Key=TopTitle}"
+                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ItemsPanel><ItemsPanelTemplate><VirtualizingStackPanel /></ItemsPanelTemplate></ListBox.ItemsPanel>
+            <ListBox.ContextMenu><ContextMenu><MenuItem Header="{loc:Translate Module=Insights, Key=Store}" Click="OpenStore_OnClick" /><MenuItem Header="{loc:Translate Module=Insights, Key=Copy}" Click="CopyAppId_OnClick" /></ContextMenu></ListBox.ContextMenu>
+            <ListBox.Styles><Style Selector="ListBoxItem"><Setter Property="HorizontalContentAlignment" Value="Stretch" /><Setter Property="Padding" Value="14,9" /><Setter Property="MinHeight" Value="53" /><Setter Property="AutomationProperties.Name" Value="{Binding AccessibleName}" /></Style></ListBox.Styles>
+            <ListBox.ItemTemplate><DataTemplate>
+              <Grid ColumnDefinitions="26,*,Auto" ColumnSpacing="10">
+                <TextBlock Text="{Binding Rank}" Classes="label" FontSize="14" VerticalAlignment="Center" />
+                <StackPanel Grid.Column="1" Spacing="4"><TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="12" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" /><TextBlock Text="{Binding AppId}" Classes="label" FontSize="10" /></StackPanel>
+                <TextBlock Grid.Column="2" Text="{Binding Hours}" FontSize="12" VerticalAlignment="Center" />
+              </Grid>
+            </DataTemplate></ListBox.ItemTemplate>
+          </ListBox>
+        </Grid>
+      </Border>
+    </Grid>
+    <Border Grid.Row="1" Classes="card" Padding="24" IsVisible="{Binding !HasData}">
+      <StackPanel VerticalAlignment="Center" Spacing="9">
+        <TextBlock Text="{loc:Translate Module=Insights, Key=CoverageHint}" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap" />
+        <TextBlock Text="{loc:Translate Module=Insights, Key=SnapshotNote}" Classes="muted" FontSize="12" TextWrapping="Wrap" />
+      </StackPanel>
+    </Border>
+
+    <Grid Grid.Row="2" ColumnDefinitions="*,Auto" ColumnSpacing="10">
+      <StackPanel VerticalAlignment="Center" Spacing="3">
+        <TextBlock Text="{Binding UpdatedAt}" Classes="label" FontSize="10" />
+        <controls:LiveStatusTextBlock Text="{Binding LocalMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" />
+      </StackPanel>
+      <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="7" VerticalAlignment="Center">
+        <Button Content="{loc:Translate Module=Insights, Key=Copy}" Click="CopyAppId_OnClick" IsEnabled="{Binding HasSelection}" FontSize="11" />
+        <Button Content="{loc:Translate Module=Insights, Key=Store}" Click="OpenStore_OnClick" IsEnabled="{Binding HasSelection}" Classes="primary" FontSize="11" />
+      </StackPanel>
+    </Grid>
+  </controls:AdaptivePageGrid>
+</UserControl>

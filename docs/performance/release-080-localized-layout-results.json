@@ -1,0 +1,616 @@
+{
+  "Kind": "Synthetic real-view Ukrainian layout checks; not native display, Narrator audio or live Steam evidence",
+  "Culture": "uk-UA",
+  "Configurations": 6,
+  "PagesPerConfiguration": 6,
+  "PageChecks": 36,
+  "Results": [
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Dark",
+      "Page": "overview",
+      "FocusedFilter": "ProfileInput",
+      "Lists": [],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Dark",
+      "Page": "games",
+      "FocusedFilter": "GamesFilterInput",
+      "Lists": [
+        {
+          "Name": "GamesList",
+          "ItemCount": 12000,
+          "Height": 230,
+          "Realized": 5
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Dark",
+      "Page": "comparison",
+      "FocusedFilter": "MutualFilterInput",
+      "Lists": [
+        {
+          "Name": "MutualGamesList",
+          "ItemCount": 6000,
+          "Height": 161,
+          "Realized": 4
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Dark",
+      "Page": "friends",
+      "FocusedFilter": "FriendsFilterInput",
+      "Lists": [
+        {
+          "Name": "FriendsList",
+          "ItemCount": 12000,
+          "Height": 383,
+          "Realized": 7
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Dark",
+      "Page": "achievements",
+      "FocusedFilter": "AchievementGameFilterInput",
+      "Lists": [
+        {
+          "Name": "AchievementGamesList",
+          "ItemCount": 12000,
+          "Height": 360,
+          "Realized": 5
+        },
+        {
+          "Name": "AchievementsList",
+          "ItemCount": 12000,
+          "Height": 238,
+          "Realized": 5
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Dark",
+      "Page": "inventory",
+      "FocusedFilter": "InventoryFilterInput",
+      "Lists": [
+        {
+          "Name": "InventoryList",
+          "ItemCount": 12000,
+          "Height": 369,
+          "Realized": 7
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Light",
+      "Page": "overview",
+      "FocusedFilter": "ProfileInput",
+      "Lists": [],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Light",
+      "Page": "games",
+      "FocusedFilter": "GamesFilterInput",
+      "Lists": [
+        {
+          "Name": "GamesList",
+          "ItemCount": 12000,
+          "Height": 230,
+          "Realized": 5
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Light",
+      "Page": "comparison",
+      "FocusedFilter": "MutualFilterInput",
+      "Lists": [
+        {
+          "Name": "MutualGamesList",
+          "ItemCount": 6000,
+          "Height": 161,
+          "Realized": 4
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Light",
+      "Page": "friends",
+      "FocusedFilter": "FriendsFilterInput",
+      "Lists": [
+        {
+          "Name": "FriendsList",
+          "ItemCount": 12000,
+          "Height": 383,
+          "Realized": 7
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Light",
+      "Page": "achievements",
+      "FocusedFilter": "AchievementGameFilterInput",
+      "Lists": [
+        {
+          "Name": "AchievementGamesList",
+          "ItemCount": 12000,
+          "Height": 360,
+          "Realized": 5
+        },
+        {
+          "Name": "AchievementsList",
+          "ItemCount": 12000,
+          "Height": 238,
+          "Realized": 5
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "Light",
+      "Page": "inventory",
+      "FocusedFilter": "InventoryFilterInput",
+      "Lists": [
+        {
+          "Name": "InventoryList",
+          "ItemCount": 12000,
+          "Height": 369,
+          "Realized": 7
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "HighContrast",
+      "Page": "overview",
+      "FocusedFilter": "ProfileInput",
+      "Lists": [],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "HighContrast",
+      "Page": "games",
+      "FocusedFilter": "GamesFilterInput",
+      "Lists": [
+        {
+          "Name": "GamesList",
+          "ItemCount": 12000,
+          "Height": 230,
+          "Realized": 5
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "HighContrast",
+      "Page": "comparison",
+      "FocusedFilter": "MutualFilterInput",
+      "Lists": [
+        {
+          "Name": "MutualGamesList",
+          "ItemCount": 6000,
+          "Height": 161,
+          "Realized": 4
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "HighContrast",
+      "Page": "friends",
+      "FocusedFilter": "FriendsFilterInput",
+      "Lists": [
+        {
+          "Name": "FriendsList",
+          "ItemCount": 12000,
+          "Height": 383,
+          "Realized": 7
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "HighContrast",
+      "Page": "achievements",
+      "FocusedFilter": "AchievementGameFilterInput",
+      "Lists": [
+        {
+          "Name": "AchievementGamesList",
+          "ItemCount": 12000,
+          "Height": 360,
+          "Realized": 5
+        },
+        {
+          "Name": "AchievementsList",
+          "ItemCount": 12000,
+          "Height": 238,
+          "Realized": 5
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 1260,
+      "Height": 900,
+      "Theme": "HighContrast",
+      "Page": "inventory",
+      "FocusedFilter": "InventoryFilterInput",
+      "Lists": [
+        {
+          "Name": "InventoryList",
+          "ItemCount": 12000,
+          "Height": 369,
+          "Realized": 7
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Dark",
+      "Page": "overview",
+      "FocusedFilter": "ProfileInput",
+      "Lists": [],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Dark",
+      "Page": "games",
+      "FocusedFilter": "GamesFilterInput",
+      "Lists": [
+        {
+          "Name": "GamesList",
+          "ItemCount": 12000,
+          "Height": 64,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Dark",
+      "Page": "comparison",
+      "FocusedFilter": "MutualFilterInput",
+      "Lists": [
+        {
+          "Name": "MutualGamesList",
+          "ItemCount": 6000,
+          "Height": 77,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Dark",
+      "Page": "friends",
+      "FocusedFilter": "FriendsFilterInput",
+      "Lists": [
+        {
+          "Name": "FriendsList",
+          "ItemCount": 12000,
+          "Height": 133,
+          "Realized": 3
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Dark",
+      "Page": "achievements",
+      "FocusedFilter": "AchievementGameFilterInput",
+      "Lists": [
+        {
+          "Name": "AchievementGamesList",
+          "ItemCount": 12000,
+          "Height": 79,
+          "Realized": 2
+        },
+        {
+          "Name": "AchievementsList",
+          "ItemCount": 12000,
+          "Height": 80,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Dark",
+      "Page": "inventory",
+      "FocusedFilter": "InventoryFilterInput",
+      "Lists": [
+        {
+          "Name": "InventoryList",
+          "ItemCount": 12000,
+          "Height": 121,
+          "Realized": 3
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Light",
+      "Page": "overview",
+      "FocusedFilter": "ProfileInput",
+      "Lists": [],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Light",
+      "Page": "games",
+      "FocusedFilter": "GamesFilterInput",
+      "Lists": [
+        {
+          "Name": "GamesList",
+          "ItemCount": 12000,
+          "Height": 64,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Light",
+      "Page": "comparison",
+      "FocusedFilter": "MutualFilterInput",
+      "Lists": [
+        {
+          "Name": "MutualGamesList",
+          "ItemCount": 6000,
+          "Height": 77,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Light",
+      "Page": "friends",
+      "FocusedFilter": "FriendsFilterInput",
+      "Lists": [
+        {
+          "Name": "FriendsList",
+          "ItemCount": 12000,
+          "Height": 133,
+          "Realized": 3
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Light",
+      "Page": "achievements",
+      "FocusedFilter": "AchievementGameFilterInput",
+      "Lists": [
+        {
+          "Name": "AchievementGamesList",
+          "ItemCount": 12000,
+          "Height": 79,
+          "Realized": 2
+        },
+        {
+          "Name": "AchievementsList",
+          "ItemCount": 12000,
+          "Height": 80,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "Light",
+      "Page": "inventory",
+      "FocusedFilter": "InventoryFilterInput",
+      "Lists": [
+        {
+          "Name": "InventoryList",
+          "ItemCount": 12000,
+          "Height": 121,
+          "Realized": 3
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "HighContrast",
+      "Page": "overview",
+      "FocusedFilter": "ProfileInput",
+      "Lists": [],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "HighContrast",
+      "Page": "games",
+      "FocusedFilter": "GamesFilterInput",
+      "Lists": [
+        {
+          "Name": "GamesList",
+          "ItemCount": 12000,
+          "Height": 64,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "HighContrast",
+      "Page": "comparison",
+      "FocusedFilter": "MutualFilterInput",
+      "Lists": [
+        {
+          "Name": "MutualGamesList",
+          "ItemCount": 6000,
+          "Height": 77,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "HighContrast",
+      "Page": "friends",
+      "FocusedFilter": "FriendsFilterInput",
+      "Lists": [
+        {
+          "Name": "FriendsList",
+          "ItemCount": 12000,
+          "Height": 133,
+          "Realized": 3
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "HighContrast",
+      "Page": "achievements",
+      "FocusedFilter": "AchievementGameFilterInput",
+      "Lists": [
+        {
+          "Name": "AchievementGamesList",
+          "ItemCount": 12000,
+          "Height": 79,
+          "Realized": 2
+        },
+        {
+          "Name": "AchievementsList",
+          "ItemCount": 12000,
+          "Height": 80,
+          "Realized": 2
+        }
+      ],
+      "Passed": true
+    },
+    {
+      "Culture": "uk-UA",
+      "Width": 840,
+      "Height": 480,
+      "Theme": "HighContrast",
+      "Page": "inventory",
+      "FocusedFilter": "InventoryFilterInput",
+      "Lists": [
+        {
+          "Name": "InventoryList",
+          "ItemCount": 12000,
+          "Height": 121,
+          "Realized": 3
+        }
+      ],
+      "Passed": true
+    }
+  ],
+  "Passed": true
+}

@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>Порівняння профілів</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Досліджуйте два незалежні Steam-профілі та знаходьте їхні спільні ігри.</value>
+  </data>
+  <data name="ProfileA" xml:space="preserve">
+    <value>Профіль A</value>
+  </data>
+  <data name="ProfileB" xml:space="preserve">
+    <value>Профіль B</value>
+  </data>
+  <data name="InputHint" xml:space="preserve">
+    <value>SteamID64, посилання на профіль або vanity-ідентифікатор</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Відкрити</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Порівняти обидва</value>
+  </data>
+  <data name="RefreshBoth" xml:space="preserve">
+    <value>Оновити обидва</value>
+  </data>
+  <data name="IdentityHint" xml:space="preserve">
+    <value>Введіть будь-який публічний профіль. Вхід у Steam не потрібен.</value>
+  </data>
+  <data name="SearchHint" xml:space="preserve">
+    <value>Імена користувачів неунікальні; використайте ID, посилання на профіль або vanity-ідентифікатор.</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Рівень</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Ігри</value>
+  </data>
+  <data name="Playtime" xml:space="preserve">
+    <value>Загальний ігровий час</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Створено</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Вік акаунту</value>
+  </data>
+  <data name="Vac" xml:space="preserve">
+    <value>Блокування VAC</value>
+  </data>
+  <data name="VacStatus" xml:space="preserve">
+    <value>Заблоковано VAC</value>
+  </data>
+  <data name="GameBans" xml:space="preserve">
+    <value>Ігрові блокування</value>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>Блокування спільноти</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Блокування обміну</value>
+  </data>
+  <data name="MutualTitle" xml:space="preserve">
+    <value>Спільні ігри</value>
+  </data>
+  <data name="MutualHint" xml:space="preserve">
+    <value>Перетин за AppID; порівнюються лише повні доступні бібліотеки.</value>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>Гра</value>
+  </data>
+  <data name="HoursA" xml:space="preserve">
+    <value>Години · A</value>
+  </data>
+  <data name="HoursB" xml:space="preserve">
+    <value>Години · B</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Дії</value>
+  </data>
+  <data name="QueryHint" xml:space="preserve">
+    <value>Пошук за назвою або AppID</value>
+  </data>
+  <data name="MinimumHours" xml:space="preserve">
+    <value>Мін. годин у кожного</value>
+  </data>
+  <data name="MinimumHint" xml:space="preserve">
+    <value>Будь-яка кількість</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Сортування</value>
+  </data>
+  <data name="CombinedTime" xml:space="preserve">
+    <value>Сумарний ігровий час</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Назва</value>
+  </data>
+  <data name="TimeA" xml:space="preserve">
+    <value>Ігровий час профілю A</value>
+  </data>
+  <data name="TimeB" xml:space="preserve">
+    <value>Ігровий час профілю B</value>
+  </data>
+  <data name="CopyAppId" xml:space="preserve">
+    <value>Копіювати AppID</value>
+  </data>
+  <data name="OpenStore" xml:space="preserve">
+    <value>Магазин Steam</value>
+  </data>
+  <data name="CopySteamId" xml:space="preserve">
+    <value>Копіювати SteamID</value>
+  </data>
+  <data name="OpenProfile" xml:space="preserve">
+    <value>Відкрити в Steam</value>
+  </data>
+  <data name="NothingSelected" xml:space="preserve">
+    <value>Відкрийте профіль A та профіль B, щоб порівняти їхні бібліотеки.</value>
+  </data>
+  <data name="Waiting" xml:space="preserve">
+    <value>Очікування обох бібліотек…</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Визначення профілю…</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Завантаження…</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Доступно</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Ця бібліотека порожня.</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Ця бібліотека приватна. Її вміст неможливо порівняти.</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>Steam повернув неповну бібліотеку. Кількість ігор і спільні ігри невідомі.</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Steam не надав бібліотеку. Її вміст невідомий.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Запит завершився помилкою. Спробуйте ще раз, коли з’єднання відновиться.</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Введіть SteamID64, посилання на профіль або vanity-ідентифікатор. Глобальний пошук за іменами користувачів недоступний.</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>Потрібен ключ Steam API. Вкажіть GAMEPULSE_STEAM_API_KEY у локальному .env або змінній середовища й перезапустіть програму.</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Steam не знайшов цього профілю.</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Steam обмежує частоту запитів. Зачекайте перед оновленням.</value>
+  </data>
+  <data name="ProfilePrivate" xml:space="preserve">
+    <value>Профіль не є публічним. Показано лише доступні факти.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Запит скасовано.</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ні</value>
+  </data>
+  <data name="UnknownName" xml:space="preserve">
+    <value>Профіль без імені</value>
+  </data>
+  <data name="NoMutual" xml:space="preserve">
+    <value>Ці дві повні доступні бібліотеки не мають спільних ігор.</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>Немає спільних ігор, що відповідають цим фільтрам.</value>
+  </data>
+  <data name="ComparisonUnavailable" xml:space="preserve">
+    <value>Спільні ігри неможливо визначити, доки обидві повні бібліотеки не будуть доступні.</value>
+  </data>
+  <data name="ComparisonReady" xml:space="preserve">
+    <value>Обидві бібліотеки доступні. Ігровий час надано Steam; він не є історією покупок.</value>
+  </data>
+  <data name="FilterInvalid" xml:space="preserve">
+    <value>Введіть невід’ємну кількість годин.</value>
+  </data>
+  <data name="YearsFormat" xml:space="preserve">
+    <value>{0:N1} р.</value>
+  </data>
+  <data name="HoursFormat" xml:space="preserve">
+    <value>{0:N1} год</value>
+  </data>
+  <data name="RowsFormat" xml:space="preserve">
+    <value>Показано {0:N0} · спільних ігор: {1:N0}</value>
+  </data>
+  <data name="UpdatedFormat" xml:space="preserve">
+    <value>Оновлено {0:g}</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>з кешу</value>
+  </data>
+  <data name="BanNote" xml:space="preserve">
+    <value>Відомості про блокування — це факти зі Steam; відсутні значення позначено N/A. Оцінка довіри не обчислюється.</value>
+  </data>
+  <data name="PartialMetricsNote" xml:space="preserve">
+    <value>Кількість ігор і загальний ігровий час потребують повної бібліотеки. Невідомий ігровий час позначено N/A.</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>Скопійовано.</value>
+  </data>
+  <data name="ClipboardFailed" xml:space="preserve">
+    <value>Буфер обміну недоступний.</value>
+  </data>
+  <data name="ExternalFailed" xml:space="preserve">
+    <value>Система не змогла відкрити посилання Steam.</value>
+  </data>
+  <data name="AdditionalFacts" xml:space="preserve">
+    <value>Дані акаунту та блокування</value>
+  </data>
+  <data name="AccessibleMutualGame" xml:space="preserve">
+    <value>{0}. AppID {1}. Профіль A: {2}. Профіль B: {3}.</value>
+  </data>
+</root>

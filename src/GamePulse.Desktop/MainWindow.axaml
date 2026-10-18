@@ -1,0 +1,217 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+        xmlns:text="using:GamePulse.Desktop.Resources"
+        xmlns:views="using:GamePulse.Desktop.Views"
+        xmlns:controls="using:GamePulse.Desktop.Controls"
+        x:Class="GamePulse.Desktop.MainWindow"
+        Title="{Binding AppTitle}"
+        Width="1260" Height="900" MinWidth="840" MinHeight="480"
+        Background="{DynamicResource PageBrush}" Foreground="{DynamicResource TextBrush}">
+  <Window.Resources><controls:CurrentPageStatusConverter x:Key="CurrentPageStatusConverter" /></Window.Resources>
+  <Grid x:Name="ShellLayout" AutomationProperties.AutomationId="ShellLayout" ColumnDefinitions="216,*" Background="{DynamicResource PageBrush}">
+    <Border x:Name="SidebarBorder" AutomationProperties.AutomationId="SidebarBorder" Grid.Column="0" Background="{DynamicResource SidebarBrush}"
+            BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,1,0" Padding="20,26,20,52">
+      <ScrollViewer x:Name="NavigationScroll" AutomationProperties.AutomationId="NavigationScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" AutomationProperties.Name="{loc:Translate Module=Strings, Key=Navigation}">
+      <Grid RowDefinitions="Auto,*,Auto" MinHeight="{Binding $parent[ScrollViewer].Viewport.Height}">
+        <StackPanel Spacing="14">
+          <Border x:Name="BrandMark" AutomationProperties.AutomationId="BrandMark" Width="40" Height="40" CornerRadius="11" Background="#69E8C7" HorizontalAlignment="Left">
+            <TextBlock Text="P" FontSize="26" FontWeight="Bold" Foreground="#102A28" HorizontalAlignment="Center" VerticalAlignment="Center" />
+          </Border>
+          <TextBlock Text="{Binding AppTitle}" FontSize="21" FontWeight="SemiBold" TextWrapping="Wrap" />
+          <TextBlock Text="{Binding AppVersion}" Classes="label" FontSize="11" />
+          <TextBlock x:Name="BrandSubtitle" AutomationProperties.AutomationId="BrandSubtitle" Text="{loc:Translate Module=Strings, Key=Subtitle}" Classes="muted" FontSize="12" />
+          <StackPanel Spacing="6" Margin="0,16,0,0">
+            <Button x:Name="NavOverview" AutomationProperties.AutomationId="NavOverview" Classes="nav" Classes.active="{Binding IsOverview}" AutomationProperties.ItemStatus="{Binding IsOverview, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Strings, Key=Explorer}" Command="{Binding ShowOverviewCommand}" />
+            <Button x:Name="NavGames" AutomationProperties.AutomationId="NavGames" Classes="nav" Classes.active="{Binding IsGames}" AutomationProperties.ItemStatus="{Binding IsGames, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Strings, Key=Games}" Command="{Binding ShowGamesCommand}" />
+            <Button x:Name="NavAchievements" AutomationProperties.AutomationId="NavAchievements" Classes="nav" Classes.active="{Binding IsAchievements}" AutomationProperties.ItemStatus="{Binding IsAchievements, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Strings, Key=Achievements}" Command="{Binding ShowAchievementsCommand}" />
+            <Button x:Name="NavFriends" AutomationProperties.AutomationId="NavFriends" Classes="nav" Classes.active="{Binding IsFriends}" AutomationProperties.ItemStatus="{Binding IsFriends, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Strings, Key=Friends}" Command="{Binding ShowFriendsCommand}" />
+            <Button x:Name="NavInventory" AutomationProperties.AutomationId="NavInventory" Classes="nav" Classes.active="{Binding IsInventory}" AutomationProperties.ItemStatus="{Binding IsInventory, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Strings, Key=Inventory}" Command="{Binding ShowInventoryCommand}" />
+            <Button x:Name="NavComparison" AutomationProperties.AutomationId="NavComparison" Classes="nav" Classes.active="{Binding IsComparison}" AutomationProperties.ItemStatus="{Binding IsComparison, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Strings, Key=Compare}" Command="{Binding ShowComparisonCommand}" />
+            <Button x:Name="NavInsights" AutomationProperties.AutomationId="NavInsights" Classes="nav" Classes.active="{Binding IsInsights}" AutomationProperties.ItemStatus="{Binding IsInsights, Converter={StaticResource CurrentPageStatusConverter}}" Content="{loc:Translate Module=Insights, Key=Title}" Command="{Binding ShowInsightsCommand}" />
+          </StackPanel>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" Margin="0,12,0,12" MaxHeight="180" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel Spacing="12" Margin="0,0,12,0">
+          <TextBlock Text="{loc:Translate Module=Strings, Key=Recent}" Classes="label" />
+          <ItemsControl ItemsSource="{Binding RecentProfiles}">
+            <ItemsControl.ItemTemplate>
+              <DataTemplate>
+                <Button Classes="quiet" Padding="0,7" HorizontalAlignment="Stretch"
+                        Command="{Binding $parent[Window].DataContext.OpenRecentCommand}" CommandParameter="{Binding}">
+                  <StackPanel>
+                    <TextBlock Text="{Binding Name}" MaxWidth="172" TextTrimming="CharacterEllipsis" />
+                    <TextBlock Text="{Binding SteamId}" Classes="label" FontSize="10" />
+                  </StackPanel>
+                </Button>
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ItemsControl>
+          <TextBlock Text="{loc:Translate Module=Strings, Key=SessionOnly}" Classes="muted" FontSize="11" />
+        </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Spacing="6">
+          <Button x:Name="ExportButton" AutomationProperties.AutomationId="ExportButton" Classes="quiet"
+                  Content="{loc:Translate Module=Strings, Key=ExportCsv}" ToolTip.Tip="{loc:Translate Module=Strings, Key=ExportHint}"
+                  AutomationProperties.Name="{loc:Translate Module=Strings, Key=ExportHint}" Click="Export_OnClick"
+                  IsEnabled="{Binding CanStartExport}" HorizontalAlignment="Stretch" />
+          <Button x:Name="LanguageButton" AutomationProperties.AutomationId="LanguageButton" Classes="quiet"
+                  Content="{loc:Translate Module=Strings, Key=LanguageButton}" ToolTip.Tip="{loc:Translate Module=Strings, Key=LanguageHint}"
+                  AutomationProperties.Name="{loc:Translate Module=Strings, Key=LanguageHint}" Click="Language_OnClick" HorizontalAlignment="Stretch" />
+          <Button x:Name="ThemeButton" AutomationProperties.AutomationId="ThemeButton" ToolTip.Tip="{loc:Translate Module=Strings, Key=ThemeHint}" Classes="quiet" Content="{loc:Translate Module=Strings, Key=Theme}" Command="{Binding ToggleThemeCommand}" HorizontalAlignment="Stretch" />
+          <Button x:Name="SettingsButton" AutomationProperties.AutomationId="SettingsButton" Classes="quiet" Content="{loc:Translate Module=Strings, Key=Settings}" Click="Settings_OnClick" HorizontalAlignment="Stretch" />
+        </StackPanel>
+      </Grid>
+      </ScrollViewer>
+    </Border>
+
+    <Grid Grid.Column="1" RowDefinitions="Auto,*">
+      <Border x:Name="SearchHeader" AutomationProperties.AutomationId="SearchHeader" Padding="30,24,30,18" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1">
+        <StackPanel Spacing="9">
+          <TextBlock Text="{loc:Translate Module=Strings, Key=SearchLabel}" Classes="label" />
+          <Grid ColumnDefinitions="*,Auto,Auto,Auto">
+            <TextBox x:Name="ProfileInput" AutomationProperties.AutomationId="ProfileInput" Text="{Binding SearchInput, Mode=TwoWay}"
+                     PlaceholderText="{loc:Translate Module=Strings, Key=SearchPlaceholder}" MinHeight="42"
+                     Background="{DynamicResource InputBrush}" Foreground="{DynamicResource TextBrush}"
+                     PlaceholderForeground="{DynamicResource MutedTextBrush}"
+                     VerticalContentAlignment="Center" KeyDown="ProfileInput_OnKeyDown"
+                     AutomationProperties.Name="{loc:Translate Module=Strings, Key=SearchLabel}">
+              <TextBox.Resources>
+                <!-- Fluent 12's PART_Placeholder otherwise multiplies this readable brush by opacity. -->
+                <x:Double x:Key="TextControlPlaceholderOpacity">1</x:Double>
+              </TextBox.Resources>
+            </TextBox>
+            <Button x:Name="SearchButton" AutomationProperties.AutomationId="SearchButton" Grid.Column="1" Classes="primary" Content="{loc:Translate Module=Strings, Key=Search}"
+                    Command="{Binding SearchCommand}" Margin="10,0,0,0" Padding="17,0" />
+            <Button Grid.Column="2" Content="{loc:Translate Module=Strings, Key=Refresh}" Command="{Binding RefreshCommand}"
+                    Margin="8,0,0,0" Padding="12,0" />
+            <Button Grid.Column="3" Content="{loc:Translate Module=Strings, Key=Cancel}" Command="{Binding CancelCommand}"
+                    IsVisible="{Binding IsBusy}" Margin="8,0,0,0" Padding="12,0" />
+          </Grid>
+          <TextBlock x:Name="SearchExplanation" AutomationProperties.AutomationId="SearchExplanation" Text="{loc:Translate Module=Strings, Key=SearchHint}" Classes="muted" FontSize="11" />
+          <TextBlock Text="{loc:Translate Module=Strings, Key=ShortcutHint}" Classes="label" FontSize="11" />
+          <ProgressBar Height="3" IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
+          <controls:LiveStatusTextBlock x:Name="ActionStatus" AutomationProperties.AutomationId="ActionStatus"
+              Text="{Binding ActionMessage}" IsVisible="{Binding HasActionMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="12" />
+        </StackPanel>
+      </Border>
+
+      <Grid Grid.Row="1">
+      <ScrollViewer IsVisible="{Binding IsOverview}" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30,25,30,30" Spacing="20">
+          <StackPanel Spacing="5">
+            <TextBlock AutomationProperties.HeadingLevel="1" Text="{loc:Translate Module=Strings, Key=Overview}" FontSize="28" FontWeight="SemiBold" />
+            <TextBlock Text="{loc:Translate Module=Strings, Key=AvailableData}" Classes="muted" />
+          </StackPanel>
+
+          <Border Classes="card" IsVisible="{Binding IsSetupRequired}">
+            <StackPanel Spacing="10">
+              <TextBlock Text="{loc:Translate Module=Strings, Key=SetupTitle}" FontSize="20" FontWeight="SemiBold" />
+              <TextBlock Text="{loc:Translate Module=Strings, Key=SetupMessage}" Classes="muted" />
+              <Border CornerRadius="6" Background="{DynamicResource AccentSurfaceBrush}" Padding="12" HorizontalAlignment="Left">
+                <TextBlock Text="{loc:Translate Module=Strings, Key=KeyName}" Foreground="{DynamicResource AccentTextBrush}" />
+              </Border>
+              <TextBlock Text="{loc:Translate Module=Strings, Key=PrivacyNote}" Classes="muted" FontSize="12" />
+            </StackPanel>
+          </Border>
+
+          <Border Classes="card">
+            <StackPanel Spacing="7">
+              <TextBlock Text="{Binding StatusTitle}" FontSize="17" FontWeight="SemiBold" TextWrapping="Wrap" />
+              <controls:LiveStatusTextBlock x:Name="ProfileStatus" AutomationProperties.AutomationId="ProfileStatus" Text="{Binding StatusMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" />
+            </StackPanel>
+          </Border>
+
+          <StackPanel IsVisible="{Binding HasProfile}" Spacing="20">
+            <Grid ColumnDefinitions="*,220" ColumnSpacing="20">
+              <Border Classes="card">
+                <StackPanel Spacing="20">
+                  <TextBlock Text="{loc:Translate Module=Strings, Key=Identity}" Classes="label" />
+                  <Grid ColumnDefinitions="86,*" ColumnSpacing="17">
+                    <Border Width="86" Height="86" CornerRadius="13" Background="#213E39" ClipToBounds="True">
+                      <Grid>
+                        <TextBlock Text="P" FontSize="40" Foreground="#91E9D0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="{Binding Avatar}" Stretch="UniformToFill" AutomationProperties.Name="{loc:Translate Module=Strings, Key=AvatarAlt}" />
+                      </Grid>
+                    </Border>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="8">
+                      <TextBlock Text="{Binding DisplayName}" FontSize="25" FontWeight="SemiBold" TextWrapping="Wrap" />
+                      <TextBlock Text="{Binding Presence}" FontSize="13" />
+                    </StackPanel>
+                  </Grid>
+                  <StackPanel Spacing="5">
+                    <TextBlock Text="{loc:Translate Module=Strings, Key=SteamId}" Classes="label" />
+                    <SelectableTextBlock Text="{Binding SteamId}" FontFamily="Consolas, monospace" FontSize="17" />
+                    <WrapPanel Orientation="Horizontal">
+                      <Button Classes="quiet" Content="{loc:Translate Module=Strings, Key=CopyId}" Click="CopyId_OnClick" Padding="0,5,15,5" />
+                      <Button Classes="quiet" Content="{loc:Translate Module=Strings, Key=OpenSteam}" Click="OpenSteam_OnClick" Padding="0,5" />
+                    </WrapPanel>
+                  </StackPanel>
+                  <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="20" RowSpacing="10">
+                    <TextBlock Text="{loc:Translate Module=Strings, Key=Visibility}" Classes="muted" />
+                    <TextBlock Grid.Column="1" Text="{Binding Visibility}" TextWrapping="Wrap" />
+                    <TextBlock Grid.Row="1" Text="{loc:Translate Module=Strings, Key=Created}" Classes="muted" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CreatedAt}" TextWrapping="Wrap" />
+                    <TextBlock Grid.Row="2" Text="{loc:Translate Module=Strings, Key=LastOnline}" Classes="muted" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding LastLogoff}" TextWrapping="Wrap" />
+                    <TextBlock Grid.Row="3" Text="{loc:Translate Module=Strings, Key=CurrentGame}" Classes="muted" />
+                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding CurrentGame}" TextWrapping="Wrap" />
+                  </Grid>
+                  <TextBlock Text="{Binding UpdatedAt}" Classes="label" TextWrapping="Wrap" />
+                </StackPanel>
+              </Border>
+              <Border Grid.Column="1" Classes="card">
+                <StackPanel Spacing="14">
+                  <TextBlock Text="{loc:Translate Module=Strings, Key=Level}" Classes="label" />
+                  <TextBlock Text="{Binding Level}" FontSize="56" FontWeight="Light" />
+                  <TextBlock Text="{loc:Translate Module=Strings, Key=LevelNote}" Classes="muted" FontSize="12" />
+                  <TextBlock Text="{Binding LevelStatus}" Classes="muted" FontSize="12" />
+                </StackPanel>
+              </Border>
+            </Grid>
+
+            <Border Classes="card">
+              <StackPanel Spacing="16">
+                <TextBlock Text="{loc:Translate Module=Strings, Key=Bans}" Classes="label" />
+                <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" ColumnSpacing="24" RowSpacing="16">
+                  <StackPanel Spacing="6"><TextBlock Text="{loc:Translate Module=Strings, Key=VacStatus}" Classes="muted" FontSize="12" /><TextBlock Text="{Binding VacStatus}" FontSize="23" /></StackPanel>
+                  <StackPanel Grid.Column="1" Spacing="6"><TextBlock Text="{loc:Translate Module=Strings, Key=Vac}" Classes="muted" FontSize="12" /><TextBlock Text="{Binding VacBans}" FontSize="23" /></StackPanel>
+                  <StackPanel Grid.Column="2" Spacing="6"><TextBlock Text="{loc:Translate Module=Strings, Key=GameBans}" Classes="muted" FontSize="12" /><TextBlock Text="{Binding GameBans}" FontSize="23" /></StackPanel>
+                  <StackPanel Grid.Row="1" Spacing="6"><TextBlock Text="{loc:Translate Module=Strings, Key=CommunityBan}" Classes="muted" FontSize="12" /><TextBlock Text="{Binding CommunityBan}" FontSize="18" /></StackPanel>
+                  <StackPanel Grid.Row="1" Grid.Column="1" Spacing="6"><TextBlock Text="{loc:Translate Module=Strings, Key=Economy}" Classes="muted" FontSize="12" /><TextBlock Text="{Binding EconomyBan}" FontSize="18" TextWrapping="Wrap" /></StackPanel>
+                  <StackPanel Grid.Row="1" Grid.Column="2" Spacing="6"><TextBlock Text="{loc:Translate Module=Strings, Key=DaysSinceBan}" Classes="muted" FontSize="12" /><TextBlock Text="{Binding DaysSinceBan}" FontSize="18" /></StackPanel>
+                </Grid>
+                <TextBlock Text="{Binding BansStatus}" Classes="muted" FontSize="12" />
+                <TextBlock Text="{loc:Translate Module=Strings, Key=BanNote}" Classes="muted" FontSize="12" />
+              </StackPanel>
+            </Border>
+          </StackPanel>
+
+          <Border x:Name="SettingsCard" AutomationProperties.AutomationId="SettingsCard" Classes="card" IsVisible="{Binding ShowSettings}">
+            <StackPanel Spacing="12">
+              <TextBlock Text="{loc:Translate Module=Strings, Key=About}" Classes="label" />
+              <TextBlock Text="{Binding AppVersion}" FontWeight="SemiBold" />
+              <TextBlock Text="{loc:Translate Module=Strings, Key=AboutMessage}" Classes="muted" />
+              <TextBlock Text="{loc:Translate Module=Strings, Key=SetupMessage}" Classes="muted" />
+              <TextBlock Text="{loc:Translate Module=Strings, Key=KeyName}" />
+            </StackPanel>
+          </Border>
+
+          <Border Classes="card">
+            <StackPanel Spacing="12">
+              <TextBlock Text="{loc:Translate Module=Strings, Key=ScopeTitle}" FontSize="18" FontWeight="SemiBold" />
+              <TextBlock Text="{loc:Translate Module=Strings, Key=ScopeMessage}" Classes="muted" FontSize="12" />
+            </StackPanel>
+          </Border>
+        </StackPanel>
+      </ScrollViewer>
+      <views:GamesView IsVisible="{Binding $parent[Window].DataContext.IsGames}" DataContext="{Binding Games}" Margin="24,16,24,20" />
+      <views:ComparisonView IsVisible="{Binding $parent[Window].DataContext.IsComparison}" DataContext="{Binding Comparison}" />
+      <views:FriendsView IsVisible="{Binding $parent[Window].DataContext.IsFriends}" DataContext="{Binding Friends}" Margin="24,16,24,20" />
+      <views:AchievementsView IsVisible="{Binding $parent[Window].DataContext.IsAchievements}" DataContext="{Binding Achievements}" Margin="24,16,24,20" />
+      <views:InventoryView IsVisible="{Binding $parent[Window].DataContext.IsInventory}" DataContext="{Binding Inventory}" Margin="24,16,24,20" />
+      <views:InsightsView IsVisible="{Binding $parent[Window].DataContext.IsInsights}" DataContext="{Binding Insights}" Margin="24,16,24,20" />
+      </Grid>
+    </Grid>
+  </Grid>
+</Window>

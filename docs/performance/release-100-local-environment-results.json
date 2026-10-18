@@ -1,0 +1,15 @@
+{
+  "Passed": true,
+  "NativePublishedStartup": true,
+  "NoFileSetup": true,
+  "WorkingDirectoryEnvironment": true,
+  "FileLoadingOptOut": true,
+  "ProcessLanguagePrecedence": true,
+  "MalformedFileGracefulSetup": true,
+  "KeyValuesAbsentFromReports": true,
+  "ExistingEnvironmentFilesRead": false,
+  "ExistingEnvironmentFilesModified": false,
+  "PublishDirectoryModified": false,
+  "ExecutableDirectoryFallbackTested": false,
+  "LiveSteamRequestsTested": false
+}

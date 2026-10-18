@@ -1,0 +1,18 @@
+{
+  "Passed": true,
+  "Version": "0.9.0",
+  "PortableCrc": true,
+  "SafeEntryPaths": true,
+  "PortableFiles": 288,
+  "PortableMatchesDeliveryFolder": true,
+  "LocalEnvironmentFilesAbsent": true,
+  "TestFixturesAbsent": true,
+  "ProjectLicenseMatches": true,
+  "UkrainianResourcesIncluded": true,
+  "Runtime": "10.0.13",
+  "PortableSha256": "613d9895bbe9ce8d6f89c7c0710efcb52b6a74d1dc111376ae6064a16edbc9b4",
+  "InstallerSha256": "4ed09b7a33b6bb19b375ffc1c67ecd49d002dd655f8eacdf442bfc81fee00420",
+  "SafeExtraction": true,
+  "ExtractedNativeStartup": true,
+  "ExecutableDirectoryFallback": true
+}

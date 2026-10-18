@@ -1,0 +1,173 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+             xmlns:text="using:GamePulse.Desktop.Resources"
+             xmlns:controls="using:GamePulse.Desktop.Controls"
+             x:Class="GamePulse.Desktop.Views.ComparisonView" Background="{DynamicResource PageBrush}">
+  <UserControl.Resources>
+    <x:Double x:Key="TextControlPlaceholderOpacity">1</x:Double>
+    <DataTemplate x:Key="ProfileSideTemplate">
+      <Border Classes="card" Padding="16,12">
+        <StackPanel Spacing="7">
+          <Grid ColumnDefinitions="*,Auto">
+            <TextBlock Text="{Binding Label}" Classes="label" FontWeight="SemiBold" />
+            <ProgressBar Grid.Column="1" Width="64" Height="3" IsIndeterminate="True" IsVisible="{Binding IsBusy}" VerticalAlignment="Center" />
+          </Grid>
+          <Grid ColumnDefinitions="*,Auto,Auto,Auto" ColumnSpacing="5">
+            <TextBox Text="{Binding Input, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Comparison, Key=InputHint}"
+                     AutomationProperties.Name="{Binding Label}" KeyDown="Input_OnKeyDown" ToolTip.Tip="{loc:Translate Module=Comparison, Key=SearchHint}"
+                     Background="{DynamicResource InputBrush}" Foreground="{DynamicResource TextBrush}"
+                     PlaceholderForeground="{DynamicResource MutedTextBrush}" VerticalContentAlignment="Center" MinWidth="100" />
+            <Button Grid.Column="1" Content="{loc:Translate Module=Comparison, Key=Open}" Command="{Binding SearchCommand}" AutomationProperties.HelpText="{Binding Label}" Padding="10,0" />
+            <Button Grid.Column="2" Content="↻" Command="{Binding RefreshCommand}" ToolTip.Tip="{loc:Translate Module=Comparison, Key=Refresh}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=Refresh}" AutomationProperties.HelpText="{Binding Label}" Padding="9,0" />
+            <Button Grid.Column="3" Content="×" Command="{Binding CancelCommand}" IsVisible="{Binding IsBusy}"
+                    ToolTip.Tip="{loc:Translate Module=Comparison, Key=Cancel}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=Cancel}" Padding="9,0" />
+          </Grid>
+          <controls:LiveStatusTextBlock Text="{Binding IdentityStatus}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" />
+          <StackPanel IsVisible="{Binding HasProfile}" Spacing="7">
+            <Grid ColumnDefinitions="*,Auto">
+              <StackPanel Spacing="2">
+                <TextBlock Text="{Binding DisplayName}" FontWeight="SemiBold" FontSize="18" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding DisplayName}" />
+                <SelectableTextBlock Text="{Binding SteamId}" FontSize="11" Foreground="{DynamicResource MutedTextBrush}" />
+              </StackPanel>
+              <Button Grid.Column="1" Content="↗" Classes="quiet" Tag="{Binding SteamId}" Click="OpenProfile_OnClick"
+                      ToolTip.Tip="{loc:Translate Module=Comparison, Key=OpenProfile}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=OpenProfile}" AutomationProperties.HelpText="{Binding Label}" Padding="8,0" />
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="12" ToolTip.Tip="{loc:Translate Module=Comparison, Key=PartialMetricsNote}">
+              <StackPanel Spacing="2">
+                <TextBlock Text="{loc:Translate Module=Comparison, Key=Level}" Classes="label" FontSize="10" />
+                <TextBlock Text="{Binding Level}" FontSize="22" ToolTip.Tip="{Binding LevelStatus}" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Spacing="2">
+                <TextBlock Text="{loc:Translate Module=Comparison, Key=Games}" Classes="label" FontSize="10" />
+                <TextBlock Text="{Binding Games}" FontSize="22" />
+              </StackPanel>
+              <StackPanel Grid.Column="2" Spacing="2">
+                <TextBlock Text="{loc:Translate Module=Comparison, Key=Playtime}" Classes="label" FontSize="10" />
+                <TextBlock Text="{Binding Playtime}" FontSize="22" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Playtime}" />
+              </StackPanel>
+            </Grid>
+            <TextBlock Text="{Binding LibraryStatus}" Classes="muted" FontSize="11" />
+            <Expander Header="{loc:Translate Module=Comparison, Key=AdditionalFacts}" ToolTip.Tip="{loc:Translate Module=Comparison, Key=BanNote}" HorizontalAlignment="Stretch" Padding="0" FontSize="11">
+              <StackPanel Spacing="8" Margin="0,7,0,0">
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto" ColumnSpacing="14" RowSpacing="8">
+                  <StackPanel Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=Created}" Classes="label" /><TextBlock Text="{Binding Created}" /></StackPanel>
+                  <StackPanel Grid.Column="1" Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=Age}" Classes="label" /><TextBlock Text="{Binding AccountAge}" /></StackPanel>
+                  <StackPanel Grid.Row="1" Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=VacStatus}" Classes="label" /><TextBlock Text="{Binding VacStatus}" /></StackPanel>
+                  <StackPanel Grid.Row="1" Grid.Column="1" Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=Vac}" Classes="label" /><TextBlock Text="{Binding VacBans}" /></StackPanel>
+                  <StackPanel Grid.Row="2" Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=GameBans}" Classes="label" /><TextBlock Text="{Binding GameBans}" /></StackPanel>
+                  <StackPanel Grid.Row="2" Grid.Column="1" Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=Community}" Classes="label" /><TextBlock Text="{Binding CommunityBan}" /></StackPanel>
+                  <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Spacing="2"><TextBlock Text="{loc:Translate Module=Comparison, Key=Economy}" Classes="label" /><TextBlock Text="{Binding EconomyBan}" TextWrapping="Wrap" /></StackPanel>
+                </Grid>
+                <TextBlock Text="{Binding BansStatus}" Classes="muted" FontSize="11" />
+                <Button Classes="quiet" Content="{loc:Translate Module=Comparison, Key=CopySteamId}" Tag="{Binding SteamId}" Click="CopySteamId_OnClick" Padding="0" />
+              </StackPanel>
+            </Expander>
+          </StackPanel>
+        </StackPanel>
+      </Border>
+    </DataTemplate>
+  </UserControl.Resources>
+
+  <controls:AdaptivePageGrid x:Name="ComparisonLayout" AutomationProperties.AutomationId="ComparisonLayout" RowDefinitions="Auto,*" BodyReserve="240" RowSpacing="14" Margin="24,16,24,20">
+    <ScrollViewer Classes="adaptiveHeader" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" AutomationProperties.Name="{loc:Translate Module=Strings, Key=PageControls}">
+      <Grid RowDefinitions="Auto,Auto" RowSpacing="12" Margin="0,0,10,0">
+    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="16">
+      <StackPanel Spacing="3">
+        <TextBlock Text="{loc:Translate Module=Comparison, Key=Title}" AutomationProperties.HeadingLevel="1" FontSize="26" FontWeight="SemiBold" />
+        <TextBlock Text="{loc:Translate Module=Comparison, Key=Subtitle}" Classes="muted" FontSize="12" />
+      </StackPanel>
+      <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+        <Button Content="{loc:Translate Module=Comparison, Key=Compare}" Classes="primary" Command="{Binding CompareCommand}" />
+        <Button Content="↻" Command="{Binding RefreshCommand}" ToolTip.Tip="{loc:Translate Module=Comparison, Key=RefreshBoth}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=RefreshBoth}" />
+        <Button Content="×" Command="{Binding CancelCommand}" IsVisible="{Binding IsBusy}" ToolTip.Tip="{loc:Translate Module=Comparison, Key=Cancel}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=Cancel}" />
+      </StackPanel>
+    </Grid>
+
+    <!-- Bound each side independently so expanding facts cannot consume the mutual list.
+         At compact window heights the profile details scroll within this finite row. -->
+    <Grid Grid.Row="1" ColumnDefinitions="*,*" ColumnSpacing="14" MaxHeight="340">
+      <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <ContentControl Content="{Binding SideA}" ContentTemplate="{StaticResource ProfileSideTemplate}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" />
+      </ScrollViewer>
+      <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <ContentControl Content="{Binding SideB}" ContentTemplate="{StaticResource ProfileSideTemplate}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" />
+      </ScrollViewer>
+    </Grid>
+
+      </Grid>
+    </ScrollViewer>
+    <Border Grid.Row="1" Classes="card" Padding="16,12">
+      <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" RowSpacing="7">
+        <Grid ColumnDefinitions="*,Auto">
+          <StackPanel>
+            <TextBlock Text="{loc:Translate Module=Comparison, Key=MutualTitle}" AutomationProperties.HeadingLevel="2" FontWeight="SemiBold" FontSize="18" />
+            <controls:LiveStatusTextBlock x:Name="ComparisonStatus" AutomationProperties.AutomationId="ComparisonStatus" Text="{Binding Status}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" />
+          </StackPanel>
+          <TextBlock Grid.Column="1" Text="{Binding VisibleSummary}" Classes="label" VerticalAlignment="Center" />
+        </Grid>
+        <Grid Grid.Row="1" ColumnDefinitions="*,125,170" ColumnSpacing="10">
+          <TextBox x:Name="MutualFilterInput" AutomationProperties.AutomationId="MutualFilterInput" Text="{Binding Query, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Comparison, Key=QueryHint}"
+                   AutomationProperties.Name="{loc:Translate Module=Comparison, Key=QueryHint}" Background="{DynamicResource InputBrush}"
+                   Foreground="{DynamicResource TextBrush}" PlaceholderForeground="{DynamicResource MutedTextBrush}" VerticalContentAlignment="Center" />
+          <TextBox Grid.Column="1" Text="{Binding MinimumHours, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Comparison, Key=MinimumHours}"
+                   ToolTip.Tip="{loc:Translate Module=Comparison, Key=MinimumHours}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=MinimumHours}"
+                   Background="{DynamicResource InputBrush}" Foreground="{DynamicResource TextBrush}" PlaceholderForeground="{DynamicResource MutedTextBrush}" VerticalContentAlignment="Center" />
+          <ComboBox Grid.Column="2" ItemsSource="{Binding SortOptions}" SelectedIndex="{Binding SortIndex, Mode=TwoWay}"
+                    HorizontalAlignment="Stretch" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=Sort}" >
+            <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Value}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+        </Grid>
+        <StackPanel Grid.Row="2" Spacing="3">
+          <controls:LiveStatusTextBlock x:Name="ComparisonFilterError" AutomationProperties.AutomationId="ComparisonFilterError" Text="{Binding FilterError}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" />
+          <ProgressBar Height="2" IsIndeterminate="True" IsVisible="{Binding IsFiltering}" />
+          <Grid ColumnDefinitions="*,88,88,96" ColumnSpacing="10" Margin="8,2,12,2">
+            <TextBlock Text="{loc:Translate Module=Comparison, Key=Game}" Classes="label" />
+            <TextBlock Grid.Column="1" Text="{loc:Translate Module=Comparison, Key=HoursA}" Classes="label" HorizontalAlignment="Right" />
+            <TextBlock Grid.Column="2" Text="{loc:Translate Module=Comparison, Key=HoursB}" Classes="label" HorizontalAlignment="Right" />
+            <TextBlock Grid.Column="3" Text="{loc:Translate Module=Comparison, Key=Actions}" Classes="label" HorizontalAlignment="Right" />
+          </Grid>
+        </StackPanel>
+
+        <!-- This ListBox is measured by a star row, never by an enclosing ScrollViewer.
+             VirtualizingStackPanel retains the full collection and realizes visible rows. -->
+        <Grid Grid.Row="3">
+          <ListBox x:Name="MutualGamesList" AutomationProperties.AutomationId="MutualGamesList" ItemsSource="{Binding MutualGames}" Background="Transparent" BorderThickness="0"
+                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                   AutomationProperties.Name="{loc:Translate Module=Comparison, Key=MutualTitle}">
+            <ListBox.ItemsPanel><ItemsPanelTemplate><VirtualizingStackPanel /></ItemsPanelTemplate></ListBox.ItemsPanel>
+            <ListBox.Styles>
+              <Style Selector="ListBoxItem"><Setter Property="HorizontalContentAlignment" Value="Stretch" /><Setter Property="Padding" Value="8,5" /><Setter Property="MinHeight" Value="48" /><Setter Property="AutomationProperties.Name" Value="{Binding AccessibleName}" /></Style>
+            </ListBox.Styles>
+            <ListBox.ItemTemplate>
+              <DataTemplate>
+                <Grid ColumnDefinitions="*,88,88,96" ColumnSpacing="10">
+                  <StackPanel VerticalAlignment="Center" Spacing="2">
+                    <TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" FontWeight="Medium" ToolTip.Tip="{Binding Name}" />
+                    <TextBlock Text="{Binding AppId}" Classes="label" FontSize="10" />
+                  </StackPanel>
+                  <TextBlock Grid.Column="1" Text="{Binding HoursA}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                  <TextBlock Grid.Column="2" Text="{Binding HoursB}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                  <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="3">
+                    <Button Content="⧉" Tag="{Binding AppId}" Click="CopyAppId_OnClick" Padding="9,0"
+                            ToolTip.Tip="{loc:Translate Module=Comparison, Key=CopyAppId}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=CopyAppId}" />
+                    <Button Content="↗" Tag="{Binding AppId}" Click="OpenStore_OnClick" Padding="9,0"
+                            ToolTip.Tip="{loc:Translate Module=Comparison, Key=OpenStore}" AutomationProperties.Name="{loc:Translate Module=Comparison, Key=OpenStore}" />
+                  </StackPanel>
+                  <Grid.ContextMenu>
+                    <ContextMenu>
+                      <MenuItem Header="{loc:Translate Module=Comparison, Key=CopyAppId}" Tag="{Binding AppId}" Click="CopyAppId_OnClick" />
+                      <MenuItem Header="{loc:Translate Module=Comparison, Key=OpenStore}" Tag="{Binding AppId}" Click="OpenStore_OnClick" />
+                    </ContextMenu>
+                  </Grid.ContextMenu>
+                </Grid>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+          <TextBlock Text="{Binding NoMatches}" Classes="muted" IsVisible="{Binding ShowNoMatches}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20" TextAlignment="Center" />
+        </Grid>
+        <controls:LiveStatusTextBlock x:Name="ComparisonLocalMessage" AutomationProperties.AutomationId="ComparisonLocalMessage" Grid.Row="4" Text="{Binding LocalMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" />
+      </Grid>
+    </Border>
+  </controls:AdaptivePageGrid>
+</UserControl>

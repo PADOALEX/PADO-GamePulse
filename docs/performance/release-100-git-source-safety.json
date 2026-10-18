@@ -1,0 +1,8 @@
+{
+  "Passed": true,
+  "ActualEnvironmentFilesStaged": false,
+  "EnvironmentExampleEmpty": true,
+  "BuildArtifactsAbsent": true,
+  "CredentialPatternsAbsent": true,
+  "LocalEnvironmentFileRead": false
+}

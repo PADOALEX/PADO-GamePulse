@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-labelledby="title desc">
+  <title id="title">PADO GamePulse</title>
+  <desc id="desc">Steam Profile Explorer and Gaming Analytics. A mint pulse on a deep navy background.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#111d30"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" x2="1">
+      <stop stop-color="#72e3bf"/>
+      <stop offset="1" stop-color="#8ab7fa"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#a5bfd9" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="340" rx="22" fill="url(#background)"/>
+  <rect width="1280" height="340" rx="22" fill="url(#grid)"/>
+  <circle cx="1145" cy="163" r="128" fill="none" stroke="#72e3bf" stroke-opacity=".1"/>
+  <circle cx="1145" cy="163" r="176" fill="none" stroke="#72e3bf" stroke-opacity=".05"/>
+  <rect x="68" y="68" width="56" height="6" rx="3" fill="#72e3bf"/>
+  <text x="68" y="119" fill="#72e3bf" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="5">PADO</text>
+  <text x="65" y="196" fill="#f0f5fc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="-2">GamePulse</text>
+  <text x="69" y="241" fill="#b3c4d9" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="23">Steam Profile Explorer &amp; Gaming Analytics</text>
+  <text x="69" y="284" fill="#7590ad" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15" letter-spacing="1">EXPLORE PROFILES   /   COMPARE LIBRARIES   /   ANALYZE PLAYTIME</text>
+  <path d="M816 186H882L912 145L953 230L999 105L1044 186H1183" fill="none" stroke="url(#pulse)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1183" cy="186" r="8" fill="#8ab7fa"/>
+</svg>

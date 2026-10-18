@@ -1,0 +1,22 @@
+{
+  "Kind": "Synthetic test data; local observations, not Steam or frame-rate benchmarks",
+  "Games": 12000,
+  "MutualGames": 6000,
+  "RealizedGamesStart": 5,
+  "RealizedGamesEnd": 5,
+  "RealizedMutual": 5,
+  "FilterIterations": 10,
+  "FilterTotalMilliseconds": 322.6895,
+  "FilterAllocatedBytes": 961800,
+  "ComparisonIterations": 10,
+  "ComparisonTotalMilliseconds": 161.267,
+  "Friends": 12000,
+  "RealizedFriendsStart": 7,
+  "RealizedFriendsEnd": 7,
+  "FriendsFilterIterations": 10,
+  "FriendsFilterTotalMilliseconds": 202.1532,
+  "FriendsFilterAllocatedBytes": 4016360,
+  "FriendsNavigationButtonsPassed": true,
+  "Runtime": "10.0.2",
+  "Passed": true
+}

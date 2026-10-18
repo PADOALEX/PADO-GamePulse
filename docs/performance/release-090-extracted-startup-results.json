@@ -1,0 +1,8 @@
+{
+  "Passed": true,
+  "ExtractedNativeStartup": true,
+  "ExecutableDirectoryFallback": true,
+  "SyntheticKeyOnly": true,
+  "NoProfileSearch": true,
+  "UserEnvironmentFilesRead": false
+}

@@ -1,0 +1,13 @@
+﻿{
+    "Passed":  true,
+    "Version":  "0.7.0",
+    "PerUserRegistration":  true,
+    "StartMenuShortcut":  true,
+    "InstalledStartup":  true,
+    "NativeAccessibility":  true,
+    "SameVersionReinstall":  true,
+    "Uninstall":  true,
+    "UnmanagedFilePreserved":  true,
+    "CleanMachine":  false,
+    "Signed":  false
+}

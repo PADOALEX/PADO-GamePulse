@@ -1,0 +1,170 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+             xmlns:text="using:GamePulse.Desktop.Resources"
+             xmlns:controls="using:GamePulse.Desktop.Controls"
+             xmlns:views="using:GamePulse.Desktop.Views"
+             x:Class="GamePulse.Desktop.Views.AchievementsView">
+  <UserControl.Resources>
+    <ResourceDictionary><ResourceDictionary.ThemeDictionaries>
+      <ResourceDictionary x:Key="Dark"><SolidColorBrush x:Key="AchievementUnlockedBrush" Color="#69E8C7" /></ResourceDictionary>
+      <ResourceDictionary x:Key="Light"><SolidColorBrush x:Key="AchievementUnlockedBrush" Color="#126951" /></ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries></ResourceDictionary>
+  </UserControl.Resources>
+  <UserControl.Styles>
+    <Style Selector="TextBlock.unlocked"><Setter Property="Foreground" Value="{DynamicResource AchievementUnlockedBrush}" /></Style>
+    <Style Selector="TextBox">
+      <Setter Property="Background" Value="{DynamicResource InputBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+      <Setter Property="PlaceholderForeground" Value="{DynamicResource MutedTextBrush}" />
+    </Style>
+    <Style Selector="ListBoxItem"><Setter Property="HorizontalContentAlignment" Value="Stretch" /><Setter Property="Padding" Value="12,7" /><Setter Property="AutomationProperties.Name" Value="{Binding AccessibleName}" /></Style>
+    <Style Selector="TextBlock.compactProgress"><Setter Property="IsVisible" Value="False" /></Style>
+    <Style Selector="Button.compactDetails"><Setter Property="IsVisible" Value="False" /></Style>
+  </UserControl.Styles>
+  <controls:AdaptivePageGrid x:Name="AchievementsLayout" AutomationProperties.AutomationId="AchievementsLayout" RowDefinitions="Auto,*,Auto" RowSpacing="10" BodyReserve="300" HeaderFraction="0.4" Margin="0,4,0,0">
+    <ScrollViewer Classes="adaptiveHeader" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" AutomationProperties.Name="{loc:Translate Module=Strings, Key=PageControls}">
+      <Grid RowDefinitions="Auto,Auto" RowSpacing="8" Margin="0,0,10,0">
+    <StackPanel Spacing="4">
+      <TextBlock Text="{loc:Translate Module=Achievements, Key=Title}" AutomationProperties.HeadingLevel="1" FontSize="25" FontWeight="SemiBold" />
+      <TextBlock Text="{loc:Translate Module=Achievements, Key=Subtitle}" Classes="muted" FontSize="12" />
+    </StackPanel>
+
+    <Grid Grid.Row="1" ColumnDefinitions="*,*,*" ColumnSpacing="12">
+      <Border Classes="card" Padding="14,9"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Achievements, Key=WeightedLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding WeightedCompletion}" FontSize="22" FontWeight="SemiBold" />
+        <TextBlock Text="{Binding WeightedNote}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+      </StackPanel></Border>
+      <Border Grid.Column="1" Classes="card" Padding="14,9"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Achievements, Key=AverageLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding AverageCompletion}" FontSize="22" FontWeight="SemiBold" />
+        <TextBlock Text="{Binding AverageNote}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+      </StackPanel></Border>
+      <Border Grid.Column="2" Classes="card" Padding="14,9"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Achievements, Key=CoverageLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding Coverage}" FontSize="22" FontWeight="SemiBold" />
+        <TextBlock Text="{Binding IncludedGamesText}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+      </StackPanel></Border>
+    </Grid>
+
+      </Grid>
+    </ScrollViewer>
+    <!-- Both lists receive finite star rows. No enclosing vertical ScrollViewer breaks virtualization. -->
+    <Grid Grid.Row="1" ColumnDefinitions="220,*" ColumnSpacing="12">
+      <Border Classes="card" Padding="10" ClipToBounds="True">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*" RowSpacing="7">
+          <TextBlock Text="{loc:Translate Module=Achievements, Key=LibraryLabel}" AutomationProperties.HeadingLevel="2" Classes="label" FontSize="9" />
+          <TextBox x:Name="AchievementGameFilterInput" AutomationProperties.AutomationId="AchievementGameFilterInput" Grid.Row="1" Text="{Binding GameQuery, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Achievements, Key=GameSearch}"
+                   AutomationProperties.Name="{loc:Translate Module=Achievements, Key=GameSearch}" MinHeight="34" FontSize="12" />
+          <ComboBox x:Name="AchievementGameSort" AutomationProperties.AutomationId="AchievementGameSort" Grid.Row="2" ItemsSource="{Binding GameSortOptions}" SelectedIndex="{Binding SelectedGameSortIndex, Mode=TwoWay}"
+                    HorizontalAlignment="Stretch" MinHeight="32" FontSize="12" AutomationProperties.Name="{loc:Translate Module=Achievements, Key=Sort}" >
+            <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Value}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+          <StackPanel Grid.Row="3" Spacing="4">
+            <controls:LiveStatusTextBlock x:Name="AchievementLibraryStatus" AutomationProperties.AutomationId="AchievementLibraryStatus" Text="{Binding LibraryMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="10" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding LibraryCompleteness}" IsVisible="{Binding HasLibraryCompleteness}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+          </StackPanel>
+          <ProgressBar Grid.Row="4" Height="2" IsIndeterminate="True" IsVisible="{Binding IsLibraryBusy}" />
+          <ListBox x:Name="AchievementGamesList" AutomationProperties.AutomationId="AchievementGamesList" Grid.Row="5" ItemsSource="{Binding LibraryRows}"
+                   SelectedItem="{Binding SelectedGame, Mode=TwoWay}" Background="Transparent" BorderThickness="0" Padding="0"
+                   AutomationProperties.Name="{loc:Translate Module=Achievements, Key=LibraryLabel}"
+                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ItemsPanel><ItemsPanelTemplate><VirtualizingStackPanel /></ItemsPanelTemplate></ListBox.ItemsPanel>
+            <ListBox.ItemTemplate><DataTemplate>
+              <StackPanel Spacing="4" Height="58" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Name}" FontSize="12" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" />
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="4">
+                  <TextBlock Text="{Binding Status}" Classes="muted" FontSize="10" TextTrimming="CharacterEllipsis" />
+                  <TextBlock Grid.Column="1" Text="{Binding Progress}" FontSize="10" FontWeight="SemiBold" IsVisible="{Binding HasCompletion}" />
+                </Grid>
+                <ProgressBar Minimum="0" Maximum="100" Value="{Binding Completion}" Height="3" IsVisible="{Binding HasCompletion}" />
+              </StackPanel>
+            </DataTemplate></ListBox.ItemTemplate>
+          </ListBox>
+        </Grid>
+      </Border>
+
+      <Border x:Name="AchievementResultsCard" AutomationProperties.AutomationId="AchievementResultsCard" Grid.Column="1" Classes="card" Padding="12" ClipToBounds="True">
+        <controls:AdaptivePageGrid x:Name="AchievementResultsLayout" AutomationProperties.AutomationId="AchievementResultsLayout" RowDefinitions="Auto,*,Auto" BodyReserve="80" HeaderFraction="0.6" RowSpacing="6">
+          <ScrollViewer Classes="adaptiveHeader" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" AutomationProperties.Name="{loc:Translate Module=Strings, Key=PageControls}">
+          <Grid RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="6" Margin="0,0,8,0">
+          <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+            <StackPanel Spacing="3" VerticalAlignment="Center">
+              <TextBlock Text="{Binding SelectedGameName}" AutomationProperties.HeadingLevel="2" FontSize="16" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding SelectedGameName}" />
+              <TextBlock Text="{Binding SelectedAppId}" Classes="label" FontSize="10" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+              <Button x:Name="RefreshAchievementButton" AutomationProperties.AutomationId="RefreshAchievementButton" Content="{loc:Translate Module=Achievements, Key=Refresh}" Click="Refresh_OnClick"
+                      IsEnabled="{Binding CanRefreshSelected}" FontSize="11" MinHeight="32" Padding="9,6" />
+              <Button x:Name="CancelAchievementButton" AutomationProperties.AutomationId="CancelAchievementButton" Content="{loc:Translate Module=Achievements, Key=Cancel}" Click="Cancel_OnClick"
+                      IsVisible="{Binding IsSelectionBusy}" FontSize="11" MinHeight="32" Padding="9,6" />
+            </StackPanel>
+          </Grid>
+
+          <Grid x:Name="SelectedAchievementMetrics" AutomationProperties.AutomationId="SelectedAchievementMetrics" Grid.Row="1" Classes="selectedMetrics" ColumnDefinitions="*,*,*" ColumnSpacing="12">
+            <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Achievements, Key=UnlockedLabel}" Classes="label" FontSize="9" />
+              <TextBlock Text="{Binding SelectedUnlocked}" FontSize="18" FontWeight="SemiBold" /></StackPanel>
+            <StackPanel Grid.Column="1" Spacing="3"><TextBlock Text="{loc:Translate Module=Achievements, Key=TotalLabel}" Classes="label" FontSize="9" />
+              <TextBlock Text="{Binding SelectedTotal}" FontSize="18" FontWeight="SemiBold" /></StackPanel>
+            <StackPanel Grid.Column="2" Spacing="4"><TextBlock Text="{Binding SelectedProgress}" FontSize="18" FontWeight="SemiBold" />
+              <ProgressBar Minimum="0" Maximum="100" Value="{Binding ProgressValue}" Height="4" IsVisible="{Binding HasSelectedProgress}" /></StackPanel>
+          </Grid>
+          <TextBlock x:Name="CompactAchievementProgress" AutomationProperties.AutomationId="CompactAchievementProgress" Grid.Row="1" Classes="muted compactProgress" Text="{Binding SelectedTotalsText}" FontSize="11" />
+
+          <Grid Grid.Row="2" RowDefinitions="Auto,Auto" ColumnDefinitions="*,*" RowSpacing="6" ColumnSpacing="8">
+            <TextBox Grid.ColumnSpan="2" Text="{Binding Query, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Achievements, Key=Search}"
+                     AutomationProperties.Name="{loc:Translate Module=Achievements, Key=Search}" MinHeight="34" FontSize="11" />
+            <ComboBox Grid.Row="1" ItemsSource="{Binding UnlockFilterOptions}" SelectedIndex="{Binding SelectedUnlockFilterIndex, Mode=TwoWay}"
+                      HorizontalAlignment="Stretch" MinHeight="30" FontSize="11" AutomationProperties.Name="{loc:Translate Module=Achievements, Key=UnlockFilter}" >
+            <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Value}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+            <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding SortOptions}" SelectedIndex="{Binding SelectedSortIndex, Mode=TwoWay}"
+                      HorizontalAlignment="Stretch" MinHeight="30" FontSize="11" AutomationProperties.Name="{loc:Translate Module=Achievements, Key=Sort}" >
+            <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Value}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+          </Grid>
+
+          <StackPanel Grid.Row="3" Spacing="5">
+            <controls:LiveStatusTextBlock x:Name="AchievementSelectedStatus" AutomationProperties.AutomationId="AchievementSelectedStatus" Text="{Binding SelectedMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+              <TextBlock Text="{Binding UpdatedAt}" Classes="label" FontSize="9" TextWrapping="Wrap" />
+              <TextBlock x:Name="AchievementShownCount" AutomationProperties.AutomationId="AchievementShownCount" Grid.Column="1" Text="{Binding ShownCount}" Classes="label" FontSize="9" />
+            </Grid>
+            <ProgressBar Height="2" IsIndeterminate="True" IsVisible="{Binding IsSelectionBusy}" />
+          </StackPanel>
+
+          </Grid>
+          </ScrollViewer>
+          <ListBox x:Name="AchievementsList" AutomationProperties.AutomationId="AchievementsList" Grid.Row="1" ItemsSource="{Binding AchievementRows}"
+                   SelectedItem="{Binding SelectedAchievement, Mode=TwoWay}" Background="Transparent" BorderThickness="0" Padding="0"
+                   AutomationProperties.Name="{loc:Translate Module=Achievements, Key=Title}"
+                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ItemsPanel><ItemsPanelTemplate><VirtualizingStackPanel /></ItemsPanelTemplate></ListBox.ItemsPanel>
+            <ListBox.ItemTemplate><DataTemplate>
+              <Grid ColumnDefinitions="*,74" ColumnSpacing="9" Height="42" VerticalAlignment="Center">
+                <StackPanel Spacing="4" VerticalAlignment="Center">
+                  <TextBlock Text="{Binding Name}" FontSize="12" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" />
+                  <TextBlock Text="{Binding Description}" Classes="label" FontSize="10" TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+                <TextBlock Grid.Column="1" Text="{Binding Status}" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Classes="muted" Classes.unlocked="{Binding IsUnlocked}" />
+              </Grid>
+            </DataTemplate></ListBox.ItemTemplate>
+          </ListBox>
+
+          <Expander x:Name="AchievementDetailsExpander" AutomationProperties.AutomationId="AchievementDetailsExpander" Grid.Row="2" Classes="inlineDetails" Header="{loc:Translate Module=Achievements, Key=DetailLabel}"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" MaxHeight="168"
+                    Background="{DynamicResource CardBrush}" BorderBrush="{DynamicResource BorderBrush}">
+            <ScrollViewer x:Name="AchievementDetailScroll" AutomationProperties.AutomationId="AchievementDetailScroll" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" MaxHeight="120">
+              <views:AchievementDetailsView />
+            </ScrollViewer>
+          </Expander>
+          <Button x:Name="OpenAchievementDetailsButton" AutomationProperties.AutomationId="OpenAchievementDetailsButton" Grid.Row="2" Classes="compactDetails" Content="{loc:Translate Module=Achievements, Key=DetailLabel}"
+                  Click="Details_OnClick" IsEnabled="{Binding HasAchievementSelection}" FontSize="11" MinHeight="30" Padding="10,6" HorizontalAlignment="Stretch" />
+        </controls:AdaptivePageGrid>
+      </Border>
+    </Grid>
+    <TextBlock Grid.Row="2" Text="{loc:Translate Module=Achievements, Key=SourcesNote}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+  </controls:AdaptivePageGrid>
+</UserControl>

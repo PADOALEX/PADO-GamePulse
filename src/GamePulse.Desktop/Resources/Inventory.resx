@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="Title" xml:space="preserve"><value>Inventory</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Explore available items, quantities and item details.</value></data>
+  <data name="Source" xml:space="preserve"><value>SteamID {0}  ·  AppID {1}  ·  Context {2}</value></data>
+  <data name="AppLabel" xml:space="preserve"><value>INVENTORY</value></data>
+  <data name="ContextLabel" xml:space="preserve"><value>CONTEXT ID</value></data>
+  <data name="ContextHelp" xml:space="preserve"><value>Use the public inventory context supplied by the game.</value></data>
+  <data name="Load" xml:space="preserve"><value>Load inventory</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Search" xml:space="preserve"><value>Search name, type, AssetID or ClassID</value></data>
+  <data name="Sort" xml:space="preserve"><value>Sort items</value></data>
+  <data name="SortName" xml:space="preserve"><value>Name</value></data>
+  <data name="SortType" xml:space="preserve"><value>Type</value></data>
+  <data name="SortAmount" xml:space="preserve"><value>Quantity · highest first</value></data>
+  <data name="SortAssetId" xml:space="preserve"><value>AssetID</value></data>
+  <data name="MarketableOnly" xml:space="preserve"><value>Marketable only</value></data>
+  <data name="TradableOnly" xml:space="preserve"><value>Tradable only</value></data>
+  <data name="Reset" xml:space="preserve"><value>Reset filters</value></data>
+  <data name="LoadedLabel" xml:space="preserve"><value>LOADED ASSETS</value></data>
+  <data name="QuantityLabel" xml:space="preserve"><value>LOADED QUANTITY</value></data>
+  <data name="TotalLabel" xml:space="preserve"><value>COMPLETE TOTAL</value></data>
+  <data name="CoverageLabel" xml:space="preserve"><value>ITEM DETAILS</value></data>
+  <data name="AssetLabel" xml:space="preserve"><value>ITEM</value></data>
+  <data name="QuantityColumn" xml:space="preserve"><value>QTY</value></data>
+  <data name="DetailTitle" xml:space="preserve"><value>Item details</value></data>
+  <data name="SelectHint" xml:space="preserve"><value>Select an item to see its available details.</value></data>
+  <data name="AssetIdLabel" xml:space="preserve"><value>ASSET ID</value></data>
+  <data name="ClassIdLabel" xml:space="preserve"><value>CLASS ID</value></data>
+  <data name="InstanceIdLabel" xml:space="preserve"><value>INSTANCE ID</value></data>
+  <data name="TypeLabel" xml:space="preserve"><value>TYPE</value></data>
+  <data name="AmountLabel" xml:space="preserve"><value>QUANTITY</value></data>
+  <data name="MarketableLabel" xml:space="preserve"><value>MARKETABLE</value></data>
+  <data name="TradableLabel" xml:space="preserve"><value>TRADABLE</value></data>
+  <data name="Copy" xml:space="preserve"><value>Copy AssetID</value></data>
+  <data name="OpenSteam" xml:space="preserve"><value>Open inventory</value></data>
+  <data name="AssetFallback" xml:space="preserve"><value>Asset {0}</value></data>
+  <data name="UnknownType" xml:space="preserve"><value>Unknown type</value></data>
+  <data name="Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="No" xml:space="preserve"><value>No</value></data>
+  <data name="Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="NA" xml:space="preserve"><value>N/A</value></data>
+  <data name="MetadataAvailable" xml:space="preserve"><value>Item details available</value></data>
+  <data name="MetadataMissing" xml:space="preserve"><value>Steam did not return a matching item description. Name, type and trade flags are unknown.</value></data>
+  <data name="Coverage" xml:space="preserve"><value>{0:N0} / {1:N0}</value></data>
+  <data name="Shown" xml:space="preserve"><value>{0:N0} / {1:N0} shown</value></data>
+  <data name="Partial" xml:space="preserve"><value>Incomplete inventory: {0} Loaded items remain available. Global totals are N/A.</value></data>
+  <data name="InterruptedRateLimited" xml:space="preserve"><value>Steam limited further requests.</value></data>
+  <data name="InterruptedPrivate" xml:space="preserve"><value>Further pages were reported private.</value></data>
+  <data name="InterruptedUnavailable" xml:space="preserve"><value>Further pages are unavailable.</value></data>
+  <data name="InterruptedFailed" xml:space="preserve"><value>Further pages could not be loaded.</value></data>
+  <data name="Progress" xml:space="preserve"><value>{0:N0} pages · {1:N0} assets received</value></data>
+  <data name="ProgressReported" xml:space="preserve"><value>{0:N0} pages · {1:N0} assets received · Steam reports {2:N0}</value></data>
+  <data name="Updated" xml:space="preserve"><value>Updated {0}</value></data>
+  <data name="Cached" xml:space="preserve"><value>Cached · updated {0}</value></data>
+  <data name="Idle" xml:space="preserve"><value>Open a profile, then choose an inventory to load.</value></data>
+  <data name="NotLoaded" xml:space="preserve"><value>Choose an inventory and select Load inventory.</value></data>
+  <data name="InvalidContext" xml:space="preserve"><value>Enter a positive numeric context ID without spaces or leading zeros.</value></data>
+  <data name="Cancelled" xml:space="preserve"><value>Inventory loading was cancelled. Select Load inventory to try again.</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading available inventory pages…</value></data>
+  <data name="Empty" xml:space="preserve"><value>Steam returned an empty inventory.</value></data>
+  <data name="Private" xml:space="preserve"><value>Steam explicitly reported this inventory as private.</value></data>
+  <data name="RateLimited" xml:space="preserve"><value>Steam is limiting inventory requests. Please try again later.</value></data>
+  <data name="Failed" xml:space="preserve"><value>The inventory could not be loaded. Please try again.</value></data>
+  <data name="MissingKey" xml:space="preserve"><value>A Steam API key is required. Configure GAMEPULSE_STEAM_API_KEY in your local .env or environment, then restart the app.</value></data>
+  <data name="Unavailable" xml:space="preserve"><value>This inventory is unavailable. Steam may restrict access or the selected context may not be available.</value></data>
+  <data name="Filtering" xml:space="preserve"><value>Filtering available items…</value></data>
+  <data name="NoMatches" xml:space="preserve"><value>No items match these filters.</value></data>
+  <data name="PartialReady" xml:space="preserve"><value>Some inventory pages are available. Check the completeness note below.</value></data>
+  <data name="Ready" xml:space="preserve"><value>Available inventory loaded.</value></data>
+  <data name="FilterFailed" xml:space="preserve"><value>The item filter could not be applied. Please reset the filters.</value></data>
+  <data name="Copied" xml:space="preserve"><value>AssetID copied.</value></data>
+  <data name="ClipboardFailed" xml:space="preserve"><value>The AssetID could not be copied.</value></data>
+  <data name="ExternalFailed" xml:space="preserve"><value>The Steam inventory could not be opened.</value></data>
+  <data name="CompleteNote" xml:space="preserve"><value>Quantities include each asset’s amount. Trade and market flags are shown only when Steam supplies them.</value></data>
+  <data name="NoPreview" xml:space="preserve"><value>No preview available</value></data>
+  <data name="StopPageLimit" xml:space="preserve"><value>The configured local page safety limit was reached.</value></data>
+  <data name="StopSizeLimit" xml:space="preserve"><value>The configured local size safety limit was reached.</value></data>
+  <data name="StopSourceChanged" xml:space="preserve"><value>Steam returned inconsistent inventory counts during loading; refresh to check the current inventory.</value></data>
+  <data name="StopInvalidPagination" xml:space="preserve"><value>Steam returned inconsistent pagination or repeated items; refresh before interpreting totals.</value></data>
+  <data name="StopMissingTotal" xml:space="preserve"><value>Steam did not supply an inventory total, so completeness cannot be confirmed.</value></data>
+  <data name="AccessibleAsset" xml:space="preserve"><value>{0}. Quantity {1}. {2}. Marketable {3}. Tradable {4}. Asset ID {5}.</value></data>
+</root>
+

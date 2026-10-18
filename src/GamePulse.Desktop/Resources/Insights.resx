@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data xml:space="preserve" name="Title">
+    <value>Library Pulse</value>
+  </data>
+  <data xml:space="preserve" name="Subtitle">
+    <value>Discover playtime patterns, with every insight grounded in the available Steam snapshot.</value>
+  </data>
+  <data xml:space="preserve" name="Available">
+    <value>AVAILABLE / REPORTED</value>
+  </data>
+  <data xml:space="preserve" name="Total">
+    <value>TOTAL PLAYTIME</value>
+  </data>
+  <data xml:space="preserve" name="Unplayed">
+    <value>NEVER PLAYED</value>
+  </data>
+  <data xml:space="preserve" name="Concentration">
+    <value>TOP 3 · SHARE OF PLAYTIME</value>
+  </data>
+  <data xml:space="preserve" name="Distribution">
+    <value>Playtime distribution</value>
+  </data>
+  <data xml:space="preserve" name="DistributionNote">
+    <value>Counts and bars describe returned games only; unknown time has its own group.</value>
+  </data>
+  <data xml:space="preserve" name="TopTitle">
+    <value>Top 10 by playtime</value>
+  </data>
+  <data xml:space="preserve" name="TopNote">
+    <value>Known playtime only. The Games page contains the complete available list.</value>
+  </data>
+  <data xml:space="preserve" name="SnapshotNote">
+    <value>Calculated locally from the loaded library. No extra Steam requests or historical tracking.</value>
+  </data>
+  <data xml:space="preserve" name="KnownTotal">
+    <value>TIME IN RETURNED GAMES WITH KNOWN PLAYTIME</value>
+  </data>
+  <data xml:space="preserve" name="Store">
+    <value>Steam Store ↗</value>
+  </data>
+  <data xml:space="preserve" name="Copy">
+    <value>Copy AppID</value>
+  </data>
+  <data xml:space="preserve" name="SelectHint">
+    <value>Select a top game to open its store page or copy its AppID.</value>
+  </data>
+  <data xml:space="preserve" name="CoverageHint">
+    <value>Open a profile to discover its Library Pulse.</value>
+  </data>
+  <data xml:space="preserve" name="Idle">
+    <value>Open any Steam profile using the search above.</value>
+  </data>
+  <data xml:space="preserve" name="Loading">
+    <value>Analyzing the available library…</value>
+  </data>
+  <data xml:space="preserve" name="Ready">
+    <value>Library snapshot ready. Whole-library metrics use complete playtime coverage.</value>
+  </data>
+  <data xml:space="preserve" name="Partial">
+    <value>Steam returned a partial library. The distribution describes only returned games.</value>
+  </data>
+  <data xml:space="preserve" name="Empty">
+    <value>Steam returned a complete, empty library.</value>
+  </data>
+  <data xml:space="preserve" name="Private">
+    <value>The library is private or access was denied. Its contents are unknown.</value>
+  </data>
+  <data xml:space="preserve" name="MissingKey">
+    <value>Configure GAMEPULSE_STEAM_API_KEY to load the library.</value>
+  </data>
+  <data xml:space="preserve" name="RateLimited">
+    <value>Steam is limiting requests. Try refreshing later.</value>
+  </data>
+  <data xml:space="preserve" name="Failed">
+    <value>The library could not be analyzed. Refresh the profile to try again.</value>
+  </data>
+  <data xml:space="preserve" name="Unavailable">
+    <value>The library is unavailable. No totals or ownership assumptions are shown.</value>
+  </data>
+  <data xml:space="preserve" name="NA">
+    <value>N/A</value>
+  </data>
+  <data xml:space="preserve" name="AvailableCount">
+    <value>{0:N0} / {1:N0}</value>
+  </data>
+  <data xml:space="preserve" name="Hours">
+    <value>{0:N1} h</value>
+  </data>
+  <data xml:space="preserve" name="Percent">
+    <value>{0:N1}%</value>
+  </data>
+  <data xml:space="preserve" name="Coverage">
+    <value>Playtime coverage: {0:N0} / {1:N0} returned games.</value>
+  </data>
+  <data xml:space="preserve" name="CompleteNote">
+    <value>Totals and never-played metrics cover the complete returned library. Percentages are N/A when their denominator is zero.</value>
+  </data>
+  <data xml:space="preserve" name="IncompleteNote">
+    <value>Whole-library totals, never-played counts and top-3 shares are N/A until the library and playtime coverage are complete.</value>
+  </data>
+  <data xml:space="preserve" name="TopCount">
+    <value>Showing {0:N0} of {1:N0} returned games with known time.</value>
+  </data>
+  <data xml:space="preserve" name="UpdatedAt">
+    <value>Steam snapshot updated {0}</value>
+  </data>
+  <data xml:space="preserve" name="CachedAt">
+    <value>Cached Steam snapshot from {0}</value>
+  </data>
+  <data xml:space="preserve" name="RangeUnplayed">
+    <value>Never played · 0 h</value>
+  </data>
+  <data xml:space="preserve" name="RangeUnderOneHour">
+    <value>Started · more than 0, under 1 h</value>
+  </data>
+  <data xml:space="preserve" name="RangeOneToTenHours">
+    <value>1 h to under 10 h</value>
+  </data>
+  <data xml:space="preserve" name="RangeTenToFiftyHours">
+    <value>10 h to under 50 h</value>
+  </data>
+  <data xml:space="preserve" name="RangeFiftyToHundredHours">
+    <value>50 h to under 100 h</value>
+  </data>
+  <data xml:space="preserve" name="RangeHundredPlusHours">
+    <value>100 h and more</value>
+  </data>
+  <data xml:space="preserve" name="RangeUnknown">
+    <value>Unknown playtime</value>
+  </data>
+  <data xml:space="preserve" name="BucketAccessible">
+    <value>{0}: {1:N0} games; {2:N1}% of returned games.</value>
+  </data>
+  <data xml:space="preserve" name="Unnamed">
+    <value>App {0}</value>
+  </data>
+  <data xml:space="preserve" name="TopGameAccessible">
+    <value>Rank {0}: {1}, {2}.</value>
+  </data>
+  <data xml:space="preserve" name="Copied">
+    <value>AppID copied.</value>
+  </data>
+  <data xml:space="preserve" name="ClipboardFailed">
+    <value>The AppID could not be copied.</value>
+  </data>
+  <data xml:space="preserve" name="ExternalFailed">
+    <value>The Steam Store page could not be opened.</value>
+  </data>
+</root>

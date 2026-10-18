@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>Друзі</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Досліджуйте доступні зв’язки цього профілю. Виберіть друга, щоб переглянути відомості або порівняти будь-які два профілі.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук за іменем або SteamID…</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Сортувати друзів</value>
+  </data>
+  <data name="OnlineOnly" xml:space="preserve">
+    <value>Лише в мережі</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Скинути фільтри</value>
+  </data>
+  <data name="TotalLabel" xml:space="preserve">
+    <value>ДОСТУПНІ ДРУЗІ</value>
+  </data>
+  <data name="LoadedLabel" xml:space="preserve">
+    <value>ОСНОВНІ ДАНІ ПРОФІЛІВ</value>
+  </data>
+  <data name="MissingLabel" xml:space="preserve">
+    <value>НЕДОСТУПНІ ДАНІ ПРОФІЛІВ</value>
+  </data>
+  <data name="PersonLabel" xml:space="preserve">
+    <value>ГРАВЕЦЬ / STEAMID</value>
+  </data>
+  <data name="PresenceLabel" xml:space="preserve">
+    <value>СТАТУС</value>
+  </data>
+  <data name="DetailTitle" xml:space="preserve">
+    <value>Мініпрофіль</value>
+  </data>
+  <data name="SelectHint" xml:space="preserve">
+    <value>Виберіть друга, щоб переглянути доступні дані профілю й відкрити його в огляді або порівнянні.</value>
+  </data>
+  <data name="SelectedNote" xml:space="preserve">
+    <value>Показано лише дані, які надає Steam. Недоступні значення залишаються невідомими.</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>ІМ’Я КОРИСТУВАЧА</value>
+  </data>
+  <data name="IdLabel" xml:space="preserve">
+    <value>STEAMID64</value>
+  </data>
+  <data name="VisibilityLabel" xml:space="preserve">
+    <value>ВИДИМІСТЬ ПРОФІЛЮ</value>
+  </data>
+  <data name="CreatedLabel" xml:space="preserve">
+    <value>АКАУНТ СТВОРЕНО</value>
+  </data>
+  <data name="SinceLabel" xml:space="preserve">
+    <value>ДРУЗІ З</value>
+  </data>
+  <data name="LogoffLabel" xml:space="preserve">
+    <value>ОСТАННІЙ ВИХІД ІЗ МЕРЕЖІ</value>
+  </data>
+  <data name="GameLabel" xml:space="preserve">
+    <value>ПОТОЧНА ГРА</value>
+  </data>
+  <data name="OpenExplorer" xml:space="preserve">
+    <value>Відкрити в огляді</value>
+  </data>
+  <data name="CompareA" xml:space="preserve">
+    <value>Порівняти як A</value>
+  </data>
+  <data name="CompareB" xml:space="preserve">
+    <value>Порівняти як B</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копіювати SteamID</value>
+  </data>
+  <data name="Steam" xml:space="preserve">
+    <value>Steam-профіль ↗</value>
+  </data>
+  <data name="SortStatus" xml:space="preserve">
+    <value>За статусом</value>
+  </data>
+  <data name="SortName" xml:space="preserve">
+    <value>За іменем А–Я</value>
+  </data>
+  <data name="SortNewest" xml:space="preserve">
+    <value>Спочатку нові друзі</value>
+  </data>
+  <data name="SortOldest" xml:space="preserve">
+    <value>Спочатку давні друзі</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Не в мережі</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>У мережі</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Зайнятий</value>
+  </data>
+  <data name="Away" xml:space="preserve">
+    <value>Відійшов</value>
+  </data>
+  <data name="Snooze" xml:space="preserve">
+    <value>Неактивний</value>
+  </data>
+  <data name="LookingToTrade" xml:space="preserve">
+    <value>Хоче обмінятися</value>
+  </data>
+  <data name="LookingToPlay" xml:space="preserve">
+    <value>Хоче пограти</value>
+  </data>
+  <data name="UnknownPresence" xml:space="preserve">
+    <value>Статус недоступний</value>
+  </data>
+  <data name="SummaryAvailable" xml:space="preserve">
+    <value>Основні дані профілю доступні</value>
+  </data>
+  <data name="SummaryMissing" xml:space="preserve">
+    <value>Основні дані профілю недоступні</value>
+  </data>
+  <data name="SummaryRateLimited" xml:space="preserve">
+    <value>Steam тимчасово обмежив отримання даних цього профілю. Оновіть профіль пізніше.</value>
+  </data>
+  <data name="SummaryMissingKey" xml:space="preserve">
+    <value>Для завантаження основних даних цього профілю потрібен налаштований ключ Steam Web API.</value>
+  </data>
+  <data name="SummaryFailed" xml:space="preserve">
+    <value>Не вдалося завантажити основні дані цього профілю. Оновіть профіль, щоб спробувати ще раз.</value>
+  </data>
+  <data name="Playing" xml:space="preserve">
+    <value>Грає в {0}</value>
+  </data>
+  <data name="PublicVisibility" xml:space="preserve">
+    <value>Публічний</value>
+  </data>
+  <data name="PrivateVisibility" xml:space="preserve">
+    <value>Приватний</value>
+  </data>
+  <data name="FriendsVisibility" xml:space="preserve">
+    <value>Лише для друзів</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>Відкрийте Steam-профіль, щоб дослідити його доступний список друзів.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Завантаження списку друзів і пакетів основних даних профілів…</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Завантаження скасовано. Відкрийте профіль повторно, щоб завантажити список.</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Steam відмовив у доступі до цього списку друзів. Він може бути приватним; кількість друзів визначити неможливо.</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Steam повернув доступний порожній список друзів.</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>Потрібен ключ Steam API. Вкажіть GAMEPULSE_STEAM_API_KEY у локальному .env або змінній середовища й перезапустіть програму.</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Steam тимчасово обмежив ці запити. Зачекайте й оновіть профіль.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Не вдалося завантажити список друзів. Оновіть профіль, щоб спробувати ще раз.</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Steam не повернув доступного списку друзів. Можливі обмеження приватності, ключа API або доступу; кількість друзів визначити неможливо.</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Список друзів доступний</value>
+  </data>
+  <data name="Filtering" xml:space="preserve">
+    <value>Фільтрування друзів…</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>Немає друзів, що відповідають цим фільтрам.</value>
+  </data>
+  <data name="Shown" xml:space="preserve">
+    <value>Показано {0:N0} / {1:N0}</value>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>Деякі дані профілів недоступні. Усі отримані ID друзів залишаються в списку; недоступний статус не означає «не в мережі».</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Оновлено {0}</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>З кешу · оновлено {0}</value>
+  </data>
+  <data name="FilterFailed" xml:space="preserve">
+    <value>Не вдалося застосувати фільтри друзів. Спробуйте скинути їх.</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>SteamID скопійовано.</value>
+  </data>
+  <data name="ClipboardFailed" xml:space="preserve">
+    <value>Буфер обміну недоступний.</value>
+  </data>
+  <data name="ExternalFailed" xml:space="preserve">
+    <value>Не вдалося відкрити Steam-профіль у браузері.</value>
+  </data>
+  <data name="ContextOpen" xml:space="preserve">
+    <value>Відкрити профіль</value>
+  </data>
+  <data name="ContextA" xml:space="preserve">
+    <value>Використати як профіль A</value>
+  </data>
+  <data name="ContextB" xml:space="preserve">
+    <value>Використати як профіль B</value>
+  </data>
+  <data name="AccessibleFriend" xml:space="preserve">
+    <value>{0}. SteamID {1}. {2}. {3}.</value>
+  </data>
+</root>

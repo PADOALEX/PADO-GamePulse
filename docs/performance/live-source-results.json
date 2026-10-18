@@ -1,0 +1,147 @@
+{
+  "StartedUtc": "2026-10-17T19:05:35.972441+00:00",
+  "FinishedUtc": "2026-10-17T19:06:06.2552384+00:00",
+  "ExitCode": 0,
+  "KeyUsed": false,
+  "RequestSpacingSeconds": 3,
+  "PageSize": 1000,
+  "InventoryRequests": 7,
+  "InventoryRetries": 0,
+  "Results": [
+    {
+      "AppId": 730,
+      "ContextId": "2",
+      "State": "Ready",
+      "HttpStatuses": [
+        200
+      ],
+      "Complete": true,
+      "Pages": 1,
+      "ReportedAssets": 1,
+      "LoadedAssets": 1,
+      "LoadedUnits": 1,
+      "DescriptionsJoined": 1,
+      "IconsAvailable": 1,
+      "TradeFlagsAvailable": 1,
+      "Interruption": null,
+      "StopReason": null,
+      "Image": {
+        "HttpStatus": 200,
+        "ContentType": "image/png",
+        "Bytes": 76648,
+        "ValidImage": true
+      }
+    },
+    {
+      "AppId": 440,
+      "ContextId": "2",
+      "State": "Ready",
+      "HttpStatuses": [
+        200
+      ],
+      "Complete": true,
+      "Pages": 1,
+      "ReportedAssets": 142,
+      "LoadedAssets": 142,
+      "LoadedUnits": 142,
+      "DescriptionsJoined": 142,
+      "IconsAvailable": 142,
+      "TradeFlagsAvailable": 142,
+      "Interruption": null,
+      "StopReason": null,
+      "Image": {
+        "HttpStatus": 200,
+        "ContentType": "image/png",
+        "Bytes": 17217,
+        "ValidImage": true
+      }
+    },
+    {
+      "AppId": 570,
+      "ContextId": "2",
+      "State": "Ready",
+      "HttpStatuses": [
+        200,
+        200
+      ],
+      "Complete": true,
+      "Pages": 2,
+      "ReportedAssets": 1697,
+      "LoadedAssets": 1697,
+      "LoadedUnits": 1697,
+      "DescriptionsJoined": 1697,
+      "IconsAvailable": 1695,
+      "TradeFlagsAvailable": 1697,
+      "Interruption": null,
+      "StopReason": null,
+      "Image": {
+        "HttpStatus": 200,
+        "ContentType": "image/png",
+        "Bytes": 26715,
+        "ValidImage": true
+      }
+    },
+    {
+      "AppId": 578080,
+      "ContextId": "2",
+      "State": "Unavailable",
+      "HttpStatuses": [
+        401
+      ],
+      "Complete": null,
+      "Pages": null,
+      "ReportedAssets": null,
+      "LoadedAssets": null,
+      "LoadedUnits": null,
+      "DescriptionsJoined": null,
+      "IconsAvailable": null,
+      "TradeFlagsAvailable": null,
+      "Interruption": null,
+      "StopReason": null,
+      "Image": null
+    },
+    {
+      "AppId": 252490,
+      "ContextId": "2",
+      "State": "Unavailable",
+      "HttpStatuses": [
+        401
+      ],
+      "Complete": null,
+      "Pages": null,
+      "ReportedAssets": null,
+      "LoadedAssets": null,
+      "LoadedUnits": null,
+      "DescriptionsJoined": null,
+      "IconsAvailable": null,
+      "TradeFlagsAvailable": null,
+      "Interruption": null,
+      "StopReason": null,
+      "Image": null
+    },
+    {
+      "AppId": 753,
+      "ContextId": "6",
+      "State": "Ready",
+      "HttpStatuses": [
+        200
+      ],
+      "Complete": true,
+      "Pages": 1,
+      "ReportedAssets": 117,
+      "LoadedAssets": 117,
+      "LoadedUnits": 416,
+      "DescriptionsJoined": 117,
+      "IconsAvailable": 117,
+      "TradeFlagsAvailable": 117,
+      "Interruption": null,
+      "StopReason": null,
+      "Image": {
+        "HttpStatus": 200,
+        "ContentType": "image/png",
+        "Bytes": 10931,
+        "ValidImage": true
+      }
+    }
+  ]
+}

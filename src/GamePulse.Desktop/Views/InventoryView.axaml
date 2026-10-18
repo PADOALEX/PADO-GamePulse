@@ -1,0 +1,160 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="using:GamePulse.Desktop.Services"
+             xmlns:text="using:GamePulse.Desktop.Resources"
+             xmlns:controls="using:GamePulse.Desktop.Controls"
+             x:Class="GamePulse.Desktop.Views.InventoryView">
+  <controls:AdaptivePageGrid RowDefinitions="Auto,*,Auto" RowSpacing="8" Margin="0,4,0,0">
+    <ScrollViewer Classes="adaptiveHeader" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" AutomationProperties.Name="{loc:Translate Module=Strings, Key=PageControls}">
+      <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="8" Margin="0,0,10,0">
+    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="18">
+      <TextBlock Text="{loc:Translate Module=Inventory, Key=Title}" AutomationProperties.HeadingLevel="1" FontSize="25" FontWeight="SemiBold" />
+      <TextBlock Grid.Column="1" Text="{loc:Translate Module=Inventory, Key=Subtitle}" Classes="muted" FontSize="11" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Right" MaxWidth="350" />
+    </Grid>
+
+    <Grid Grid.Row="1" ColumnDefinitions="*,86,Auto" ColumnSpacing="10">
+      <StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Inventory, Key=AppLabel}" Classes="label" FontSize="9" />
+        <ComboBox x:Name="InventoryAppSelector" AutomationProperties.AutomationId="InventoryAppSelector" ItemsSource="{Binding Apps}" SelectedIndex="{Binding SelectedAppIndex, Mode=TwoWay}" HorizontalAlignment="Stretch" MinHeight="34"
+                  AutomationProperties.Name="{loc:Translate Module=Inventory, Key=AppLabel}">
+          <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" FontSize="12" /></DataTemplate></ComboBox.ItemTemplate>
+        </ComboBox>
+      </StackPanel>
+      <StackPanel Grid.Column="1" Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Inventory, Key=ContextLabel}" Classes="label" FontSize="9" />
+        <TextBox x:Name="InventoryContextInput" AutomationProperties.AutomationId="InventoryContextInput" Text="{Binding ContextId, Mode=TwoWay}" MinHeight="34" FontSize="12"
+                 AutomationProperties.Name="{loc:Translate Module=Inventory, Key=ContextLabel}" ToolTip.Tip="{loc:Translate Module=Inventory, Key=ContextHelp}"
+                 Background="{DynamicResource InputBrush}" Foreground="{DynamicResource TextBrush}" />
+      </StackPanel>
+      <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="6" VerticalAlignment="Bottom">
+        <Button x:Name="LoadInventoryButton" AutomationProperties.AutomationId="LoadInventoryButton" Content="{loc:Translate Module=Inventory, Key=Load}" Click="Load_OnClick" IsEnabled="{Binding CanLoad}" Classes="primary" FontSize="11" MinHeight="34" Padding="10,7" />
+        <Button x:Name="RefreshInventoryButton" AutomationProperties.AutomationId="RefreshInventoryButton" Content="{loc:Translate Module=Inventory, Key=Refresh}" Click="Refresh_OnClick" IsEnabled="{Binding CanLoad}" FontSize="11" MinHeight="34" Padding="10,7" />
+        <Button x:Name="CancelInventoryButton" AutomationProperties.AutomationId="CancelInventoryButton" Content="{loc:Translate Module=Inventory, Key=Cancel}" Click="Cancel_OnClick" IsEnabled="{Binding IsBusy}" Classes="quiet" FontSize="11" MinHeight="34" Padding="8,7" />
+      </StackPanel>
+    </Grid>
+
+    <Grid Grid.Row="2" ColumnDefinitions="*,*,*,*" ColumnSpacing="8">
+      <Border Classes="card" Padding="12,7"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Inventory, Key=LoadedLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding LoadedAssetCount}" FontSize="18" FontWeight="SemiBold" />
+      </StackPanel></Border>
+      <Border Grid.Column="1" Classes="card" Padding="12,7"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Inventory, Key=QuantityLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding QuantityCount}" FontSize="18" FontWeight="SemiBold" />
+      </StackPanel></Border>
+      <Border Grid.Column="2" Classes="card" Padding="12,7"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Inventory, Key=TotalLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding TotalAssetCount}" FontSize="18" FontWeight="SemiBold" />
+      </StackPanel></Border>
+      <Border Grid.Column="3" Classes="card" Padding="12,7"><StackPanel Spacing="4">
+        <TextBlock Text="{loc:Translate Module=Inventory, Key=CoverageLabel}" Classes="label" FontSize="9" />
+        <TextBlock Text="{Binding MetadataCoverage}" FontSize="16" FontWeight="SemiBold" />
+      </StackPanel></Border>
+    </Grid>
+
+    <StackPanel Grid.Row="3" Spacing="5">
+      <Grid ColumnDefinitions="*,185" ColumnSpacing="10">
+        <TextBox x:Name="InventoryFilterInput" AutomationProperties.AutomationId="InventoryFilterInput" Text="{Binding Query, Mode=TwoWay}" PlaceholderText="{loc:Translate Module=Inventory, Key=Search}" MinHeight="34" FontSize="12"
+                 AutomationProperties.Name="{loc:Translate Module=Inventory, Key=Search}" Background="{DynamicResource InputBrush}" Foreground="{DynamicResource TextBrush}" PlaceholderForeground="{DynamicResource MutedTextBrush}" />
+        <ComboBox Grid.Column="1" ItemsSource="{Binding SortOptions}" SelectedIndex="{Binding SelectedSortIndex, Mode=TwoWay}" HorizontalAlignment="Stretch" FontSize="12" MinHeight="34" AutomationProperties.Name="{loc:Translate Module=Inventory, Key=Sort}" >
+            <ComboBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding Value}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+      </Grid>
+      <StackPanel Orientation="Horizontal" Spacing="16">
+        <CheckBox Content="{loc:Translate Module=Inventory, Key=MarketableOnly}" IsChecked="{Binding MarketableOnly, Mode=TwoWay}" MinHeight="25" FontSize="11" />
+        <CheckBox Content="{loc:Translate Module=Inventory, Key=TradableOnly}" IsChecked="{Binding TradableOnly, Mode=TwoWay}" MinHeight="25" FontSize="11" />
+        <Button Content="{loc:Translate Module=Inventory, Key=Reset}" Command="{Binding ResetFiltersCommand}" Classes="quiet" MinHeight="25" FontSize="11" Padding="6,3" />
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel Grid.Row="4" Spacing="4">
+      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+        <controls:LiveStatusTextBlock x:Name="InventoryStatus" AutomationProperties.AutomationId="InventoryStatus" Text="{Binding StateMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+        <TextBlock Grid.Column="1" Text="{Binding ShownCount}" Classes="label" FontSize="10" />
+      </Grid>
+      <TextBlock Text="{Binding Completeness}" IsVisible="{Binding HasCompleteness}" Classes="muted" FontSize="11" TextWrapping="Wrap" />
+      <TextBlock Text="{Binding ProgressText}" IsVisible="{Binding IsBusy}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+      <ProgressBar Height="2" IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
+    </StackPanel>
+
+      </Grid>
+    </ScrollViewer>
+    <!-- The finite star row and internal scrolling keep every asset available without allocating every row. -->
+    <Grid Grid.Row="1" ColumnDefinitions="*,240" ColumnSpacing="12">
+      <Border CornerRadius="9" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" Background="{DynamicResource CardBrush}" ClipToBounds="True">
+        <Grid RowDefinitions="28,*">
+          <Grid ColumnDefinitions="*,76" Margin="14,0,20,0" VerticalAlignment="Center">
+            <TextBlock Text="{loc:Translate Module=Inventory, Key=AssetLabel}" Classes="label" FontSize="9" />
+            <TextBlock Grid.Column="1" Text="{loc:Translate Module=Inventory, Key=QuantityColumn}" Classes="label" FontSize="9" HorizontalAlignment="Right" />
+          </Grid>
+          <ListBox x:Name="InventoryList" AutomationProperties.AutomationId="InventoryList" Grid.Row="1" ItemsSource="{Binding Rows}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                   KeyDown="InventoryList_OnKeyDown"
+                   Background="Transparent" BorderThickness="0" Padding="0" AutomationProperties.Name="{loc:Translate Module=Inventory, Key=Title}"
+                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ItemsPanel><ItemsPanelTemplate><VirtualizingStackPanel /></ItemsPanelTemplate></ListBox.ItemsPanel>
+            <ListBox.ContextMenu><ContextMenu>
+              <MenuItem Header="{loc:Translate Module=Inventory, Key=Copy}" Click="CopyAsset_OnClick" />
+              <MenuItem Header="{loc:Translate Module=Inventory, Key=OpenSteam}" Click="OpenSteam_OnClick" />
+            </ContextMenu></ListBox.ContextMenu>
+            <ListBox.Styles><Style Selector="ListBoxItem">
+              <Setter Property="AutomationProperties.Name" Value="{Binding AccessibleName}" />
+              <Setter Property="HorizontalContentAlignment" Value="Stretch" /><Setter Property="Padding" Value="12,6" /><Setter Property="MinHeight" Value="54" />
+            </Style></ListBox.Styles>
+            <ListBox.ItemTemplate><DataTemplate>
+              <Grid ColumnDefinitions="48,*,76" ColumnSpacing="10" Height="42" VerticalAlignment="Center">
+                <Border CornerRadius="7" Background="{DynamicResource InputBrush}" Width="46" Height="40" ClipToBounds="True">
+                  <controls:AsyncThumbnail Url="{Binding IconUrl}" ThumbnailStretch="Uniform"
+                      Loader="{Binding $parent[UserControl].DataContext.RowThumbnailLoader}" Margin="3" />
+                </Border>
+                <StackPanel Grid.Column="1" Spacing="4" VerticalAlignment="Center">
+                  <TextBlock Text="{Binding Name}" FontSize="12" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" />
+                  <TextBlock Text="{Binding Type}" Classes="label" FontSize="10" TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+                <TextBlock Grid.Column="2" Text="{Binding Amount}" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Amount}" />
+              </Grid>
+            </DataTemplate></ListBox.ItemTemplate>
+          </ListBox>
+        </Grid>
+      </Border>
+      <Border Grid.Column="1" Classes="card" Padding="14,12" ClipToBounds="True">
+        <Grid RowDefinitions="Auto,*" RowSpacing="10">
+          <TextBlock Text="{loc:Translate Module=Inventory, Key=DetailTitle}" AutomationProperties.HeadingLevel="2" FontSize="14" FontWeight="SemiBold" />
+          <TextBlock Grid.Row="1" Text="{loc:Translate Module=Inventory, Key=SelectHint}" IsVisible="{Binding !HasSelection}" Classes="muted" FontSize="12" TextWrapping="Wrap" Margin="0,10,0,0" />
+          <ScrollViewer x:Name="InventoryDetailScroll" AutomationProperties.AutomationId="InventoryDetailScroll" Grid.Row="1" IsVisible="{Binding HasSelection}" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Spacing="10" Margin="0,0,7,0">
+              <Border Height="88" CornerRadius="8" Background="{DynamicResource InputBrush}">
+                <Grid>
+                  <TextBlock Text="{loc:Translate Module=Inventory, Key=NoPreview}" IsVisible="{Binding HasNoPreview}" Classes="label" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                  <Image Source="{Binding SelectedIcon}" Stretch="Uniform" Margin="8" />
+                  <ProgressBar Height="2" IsIndeterminate="True" IsVisible="{Binding IsIconBusy}" VerticalAlignment="Bottom" Margin="10" />
+                </Grid>
+              </Border>
+              <TextBlock Text="{Binding SelectedItem.Name}" FontSize="15" FontWeight="SemiBold" TextWrapping="Wrap" />
+              <TextBlock Text="{Binding SelectedItem.Metadata}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=TypeLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedItem.Type}" FontSize="12" TextWrapping="Wrap" /></StackPanel>
+              <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=AmountLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedItem.Amount}" FontSize="14" TextWrapping="Wrap" /></StackPanel>
+              </Grid>
+              <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=MarketableLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedItem.Marketable}" FontSize="12" /></StackPanel>
+                <StackPanel Grid.Column="1" Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=TradableLabel}" Classes="label" FontSize="9" /><TextBlock Text="{Binding SelectedItem.Tradable}" FontSize="12" /></StackPanel>
+              </Grid>
+              <Border Height="1" Background="{DynamicResource BorderBrush}" />
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=AssetIdLabel}" Classes="label" FontSize="9" /><SelectableTextBlock Text="{Binding SelectedItem.AssetId}" FontSize="11" TextWrapping="Wrap" /></StackPanel>
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=ClassIdLabel}" Classes="label" FontSize="9" /><SelectableTextBlock Text="{Binding SelectedItem.ClassId}" FontSize="11" TextWrapping="Wrap" /></StackPanel>
+              <StackPanel Spacing="3"><TextBlock Text="{loc:Translate Module=Inventory, Key=InstanceIdLabel}" Classes="label" FontSize="9" /><SelectableTextBlock Text="{Binding SelectedItem.InstanceId}" FontSize="11" TextWrapping="Wrap" /></StackPanel>
+              <Button Content="{loc:Translate Module=Inventory, Key=Copy}" Click="CopyAsset_OnClick" HorizontalAlignment="Stretch" FontSize="11" />
+              <Button Content="{loc:Translate Module=Inventory, Key=OpenSteam}" Click="OpenSteam_OnClick" Classes="quiet" HorizontalAlignment="Stretch" FontSize="11" />
+              <TextBlock Text="{loc:Translate Module=Inventory, Key=CompleteNote}" Classes="label" FontSize="10" TextWrapping="Wrap" />
+            </StackPanel>
+          </ScrollViewer>
+        </Grid>
+      </Border>
+    </Grid>
+
+    <Grid Grid.Row="2" ColumnDefinitions="*,Auto" ColumnSpacing="10">
+      <StackPanel Spacing="3"><TextBlock Text="{Binding Source}" Classes="label" FontSize="9" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Source}" /><controls:LiveStatusTextBlock x:Name="InventoryLocalMessage" AutomationProperties.AutomationId="InventoryLocalMessage" Text="{Binding LocalMessage}" AutomationProperties.LiveSetting="Polite" Classes="muted" FontSize="10" TextWrapping="Wrap" /></StackPanel>
+      <TextBlock Grid.Column="1" Text="{Binding UpdatedAt}" Classes="label" FontSize="9" VerticalAlignment="Top" />
+    </Grid>
+  </controls:AdaptivePageGrid>
+</UserControl>

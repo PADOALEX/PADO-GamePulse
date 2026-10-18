@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="Title" xml:space="preserve"><value>Achievements</value></data>
+  <data name="Subtitle" xml:space="preserve"><value>Choose a game to check its achievements. Only the selected game is requested.</value></data>
+  <data name="WeightedLabel" xml:space="preserve"><value>WEIGHTED COMPLETION</value></data>
+  <data name="AverageLabel" xml:space="preserve"><value>AVERAGE PER GAME</value></data>
+  <data name="CoverageLabel" xml:space="preserve"><value>CHECKED GAMES</value></data>
+  <data name="WeightedNote" xml:space="preserve"><value>Unlocked / available achievements</value></data>
+  <data name="AverageNote" xml:space="preserve"><value>Mean of complete game results</value></data>
+  <data name="Coverage" xml:space="preserve"><value>{0:N0} / {1:N0}</value></data>
+  <data name="Included" xml:space="preserve"><value>{0:N0} games included in completion metrics</value></data>
+  <data name="IncludedOne" xml:space="preserve"><value>1 game included in completion metrics</value></data>
+  <data name="NA" xml:space="preserve"><value>N/A</value></data>
+  <data name="Percent" xml:space="preserve"><value>{0:0.#}%</value></data>
+  <data name="GameFallback" xml:space="preserve"><value>App {0}</value></data>
+  <data name="LibraryLabel" xml:space="preserve"><value>AVAILABLE PROFILE LIBRARY</value></data>
+  <data name="GameSearch" xml:space="preserve"><value>Find game or AppID</value></data>
+  <data name="GameSortName" xml:space="preserve"><value>Game name</value></data>
+  <data name="GameSortTime" xml:space="preserve"><value>Most played</value></data>
+  <data name="GameSortChecked" xml:space="preserve"><value>Checked first</value></data>
+  <data name="IdleLibrary" xml:space="preserve"><value>Open a Steam profile to explore achievements.</value></data>
+  <data name="LoadingLibrary" xml:space="preserve"><value>Loading the available library…</value></data>
+  <data name="EmptyLibrary" xml:space="preserve"><value>Steam returned an empty library. There are no games to select.</value></data>
+  <data name="PrivateLibrary" xml:space="preserve"><value>The library is private. Available achievements cannot be listed.</value></data>
+  <data name="UnavailableLibrary" xml:space="preserve"><value>The library is unavailable. Its games and achievement coverage are unknown.</value></data>
+  <data name="FailedLibrary" xml:space="preserve"><value>The library could not be loaded. Refresh the profile to try again.</value></data>
+  <data name="CancelledLibrary" xml:space="preserve"><value>Library loading was cancelled.</value></data>
+  <data name="ReadyLibrary" xml:space="preserve"><value>{0:N0} available games · select one to check</value></data>
+  <data name="PartialLibrary" xml:space="preserve"><value>Only the returned library is shown. It may be incomplete.</value></data>
+  <data name="NoGamesMatch" xml:space="preserve"><value>No games match this search.</value></data>
+  <data name="Unchecked" xml:space="preserve"><value>Not checked</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading achievements for this game…</value></data>
+  <data name="LoadingRow" xml:space="preserve"><value>Checking…</value></data>
+  <data name="SelectGame" xml:space="preserve"><value>Select a game from the library to load its achievements.</value></data>
+  <data name="NoAchievements" xml:space="preserve"><value>This game has no achievements according to the returned Steam schema.</value></data>
+  <data name="NoAchievementsShort" xml:space="preserve"><value>No achievements</value></data>
+  <data name="Private" xml:space="preserve"><value>This game's player statistics are private.</value></data>
+  <data name="PrivateShort" xml:space="preserve"><value>Private</value></data>
+  <data name="Unavailable" xml:space="preserve"><value>Achievements are unavailable for this profile and game. Steam did not provide usable data; completion is unknown.</value></data>
+  <data name="UnavailableShort" xml:space="preserve"><value>Unavailable</value></data>
+  <data name="Failed" xml:space="preserve"><value>Achievements could not be loaded. Use Refresh to try again.</value></data>
+  <data name="FailedShort" xml:space="preserve"><value>Request failed</value></data>
+  <data name="MissingKey" xml:space="preserve"><value>A Steam API key is required. Configure GAMEPULSE_STEAM_API_KEY in your local .env or environment, then restart the app.</value></data>
+  <data name="MissingKeyShort" xml:space="preserve"><value>API key required</value></data>
+  <data name="RateLimited" xml:space="preserve"><value>Steam temporarily limited requests. Wait before using Refresh.</value></data>
+  <data name="RateLimitedShort" xml:space="preserve"><value>Temporarily limited</value></data>
+  <data name="Cancelled" xml:space="preserve"><value>Achievement loading was cancelled. Use Refresh when ready.</value></data>
+  <data name="CancelledShort" xml:space="preserve"><value>Cancelled</value></data>
+  <data name="Ready" xml:space="preserve"><value>{0:N0} of {1:N0} achievements unlocked</value></data>
+  <data name="ReadyShort" xml:space="preserve"><value>{0:N0} / {1:N0} unlocked</value></data>
+  <data name="Partial" xml:space="preserve"><value>Steam returned incomplete or mismatched achievement data. Available details are shown; completion remains N/A.</value></data>
+  <data name="PartialShort" xml:space="preserve"><value>Incomplete result</value></data>
+  <data name="Shown" xml:space="preserve"><value>{0:N0} / {1:N0} shown</value></data>
+  <data name="Search" xml:space="preserve"><value>Find achievement, description or API name</value></data>
+  <data name="Sort" xml:space="preserve"><value>Sort achievements</value></data>
+  <data name="SortName" xml:space="preserve"><value>Name</value></data>
+  <data name="SortUnlocked" xml:space="preserve"><value>Unlocked first</value></data>
+  <data name="SortLocked" xml:space="preserve"><value>Locked first</value></data>
+  <data name="SortRecent" xml:space="preserve"><value>Recently unlocked</value></data>
+  <data name="UnlockFilter" xml:space="preserve"><value>Filter unlock state</value></data>
+  <data name="All" xml:space="preserve"><value>All states</value></data>
+  <data name="Unlocked" xml:space="preserve"><value>Unlocked</value></data>
+  <data name="Locked" xml:space="preserve"><value>Locked</value></data>
+  <data name="Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="NoMatches" xml:space="preserve"><value>No achievements match these filters.</value></data>
+  <data name="Filtering" xml:space="preserve"><value>Filtering achievements…</value></data>
+  <data name="FilterFailed" xml:space="preserve"><value>The list could not be filtered. Try changing the search.</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Refresh game</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="UnlockedLabel" xml:space="preserve"><value>UNLOCKED</value></data>
+  <data name="TotalLabel" xml:space="preserve"><value>AVAILABLE</value></data>
+  <data name="DetailLabel" xml:space="preserve"><value>Achievement details</value></data>
+  <data name="Close" xml:space="preserve"><value>Close</value></data>
+  <data name="SelectedTotals" xml:space="preserve"><value>{0} / {1} unlocked · {2}</value></data>
+  <data name="SelectDetail" xml:space="preserve"><value>Select an achievement to see its description and unlock details.</value></data>
+  <data name="ApiNameLabel" xml:space="preserve"><value>API NAME</value></data>
+  <data name="DescriptionLabel" xml:space="preserve"><value>DESCRIPTION</value></data>
+  <data name="NoDescription" xml:space="preserve"><value>Steam did not return a description.</value></data>
+  <data name="HiddenLabel" xml:space="preserve"><value>HIDDEN IN GAME</value></data>
+  <data name="HiddenYes" xml:space="preserve"><value>Yes</value></data>
+  <data name="HiddenNo" xml:space="preserve"><value>No</value></data>
+  <data name="UnlockedAtLabel" xml:space="preserve"><value>UNLOCKED AT</value></data>
+  <data name="NotUnlocked" xml:space="preserve"><value>Not unlocked</value></data>
+  <data name="StatusLabel" xml:space="preserve"><value>STATUS</value></data>
+  <data name="SourcesNote" xml:space="preserve"><value>Completion covers only checked games with complete, matching data and at least one achievement. Unknown and partial results are excluded.</value></data>
+  <data name="Updated" xml:space="preserve"><value>Updated {0}</value></data>
+  <data name="Cached" xml:space="preserve"><value>Cached · checked {0}</value></data>
+  <data name="AccessibleGame" xml:space="preserve"><value>{0}. AppID {1}. {2}. Progress {3}.</value></data>
+  <data name="AccessibleAchievement" xml:space="preserve"><value>{0}. {1}. {2}.</value></data>
+</root>

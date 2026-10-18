@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="ProductName" xml:space="preserve">
+    <value>PADO GamePulse</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Steam Profile Explorer &amp; Gaming Analytics</value>
+  </data>
+  <data name="Explorer" xml:space="preserve">
+    <value>Profile Explorer</value>
+  </data>
+  <data name="PhaseLabel" xml:space="preserve">
+    <value>STEAM PROFILE EXPLORER</value>
+  </data>
+  <data name="Recent" xml:space="preserve">
+    <value>RECENT PROFILES</value>
+  </data>
+  <data name="SessionOnly" xml:space="preserve">
+    <value>This session only. Searches are kept in memory and cleared when the app closes.</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings / About</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Switch theme</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>EXPLORE ANY STEAM PROFILE</value>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>SteamID64, steamcommunity.com URL, or vanity slug</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Explore →</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SearchHint" xml:space="preserve">
+    <value>Vanity slugs are profile URL identifiers. Display names are not unique and cannot be resolved globally.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Profile overview</value>
+  </data>
+  <data name="AvailableData" xml:space="preserve">
+    <value>Facts from the data Steam makes available.</value>
+  </data>
+  <data name="StartTitle" xml:space="preserve">
+    <value>A profile is the starting point.</value>
+  </data>
+  <data name="StartMessage" xml:space="preserve">
+    <value>Enter a SteamID64, a profile URL, or a vanity slug above. You can explore different profiles without signing in to Steam.</value>
+  </data>
+  <data name="SetupTitle" xml:space="preserve">
+    <value>Connect your Steam Web API key</value>
+  </data>
+  <data name="SetupMessage" xml:space="preserve">
+    <value>Create a local .env beside PADO.GamePulse.sln when running from source, or beside GamePulse.Desktop.exe for the portable/installed app. Set GAMEPULSE_STEAM_API_KEY to your own key and restart the app. An existing environment variable takes priority. Never share your .env.</value>
+  </data>
+  <data name="KeyName" xml:space="preserve">
+    <value>GAMEPULSE_STEAM_API_KEY</value>
+  </data>
+  <data name="PrivacyNote" xml:space="preserve">
+    <value>No Steam login. No database. Private data stays private.</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>PROFILE IDENTITY</value>
+  </data>
+  <data name="SteamId" xml:space="preserve">
+    <value>STEAMID64</value>
+  </data>
+  <data name="CopyId" xml:space="preserve">
+    <value>Copy ID</value>
+  </data>
+  <data name="OpenSteam" xml:space="preserve">
+    <value>Open on Steam ↗</value>
+  </data>
+  <data name="Visibility" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Account created</value>
+  </data>
+  <data name="LastOnline" xml:space="preserve">
+    <value>Last logoff</value>
+  </data>
+  <data name="CurrentGame" xml:space="preserve">
+    <value>Current game</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>STEAM LEVEL</value>
+  </data>
+  <data name="LevelNote" xml:space="preserve">
+    <value>Loaded independently when available.</value>
+  </data>
+  <data name="Bans" xml:space="preserve">
+    <value>BAN INFORMATION</value>
+  </data>
+  <data name="Vac" xml:space="preserve">
+    <value>VAC bans</value>
+  </data>
+  <data name="VacStatus" xml:space="preserve">
+    <value>VAC banned</value>
+  </data>
+  <data name="GameBans" xml:space="preserve">
+    <value>Game bans</value>
+  </data>
+  <data name="CommunityBan" xml:space="preserve">
+    <value>Community ban</value>
+  </data>
+  <data name="Economy" xml:space="preserve">
+    <value>Economy status</value>
+  </data>
+  <data name="DaysSinceBan" xml:space="preserve">
+    <value>Days since last ban</value>
+  </data>
+  <data name="BanNote" xml:space="preserve">
+    <value>These are source facts, not a trust score. N/A means the information is unavailable.</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="ScopeTitle" xml:space="preserve">
+    <value>Available tools</value>
+  </data>
+  <data name="ScopeMessage" xml:space="preserve">
+    <value>Explore profiles, libraries, friends, achievements and public inventories. Compare any two profiles, discover shared games, inspect Library Pulse and export filtered tables to CSV. Source availability and privacy determine which facts Steam exposes.</value>
+  </data>
+  <data name="GamesRoadmap" xml:space="preserve">
+    <value>Games · library, recent playtime, filtering</value>
+  </data>
+  <data name="AchievementsRoadmap" xml:space="preserve">
+    <value>Achievements · selected-game lazy loading</value>
+  </data>
+  <data name="FriendsRoadmap" xml:space="preserve">
+    <value>Friends · batched public mini-profiles</value>
+  </data>
+  <data name="CompareRoadmap" xml:space="preserve">
+    <value>Compare · any two profiles &amp; mutual games</value>
+  </data>
+  <data name="InventoryRoadmap" xml:space="preserve">
+    <value>Inventory · pagination &amp; virtualized items</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>SETTINGS / ABOUT</value>
+  </data>
+  <data name="AboutMessage" xml:space="preserve">
+    <value>An independent Steam profile explorer. No Steam sign-in or database is required. Your optional .env is private local plaintext. Release packages contain no API key; the source archive includes an empty .env.example.</value>
+  </data>
+  <data name="ShortcutHint" xml:space="preserve">
+    <value>Ctrl+L Profile · Ctrl+F Page filter · Enter Explore · Esc Cancel</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading…</value>
+  </data>
+  <data name="SearchingTitle" xml:space="preserve">
+    <value>Looking up this profile…</value>
+  </data>
+  <data name="SearchingMessage" xml:space="preserve">
+    <value>Summary appears first. Optional details load independently.</value>
+  </data>
+  <data name="ReadyTitle" xml:space="preserve">
+    <value>Profile summary available</value>
+  </data>
+  <data name="ReadyMessage" xml:space="preserve">
+    <value>Missing fields remain N/A. Refresh bypasses the data cache.</value>
+  </data>
+  <data name="CancelledTitle" xml:space="preserve">
+    <value>Loading cancelled</value>
+  </data>
+  <data name="CancelledMessage" xml:space="preserve">
+    <value>Already received data remains visible. Start another search or refresh to continue.</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>Enter a valid SteamID64, Steam profile URL or vanity slug. Display names are not unique. Use the identifier in the profile URL.</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>A Steam API key is required. Add GAMEPULSE_STEAM_API_KEY to your local .env, or set the environment variable, then restart the app.</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Steam did not allow access to this information.</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>No matching profile was returned. Check the SteamID64 or vanity URL.</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Steam is rate limiting requests. Please try again later.</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>This information is unavailable from Steam.</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Steam returned no information for this request.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>The request could not be completed. Check your connection and try again.</value>
+  </data>
+  <data name="RequestFailedTitle" xml:space="preserve">
+    <value>Profile could not be opened</value>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="LimitedVisibility" xml:space="preserve">
+    <value>Private / limited</value>
+  </data>
+  <data name="UnknownName" xml:space="preserve">
+    <value>Unnamed profile</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Busy</value>
+  </data>
+  <data name="Away" xml:space="preserve">
+    <value>Away</value>
+  </data>
+  <data name="Snooze" xml:space="preserve">
+    <value>Snooze</value>
+  </data>
+  <data name="LookingToTrade" xml:space="preserve">
+    <value>Looking to trade</value>
+  </data>
+  <data name="LookingToPlay" xml:space="preserve">
+    <value>Looking to play</value>
+  </data>
+  <data name="UnknownPresence" xml:space="preserve">
+    <value>Unknown status</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>from cache</value>
+  </data>
+  <data name="AvatarAlt" xml:space="preserve">
+    <value>Steam profile avatar</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>SteamID copied.</value>
+  </data>
+  <data name="ExternalFailed" xml:space="preserve">
+    <value>The link could not be opened. You can copy the SteamID instead.</value>
+  </data>
+  <data name="ClipboardFailed" xml:space="preserve">
+    <value>The SteamID could not be copied to the clipboard.</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Games &amp; recent</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Compare profiles</value>
+  </data>
+  <data name="OverviewTab" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="Achievements" xml:space="preserve">
+    <value>Achievements</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="PageControls" xml:space="preserve">
+    <value>Page controls; scroll for additional filters</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Main navigation and recent profiles</value>
+  </data>
+  <data name="ThemeHint" xml:space="preserve">
+    <value>Cycle dark, light and high contrast. System high contrast is detected automatically.</value>
+  </data>
+  <data name="CurrentPage" xml:space="preserve">
+    <value>Current page</value>
+  </data>
+  <data name="LanguageButton" xml:space="preserve">
+    <value>Language · English</value>
+  </data>
+  <data name="LanguageHint" xml:space="preserve">
+    <value>Change language. Current language: English. Switch to Ukrainian.</value>
+  </data>
+  <data name="ExportCsv" xml:space="preserve">
+    <value>Export CSV</value>
+  </data>
+  <data name="ExportHint" xml:space="preserve">
+    <value>Export filtered Games, Mutual Games or Inventory to CSV. Ctrl+Shift+E.</value>
+  </data>
+  <data name="ExportDialogTitle" xml:space="preserve">
+    <value>Save the current filtered table</value>
+  </data>
+  <data name="ExportUnavailable" xml:space="preserve">
+    <value>Open a loaded Games, Mutual Games or Inventory table with matching rows. Wait for loading and filtering to finish.</value>
+  </data>
+  <data name="ExportWorking" xml:space="preserve">
+    <value>Preparing the current filtered table for export…</value>
+  </data>
+  <data name="ExportSaved" xml:space="preserve">
+    <value>Saved {0:N0} rows to CSV. The file contains profile identifiers; share it intentionally.</value>
+  </data>
+  <data name="ExportCancelled" xml:space="preserve">
+    <value>Export cancelled.</value>
+  </data>
+  <data name="ExportFailed" xml:space="preserve">
+    <value>The export could not be completed. Check the selected file location and available space.</value>
+  </data>
+</root>

@@ -1,0 +1,17 @@
+{
+  "Version": "0.8.0",
+  "PortableArchiveCrc": true,
+  "SafeExtraction": true,
+  "PortableFiles": 288,
+  "LicenseAndUkrainianSatellite": true,
+  "ForbiddenArtifactsAbsent": true,
+  "PortableSha256": "17378ad091f484e829cf01f99d1dcc3ee915d53a4e10b2d0c5686e4121e2586f",
+  "InstallerSha256": "16b5fc664a820f2ce74af5cefe791b4a781ee9dda8c5155ef461fb689ad3efc8",
+  "SourceArchiveCrc": true,
+  "SourceSafeExtraction": true,
+  "SourceExcludesBuildAndCredentialFiles": true,
+  "ExtractedNativeStartup": true,
+  "CleanMachine": false,
+  "Signed": false,
+  "ExtractedNativeLanguage": "uk"
+}

@@ -1,0 +1,9 @@
+<Project>
+  <!-- Local credentials are never build inputs or runtime payloads, even under Assets/. -->
+  <ItemGroup>
+    <None Remove="**/.env;**/.env.*" />
+    <Content Remove="**/.env;**/.env.*" />
+    <EmbeddedResource Remove="**/.env;**/.env.*" />
+    <AvaloniaResource Remove="**/.env;**/.env.*" />
+  </ItemGroup>
+</Project>

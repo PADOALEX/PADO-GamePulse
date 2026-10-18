@@ -1,0 +1,16 @@
+[
+  {
+    "File": "ThinkPad_DESKTOP-KUCF242_2026-10-18_10_33_34.trx",
+    "Total": 471,
+    "Passed": 470,
+    "Failed": 0,
+    "Skipped": 1
+  },
+  {
+    "File": "ThinkPad_DESKTOP-KUCF242_2026-10-18_10_33_36.trx",
+    "Total": 301,
+    "Passed": 301,
+    "Failed": 0,
+    "Skipped": 0
+  }
+]

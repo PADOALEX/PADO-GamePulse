@@ -1,0 +1,11 @@
+{
+  "Mode": "Profile",
+  "StartedUtc": "2026-10-17T19:50:11.9956064+00:00",
+  "FinishedUtc": "2026-10-17T19:50:12.001019+00:00",
+  "ExitCode": 3,
+  "State": "MissingKey",
+  "KeyUsed": false,
+  "Requests": 0,
+  "Retries": 0,
+  "Results": []
+}

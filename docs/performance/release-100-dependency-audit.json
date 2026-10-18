@@ -1,0 +1,9 @@
+{
+  "Passed": true,
+  "Date": "2026-10-18",
+  "Source": "https://api.nuget.org/v3/index.json",
+  "Projects": 7,
+  "IncludeTransitive": true,
+  "ReportedVulnerablePackages": 0,
+  "Scope": "Advisory query at verification time, not a guarantee against unknown vulnerabilities"
+}

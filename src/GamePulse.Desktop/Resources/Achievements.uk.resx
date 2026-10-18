@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="Title" xml:space="preserve">
+    <value>Досягнення</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Виберіть гру, щоб перевірити її досягнення. Запит надсилається лише для вибраної гри.</value>
+  </data>
+  <data name="WeightedLabel" xml:space="preserve">
+    <value>ЗВАЖЕНИЙ ПРОГРЕС</value>
+  </data>
+  <data name="AverageLabel" xml:space="preserve">
+    <value>СЕРЕДНІЙ ПРОГРЕС ЗА ГРОЮ</value>
+  </data>
+  <data name="CoverageLabel" xml:space="preserve">
+    <value>ПЕРЕВІРЕНІ ІГРИ</value>
+  </data>
+  <data name="WeightedNote" xml:space="preserve">
+    <value>Отримані / доступні досягнення</value>
+  </data>
+  <data name="AverageNote" xml:space="preserve">
+    <value>Середнє для повних результатів ігор</value>
+  </data>
+  <data name="Coverage" xml:space="preserve">
+    <value>{0:N0} / {1:N0}</value>
+  </data>
+  <data name="Included" xml:space="preserve">
+    <value>Ігор у розрахунку прогресу: {0:N0}</value>
+  </data>
+  <data name="IncludedOne" xml:space="preserve">
+    <value>1 гра в розрахунку прогресу</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>{0:0.#}%</value>
+  </data>
+  <data name="GameFallback" xml:space="preserve">
+    <value>Застосунок {0}</value>
+  </data>
+  <data name="LibraryLabel" xml:space="preserve">
+    <value>ДОСТУПНА БІБЛІОТЕКА ПРОФІЛЮ</value>
+  </data>
+  <data name="GameSearch" xml:space="preserve">
+    <value>Пошук гри або AppID</value>
+  </data>
+  <data name="GameSortName" xml:space="preserve">
+    <value>За назвою гри</value>
+  </data>
+  <data name="GameSortTime" xml:space="preserve">
+    <value>Найбільше годин</value>
+  </data>
+  <data name="GameSortChecked" xml:space="preserve">
+    <value>Спочатку перевірені</value>
+  </data>
+  <data name="IdleLibrary" xml:space="preserve">
+    <value>Відкрийте Steam-профіль, щоб дослідити досягнення.</value>
+  </data>
+  <data name="LoadingLibrary" xml:space="preserve">
+    <value>Завантаження доступної бібліотеки…</value>
+  </data>
+  <data name="EmptyLibrary" xml:space="preserve">
+    <value>Steam повернув порожню бібліотеку. Немає ігор для вибору.</value>
+  </data>
+  <data name="PrivateLibrary" xml:space="preserve">
+    <value>Бібліотека приватна. Неможливо отримати список ігор із доступними досягненнями.</value>
+  </data>
+  <data name="UnavailableLibrary" xml:space="preserve">
+    <value>Бібліотека недоступна. Її ігри та охоплення досягнень невідомі.</value>
+  </data>
+  <data name="FailedLibrary" xml:space="preserve">
+    <value>Не вдалося завантажити бібліотеку. Оновіть профіль, щоб спробувати ще раз.</value>
+  </data>
+  <data name="CancelledLibrary" xml:space="preserve">
+    <value>Завантаження бібліотеки скасовано.</value>
+  </data>
+  <data name="ReadyLibrary" xml:space="preserve">
+    <value>Доступних ігор: {0:N0} · виберіть гру для перевірки</value>
+  </data>
+  <data name="PartialLibrary" xml:space="preserve">
+    <value>Показано лише отриману бібліотеку. Вона може бути неповною.</value>
+  </data>
+  <data name="NoGamesMatch" xml:space="preserve">
+    <value>Немає ігор, що відповідають цьому запиту.</value>
+  </data>
+  <data name="Unchecked" xml:space="preserve">
+    <value>Не перевірено</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Завантаження досягнень цієї гри…</value>
+  </data>
+  <data name="LoadingRow" xml:space="preserve">
+    <value>Перевірка…</value>
+  </data>
+  <data name="SelectGame" xml:space="preserve">
+    <value>Виберіть гру з бібліотеки, щоб завантажити її досягнення.</value>
+  </data>
+  <data name="NoAchievements" xml:space="preserve">
+    <value>Згідно з отриманою схемою Steam, ця гра не має досягнень.</value>
+  </data>
+  <data name="NoAchievementsShort" xml:space="preserve">
+    <value>Немає досягнень</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Статистика гравця для цієї гри приватна.</value>
+  </data>
+  <data name="PrivateShort" xml:space="preserve">
+    <value>Приватні</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Досягнення для цього профілю та гри недоступні. Steam не надав придатних даних; прогрес невідомий.</value>
+  </data>
+  <data name="UnavailableShort" xml:space="preserve">
+    <value>Недоступні</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Не вдалося завантажити досягнення. Натисніть «Оновити», щоб спробувати ще раз.</value>
+  </data>
+  <data name="FailedShort" xml:space="preserve">
+    <value>Помилка запиту</value>
+  </data>
+  <data name="MissingKey" xml:space="preserve">
+    <value>Потрібен ключ Steam API. Вкажіть GAMEPULSE_STEAM_API_KEY у локальному .env або змінній середовища й перезапустіть програму.</value>
+  </data>
+  <data name="MissingKeyShort" xml:space="preserve">
+    <value>Потрібен ключ API</value>
+  </data>
+  <data name="RateLimited" xml:space="preserve">
+    <value>Steam тимчасово обмежив запити. Зачекайте перед оновленням.</value>
+  </data>
+  <data name="RateLimitedShort" xml:space="preserve">
+    <value>Тимчасове обмеження</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Завантаження досягнень скасовано. Коли будете готові, натисніть «Оновити».</value>
+  </data>
+  <data name="CancelledShort" xml:space="preserve">
+    <value>Скасовано</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Отримано {0:N0} з {1:N0} досягнень</value>
+  </data>
+  <data name="ReadyShort" xml:space="preserve">
+    <value>Отримано {0:N0} / {1:N0}</value>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>Steam повернув неповні або неузгоджені дані досягнень. Доступні відомості показано; прогрес залишається N/A.</value>
+  </data>
+  <data name="PartialShort" xml:space="preserve">
+    <value>Неповний результат</value>
+  </data>
+  <data name="Shown" xml:space="preserve">
+    <value>Показано {0:N0} / {1:N0}</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук за назвою, описом або іменем API</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Сортувати досягнення</value>
+  </data>
+  <data name="SortName" xml:space="preserve">
+    <value>За назвою</value>
+  </data>
+  <data name="SortUnlocked" xml:space="preserve">
+    <value>Спочатку отримані</value>
+  </data>
+  <data name="SortLocked" xml:space="preserve">
+    <value>Спочатку неотримані</value>
+  </data>
+  <data name="SortRecent" xml:space="preserve">
+    <value>Нещодавно отримані</value>
+  </data>
+  <data name="UnlockFilter" xml:space="preserve">
+    <value>Фільтр отримання</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Усі стани</value>
+  </data>
+  <data name="Unlocked" xml:space="preserve">
+    <value>Отримано</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Не отримано</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Невідомо</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>Немає досягнень, що відповідають цим фільтрам.</value>
+  </data>
+  <data name="Filtering" xml:space="preserve">
+    <value>Фільтрування досягнень…</value>
+  </data>
+  <data name="FilterFailed" xml:space="preserve">
+    <value>Не вдалося відфільтрувати список. Спробуйте змінити запит.</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Оновити гру</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="UnlockedLabel" xml:space="preserve">
+    <value>ОТРИМАНО</value>
+  </data>
+  <data name="TotalLabel" xml:space="preserve">
+    <value>ДОСТУПНО</value>
+  </data>
+  <data name="DetailLabel" xml:space="preserve">
+    <value>Відомості про досягнення</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="SelectedTotals" xml:space="preserve">
+    <value>Отримано {0} / {1} · {2}</value>
+  </data>
+  <data name="SelectDetail" xml:space="preserve">
+    <value>Виберіть досягнення, щоб переглянути його опис і відомості про отримання.</value>
+  </data>
+  <data name="ApiNameLabel" xml:space="preserve">
+    <value>ІМ’Я API</value>
+  </data>
+  <data name="DescriptionLabel" xml:space="preserve">
+    <value>ОПИС</value>
+  </data>
+  <data name="NoDescription" xml:space="preserve">
+    <value>Steam не повернув опису.</value>
+  </data>
+  <data name="HiddenLabel" xml:space="preserve">
+    <value>ПРИХОВАНЕ В ГРІ</value>
+  </data>
+  <data name="HiddenYes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="HiddenNo" xml:space="preserve">
+    <value>Ні</value>
+  </data>
+  <data name="UnlockedAtLabel" xml:space="preserve">
+    <value>ДАТА ОТРИМАННЯ</value>
+  </data>
+  <data name="NotUnlocked" xml:space="preserve">
+    <value>Не отримано</value>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>СТАТУС</value>
+  </data>
+  <data name="SourcesNote" xml:space="preserve">
+    <value>Прогрес охоплює лише перевірені ігри з повними узгодженими даними та хоча б одним досягненням. Невідомі й неповні результати не враховуються.</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Оновлено {0}</value>
+  </data>
+  <data name="Cached" xml:space="preserve">
+    <value>З кешу · перевірено {0}</value>
+  </data>
+  <data name="AccessibleGame" xml:space="preserve">
+    <value>{0}. AppID {1}. {2}. Прогрес: {3}.</value>
+  </data>
+  <data name="AccessibleAchievement" xml:space="preserve">
+    <value>{0}. {1}. {2}.</value>
+  </data>
+</root>

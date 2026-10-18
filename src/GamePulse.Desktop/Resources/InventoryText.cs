@@ -1,0 +1,88 @@
+using System.Globalization;
+using System.Resources;
+
+namespace GamePulse.Desktop.Resources;
+
+/// <summary>Inventory UI text with English and Ukrainian resources.</summary>
+public static class InventoryText
+{
+    private static readonly ResourceManager Manager = new("GamePulse.Desktop.Resources.Inventory", typeof(InventoryText).Assembly);
+    public static string Get(string key) => Manager.GetString(key, GamePulse.Desktop.Services.UiLanguage.Culture) ?? key;
+    public static string Format(string key, params object[] args) => string.Format(CultureInfo.CurrentCulture, Get(key), args);
+    public static string Title => Get(nameof(Title));
+    public static string Subtitle => Get(nameof(Subtitle));
+    public static string Source => Get(nameof(Source));
+    public static string AppLabel => Get(nameof(AppLabel));
+    public static string ContextLabel => Get(nameof(ContextLabel));
+    public static string ContextHelp => Get(nameof(ContextHelp));
+    public static string Load => Get(nameof(Load));
+    public static string Refresh => Get(nameof(Refresh));
+    public static string Cancel => Get(nameof(Cancel));
+    public static string Search => Get(nameof(Search));
+    public static string Sort => Get(nameof(Sort));
+    public static string SortName => Get(nameof(SortName));
+    public static string SortType => Get(nameof(SortType));
+    public static string SortAmount => Get(nameof(SortAmount));
+    public static string SortAssetId => Get(nameof(SortAssetId));
+    public static string MarketableOnly => Get(nameof(MarketableOnly));
+    public static string TradableOnly => Get(nameof(TradableOnly));
+    public static string Reset => Get(nameof(Reset));
+    public static string LoadedLabel => Get(nameof(LoadedLabel));
+    public static string QuantityLabel => Get(nameof(QuantityLabel));
+    public static string TotalLabel => Get(nameof(TotalLabel));
+    public static string CoverageLabel => Get(nameof(CoverageLabel));
+    public static string AssetLabel => Get(nameof(AssetLabel));
+    public static string QuantityColumn => Get(nameof(QuantityColumn));
+    public static string DetailTitle => Get(nameof(DetailTitle));
+    public static string SelectHint => Get(nameof(SelectHint));
+    public static string AssetIdLabel => Get(nameof(AssetIdLabel));
+    public static string ClassIdLabel => Get(nameof(ClassIdLabel));
+    public static string InstanceIdLabel => Get(nameof(InstanceIdLabel));
+    public static string TypeLabel => Get(nameof(TypeLabel));
+    public static string AmountLabel => Get(nameof(AmountLabel));
+    public static string MarketableLabel => Get(nameof(MarketableLabel));
+    public static string TradableLabel => Get(nameof(TradableLabel));
+    public static string Copy => Get(nameof(Copy));
+    public static string OpenSteam => Get(nameof(OpenSteam));
+    public static string AssetFallback => Get(nameof(AssetFallback));
+    public static string UnknownType => Get(nameof(UnknownType));
+    public static string Yes => Get(nameof(Yes));
+    public static string No => Get(nameof(No));
+    public static string Unknown => Get(nameof(Unknown));
+    public static string NA => Get(nameof(NA));
+    public static string MetadataAvailable => Get(nameof(MetadataAvailable));
+    public static string MetadataMissing => Get(nameof(MetadataMissing));
+    public static string Coverage => Get(nameof(Coverage));
+    public static string Shown => Get(nameof(Shown));
+    public static string Partial => Get(nameof(Partial));
+    public static string InterruptedRateLimited => Get(nameof(InterruptedRateLimited));
+    public static string InterruptedPrivate => Get(nameof(InterruptedPrivate));
+    public static string InterruptedUnavailable => Get(nameof(InterruptedUnavailable));
+    public static string InterruptedFailed => Get(nameof(InterruptedFailed));
+    public static string Progress => Get(nameof(Progress));
+    public static string ProgressReported => Get(nameof(ProgressReported));
+    public static string Updated => Get(nameof(Updated));
+    public static string Cached => Get(nameof(Cached));
+    public static string Idle => Get(nameof(Idle));
+    public static string NotLoaded => Get(nameof(NotLoaded));
+    public static string InvalidContext => Get(nameof(InvalidContext));
+    public static string Cancelled => Get(nameof(Cancelled));
+    public static string Loading => Get(nameof(Loading));
+    public static string Empty => Get(nameof(Empty));
+    public static string Private => Get(nameof(Private));
+    public static string RateLimited => Get(nameof(RateLimited));
+    public static string Failed => Get(nameof(Failed));
+    public static string MissingKey => Get(nameof(MissingKey));
+    public static string Unavailable => Get(nameof(Unavailable));
+    public static string Filtering => Get(nameof(Filtering));
+    public static string NoMatches => Get(nameof(NoMatches));
+    public static string PartialReady => Get(nameof(PartialReady));
+    public static string Ready => Get(nameof(Ready));
+    public static string FilterFailed => Get(nameof(FilterFailed));
+    public static string Copied => Get(nameof(Copied));
+    public static string ClipboardFailed => Get(nameof(ClipboardFailed));
+    public static string ExternalFailed => Get(nameof(ExternalFailed));
+    public static string CompleteNote => Get(nameof(CompleteNote));
+    public static string NoPreview => Get(nameof(NoPreview));
+}
+
